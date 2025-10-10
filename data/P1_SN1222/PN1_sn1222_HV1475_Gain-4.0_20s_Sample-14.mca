@@ -1,0 +1,336 @@
+<<PMCA SPECTRUM>>
+TAG - live_data
+DESCRIPTION - 
+GAIN - 0
+THRESHOLD - 0
+LIVE_MODE - 0
+PRESET_TIME - 0
+LIVE_TIME - 19.676000
+REAL_TIME - 20.000000
+START_TIME - 08/04/2023 16:33:04
+SERIAL_NUMBER - 0
+<<DATA>>
+0
+0
+0
+29348
+12270
+8242
+6591
+5429
+4531
+3960
+3361
+3023
+2692
+2434
+2233
+2020
+1902
+1761
+1556
+1525
+1455
+1333
+1283
+1140
+1140
+1081
+1055
+998
+984
+959
+858
+850
+882
+836
+757
+753
+723
+734
+730
+715
+635
+666
+629
+639
+600
+617
+619
+568
+585
+574
+536
+530
+506
+469
+518
+513
+438
+433
+416
+411
+421
+412
+397
+416
+388
+345
+356
+322
+313
+326
+289
+302
+277
+224
+268
+247
+218
+220
+248
+185
+197
+224
+191
+167
+176
+189
+153
+163
+141
+143
+141
+129
+121
+132
+118
+125
+119
+132
+126
+120
+127
+89
+104
+100
+99
+94
+93
+88
+79
+77
+82
+87
+71
+68
+83
+79
+57
+58
+65
+57
+53
+67
+63
+58
+60
+65
+50
+44
+54
+48
+48
+45
+48
+37
+36
+39
+33
+39
+31
+34
+39
+29
+34
+24
+29
+31
+35
+20
+20
+24
+15
+21
+22
+21
+18
+13
+22
+17
+18
+29
+20
+32
+16
+23
+24
+22
+17
+20
+23
+12
+17
+13
+17
+16
+14
+16
+16
+20
+18
+12
+11
+20
+13
+11
+19
+13
+12
+9
+13
+11
+6
+18
+8
+14
+15
+9
+5
+9
+16
+5
+5
+11
+10
+8
+12
+5
+12
+2
+6
+6
+11
+12
+10
+7
+6
+5
+6
+4
+5
+8
+6
+6
+4
+5
+8
+7
+5
+9
+5
+3
+5
+6
+4
+5
+2
+4
+2
+3
+1
+5
+5
+4
+2
+1
+9
+1
+5
+3
+4
+4
+4
+3
+4
+6
+3
+3
+<<END>>
+<<DP5 CONFIGURATION>>
+RESC=?;    Reset Configuration
+CLCK=20;    20MHz/80MHz
+TPEA=0.800;    Peaking Time
+GAIF=0.9780;    Fine Gain
+GAIN=4.001;    Total Gain (Analog * Fine)
+RESL=OFF;    Detector Reset Lockout
+TFLA=0.200;    Flat Top
+TPFA=400;    Fast Channel Peaking Time
+PURE=OFF;    PUR Interval On/Off
+SCTC=OFF;    Scintillator Time Constant
+RTDE=OFF;    RTD On/Off
+MCAS=NORM;    MCA Source
+MCAC=256;    MCA/MCS Channels
+SOFF=OFF;    Set Spectrum Offset
+AINP=NEG;    Analog Input Pos/Neg
+GAIA=3;    Analog Gain Index
+CUSP=0;    Non-Trapezoidal Shaping
+PDMD=NORM;    Peak Detect Mode (Min/Max)
+THSL=0.500;    Slow Threshold
+TLLD=2;    LLD Threshold
+THFA=5.87;    Fast Threshold
+DACO=SHAPED;    DAC Output
+DACF=31;    DAC Offset
+RTDS=1.5;    RTD Sensitivity
+RTDT=0.00;    RTD Threshold
+BLRM=OFF;    BLR Mode
+BLRD=3;    BLR Down Correction
+BLRU=0;    BLR Up Correction
+AUO1=ICR;    AUX_OUT Selection
+PRET=20.0;    Preset Time
+PRER=OFF;    Preset Real Time
+PREC=OFF;    Preset Counts
+PRCL=0;    Preset Counts Low Threshold
+PRCH=8191;    Preset Counts High Threshold
+SCOE=FA;    Scope Trigger Edge
+SCOT=12;    Scope Trigger Position
+SCOG=1;    Digital Scope Gain
+MCSL=0;    MCS Low Threshold
+MCSH=8191;    MCS High Threshold
+MCST=1.00;    MCS Timebase
+AUO2=ICR;    AUX_OUT2 Selection
+TPMO=OFF;    Test Pulser On/Off
+GPED=FA;    G.P. Counter Edge
+GPIN=AUX1;    G.P. Counter Input
+GPME=ON;    G.P. Counter Uses MCA_EN?
+GPGA=ON;    G.P. Counter Uses GATE?
+GPMC=ON;    G.P. Counter Cleared With MCA Counters?
+MCAE=OFF;    MCA/MCS Enable
+CON1=AUXIN1;    Connector 1
+CON2=AUXIN2;    Connector 2
+<<DP5 CONFIGURATION END>>
+<<DPP STATUS>>
+Device Type: DP5G
+Serial Number: 1222
+Firmware: 6.09  Build:  3
+FPGA: 6.15
+Fast Count: 138467
+Slow Count: 136229
+GP Count: 0
+Accumulation Time: 20.000000
+Real Time: 20.004000
+Dead Time: 1.62%
+HV Volt: 0V
+TEC Temp: 
+Board Temp: 50°C
+<<DPP STATUS END>>
