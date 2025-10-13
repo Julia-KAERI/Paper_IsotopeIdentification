@@ -1,0 +1,140 @@
+\begin{thebibliography}{10}
+\urlstyle{rm}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname doiprefix\endcsname\relax\def\doiprefix{DOI: }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{Sicilliano2005Comparision}
+\bibinfo{author}{Siciliano, E.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Comparison of pvt and nai(tl)
+  scintillators for vehicle portal monitor applications}}.
+\newblock {\emph{\JournalTitle{Nuclear Instruments and Methods in Physics
+  Research Section A: Accelerators, Spectrometers, Detectors and Associated
+  Equipment}}} \textbf{\bibinfo{volume}{550}}, \bibinfo{pages}{647--674},
+  \doiprefix\url{https://doi.org/10.1016/j.nima.2005.05.056}
+  (\bibinfo{year}{2005}).
+
+\bibitem{Bertrand2014Current}
+\bibinfo{author}{Bertrand, G. H.~V.}, \bibinfo{author}{Hamel, M.} \&
+  \bibinfo{author}{Sguerra, F.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Current status on plastic
+  scintillators modifications}}.
+\newblock {\emph{\JournalTitle{Chemistry -- A European Journal}}}
+  \textbf{\bibinfo{volume}{20}}, \bibinfo{pages}{15660--15685},
+  \doiprefix\url{https://doi.org/10.1002/chem.201404093}
+  (\bibinfo{year}{2014}).
+
+\bibitem{Ely2006EWindow}
+\bibinfo{author}{Ely, J.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{The use of energy windowing to
+  discriminate snm from norm in radiation portal monitors}}.
+\newblock {\emph{\JournalTitle{Nuclear Instruments and Methods in Physics
+  Research Section A: Accelerators, Spectrometers, Detectors and Associated
+  Equipment}}} \textbf{\bibinfo{volume}{560}}, \bibinfo{pages}{373--387},
+  \doiprefix\url{https://doi.org/10.1016/j.nima.2006.01.053}
+  (\bibinfo{year}{2006}).
+
+\bibitem{Hevener2013EWindow}
+\bibinfo{author}{Hevener, R.}, \bibinfo{author}{Yim, M.-S.} \&
+  \bibinfo{author}{Baird, K.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Investigation of energy windowing
+  algorithms for effective cargo screening with radiation portal monitors}}.
+\newblock {\emph{\JournalTitle{Radiation Measurements}}}
+  \textbf{\bibinfo{volume}{58}}, \bibinfo{pages}{113--120},
+  \doiprefix\url{https://doi.org/10.1016/j.radmeas.2013.08.004}
+  (\bibinfo{year}{2013}).
+
+\bibitem{Lee2020EWeight}
+\bibinfo{author}{Lee, H.~C.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Radioisotope identification using
+  an energy-weighted algorithm with a proof-of-principle radiation portal
+  monitor based on plastic scintillators}}.
+\newblock {\emph{\JournalTitle{Applied Radiation and Isotopes}}}
+  \textbf{\bibinfo{volume}{156}}, \bibinfo{pages}{109010},
+  \doiprefix\url{https://doi.org/10.1016/j.apradiso.2019.109010}
+  (\bibinfo{year}{2020}).
+
+\bibitem{Paff2017Spectral}
+\bibinfo{author}{Paff, M.~G.}, \bibinfo{author}{Fulvio, A.~D.},
+  \bibinfo{author}{Clarke, S.~D.} \& \bibinfo{author}{Pozzi, S.~A.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Radionuclide identification
+  algorithm for organic scintillator-based radiation portal monitor}}.
+\newblock {\emph{\JournalTitle{Nuclear Instruments and Methods in Physics
+  Research Section A: Accelerators, Spectrometers, Detectors and Associated
+  Equipment}}} \textbf{\bibinfo{volume}{849}}, \bibinfo{pages}{41--48},
+  \doiprefix\url{https://doi.org/10.1016/j.nima.2017.01.009}
+  (\bibinfo{year}{2017}).
+
+\bibitem{Kim2019InvMat}
+\bibinfo{author}{Kim, Y.}, \bibinfo{author}{Kim, M.}, \bibinfo{author}{Lim,
+  K.~T.}, \bibinfo{author}{Kim, J.} \& \bibinfo{author}{Cho, G.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Inverse calibration matrix
+  algorithm for radiation detection portal monitors}}.
+\newblock {\emph{\JournalTitle{Radiation Physics and Chemistry}}}
+  \textbf{\bibinfo{volume}{155}}, \bibinfo{pages}{127--132},
+  \doiprefix\url{https://doi.org/10.1016/j.radphyschem.2018.07.022}
+  (\bibinfo{year}{2019}).
+
+\bibitem{Kim2019ANN}
+\bibinfo{author}{Kim, J.}, \bibinfo{author}{Park, K.} \& \bibinfo{author}{Cho,
+  G.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Multi-radioisotope identification
+  algorithm using an artificial neural network for plastic gamma spectra}}.
+\newblock {\emph{\JournalTitle{Applied Radiation and Isotopes}}}
+  \textbf{\bibinfo{volume}{147}}, \bibinfo{pages}{83--90},
+  \doiprefix\url{https://doi.org/10.1016/j.apradiso.2019.01.005}
+  (\bibinfo{year}{2019}).
+
+\bibitem{Lee2023Radionuclide}
+\bibinfo{author}{Lee, H.~C.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Radionuclide identification based
+  on energy-weighted algorithm and machine learning applied to a multi-array
+  plastic scintillator}}.
+\newblock {\emph{\JournalTitle{Nuclear Engineering and Technology}}}
+  \textbf{\bibinfo{volume}{55}}, \bibinfo{pages}{3907--3912},
+  \doiprefix\url{https://doi.org/10.1016/j.net.2023.07.005}
+  (\bibinfo{year}{2023}).
+
+\bibitem{Jeon2021CompML}
+\bibinfo{author}{Jeon, B.}, \bibinfo{author}{Kim, J.}, \bibinfo{author}{Yu, Y.}
+  \& \bibinfo{author}{Moon, M.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Comparison of machine
+  learning-based radioisotope identifiers for plastic scintillation detector}}.
+\newblock {\emph{\JournalTitle{Journal of Radiation Protection and Research}}}
+  \textbf{\bibinfo{volume}{46}}, \bibinfo{pages}{204--212},
+  \doiprefix\url{https://doi.org/10.14407/jrpr.2021.00206}
+  (\bibinfo{year}{2021}).
+
+\bibitem{Jeon2021PseudoGamma}
+\bibinfo{author}{Jeon, B.}, \bibinfo{author}{Kim, J.}, \bibinfo{author}{Lee,
+  E.}, \bibinfo{author}{Moon, M.} \& \bibinfo{author}{Cho, G.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Pseudo-gamma spectroscopy based on
+  plastic scintillation detectors using multitask learning}}.
+\newblock {\emph{\JournalTitle{Sensors}}} \textbf{\bibinfo{volume}{21}},
+  \doiprefix\url{https://doi.org/10.3390/s21030684} (\bibinfo{year}{2021}).
+
+\bibitem{Jeon2023Explanation}
+\bibinfo{author}{Jeon, B.}, \bibinfo{author}{Kim, J.} \& \bibinfo{author}{and,
+  M.~M.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Explanation of deep learning-based
+  radioisotope identifier for plastic scintillation detector}}.
+\newblock {\emph{\JournalTitle{Nuclear Technology}}}
+  \textbf{\bibinfo{volume}{209}}, \bibinfo{pages}{1--14},
+  \doiprefix\url{https://doi.org/10.1080/00295450.2022.2096389}
+  (\bibinfo{year}{2023}).
+
+\bibitem{LoPresti2006BaselineSuppression}
+\bibinfo{author}{{Lo Presti}, C.~A.}, \bibinfo{author}{Weier, D.~R.},
+  \bibinfo{author}{Kouzes, R.~T.} \& \bibinfo{author}{Schweppe, J.~E.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Baseline suppression of vehicle
+  portal monitor gamma count profiles: A characterization study}}.
+\newblock {\emph{\JournalTitle{Nuclear Instruments and Methods in Physics
+  Research Section A: Accelerators, Spectrometers, Detectors and Associated
+  Equipment}}} \textbf{\bibinfo{volume}{562}}, \bibinfo{pages}{281--297},
+  \doiprefix\url{https://doi.org/10.1016/j.nima.2006.02.156}
+  (\bibinfo{year}{2006}).
+
+\end{thebibliography}
