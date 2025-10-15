@@ -86,9 +86,9 @@ This paper presents a backward cumulative channel sum (BCCS) to address these li
 
 \subsection*{Spectral Preprocessing: Backward Cumulative Channel Sum}
 
-Most radiation portal monitors employ plastic scintillators, which provide high detection efficiency due to their large effective volume but suffer from poor spectroscopic performance. As a result, additional processing techniques are required to identify radionuclides, particularly when source intensity is lower than background radiation, i.e., under low net-count conditions. In such cases, signal processing methods that enhance spectral features and compensate for detector limitations become essential. To address these challenges, we propose the Backward Cumulative Channel Sum (BCCS) method, derived as follows.
+Most radiation portal monitors employ plastic scintillators, which provide high detection efficiency due to their large effective volume but suffer from poor spectroscopic performance. As a result, additional processing techniques are required to identify radionuclides, particularly when source intensity is lower than background radiation, i.e., under low net-count conditions. Typical gamma ray spectrums are showIn such cases, signal processing methods that enhance spectral features and compensate for detector limitations become essential. To address these challenges, we propose the Backward Cumulative Channel Sum (BCCS) method, derived as follows.
 
-Given a raw pulse-height spectrum $\mathbf{C} = [C_1, C_2, \ldots, C_N]$, where $C_i$ denots the count in channel $i$, the corresponnding BCCS spectrum $\mathbf{B} = [B_1, B_2, \ldots , B_N]$ is defined as follows: 
+Given a raw pulse-height spectrum $\mathbf{C} = [C_1, C_2, \ldots, C_N]$, where $C_i$ denotes the count in channel $i$, the corresponnding BCCS spectrum $\mathbf{B} = [B_1, B_2, \ldots , B_N]$ is defined as follows: 
 
 \begin{equation}
 B_i = \sum_{j=i}^N C_i.
@@ -100,44 +100,58 @@ In contrast to the conventional cumulative spectrum, which sums counts from the 
 
 Under weak source conditions with a short measuring period, background radiation is dominant in measured spectra and the spectra have poor counting statistics. In this case, it is necessary to compensate for background contributions in the spectra and to improve signal-to-noise ratio for reliable radionuclide identification. 
 
-In this study, we propose two background compensation strategies: (a) direct subtraction and (b) ratio-based normalization, each providing unique advantages in terms of physical interpretability and statistical robustness.  
+In this study, we propose two background compensation strategies: (a) direct subtraction from signal to background and (b) normalization to background, each providing unique advantages in terms of physical interpretability and statistical robustness.  
 
-\subsubsection*{(a) Direct Subtraction}
+\subsubsection*{(a) Direct Subtraction Method}
 
-Direct subtraction obtains the net spectrum by subtracting the background BCCS spectrum from that of the source. Let $\mathbf{B}^X$ and $\mathbf{B}^\textrm{bkg}$ denote the BCCS spectra of source $X$ and background, respectively. The net spectrum $\mathbf{S}^X$ is then given by
+Direct subtraction obtains the net spectrum by subtracting the background BCCS spectrum from that of the source. Let $\mathbf{B}$ and $\mathbf{B}^\textrm{bkg}$ denote the BCCS spectra of source and background, respectively. The net spectrum $\mathbf{S} = [S_1,\ldots,S_N]$ is then given by
 
 \begin{equation}
-\mathbf{S}^X =  \mathbf{B}^X - \mathbf{B}^{\textrm{bkg}}
+S_i =  B_i - B_i^{\textrm{bkg}}.
 \end{equation}
 
-This operation yields an interpretable estimate of the source contribution while preserving the count scale. Owing to the cumulative nature of BCCS, negative values rarely occur even for weak signals, making the method inherently robust against over-subtraction.
+This operation yields an interpretable estimate of the source contribution while preserving the count scale. However, due to the cumulative nature of BCCS, small negative values may appear as a result of statistical fluctuations, particularly when radiation is concentrated in the low-channel region or when the overall count rate is extremely low. In the latter case, radionuclide analysis becomes practically meaningless, while the former situation will be revisited and discussed later in the context of the actual spectral analysis. 
 
-\subsubsection*{(b) Ratio-Based Normalization} 
+%Owing to the cumulative nature of BCCS, negative values rarely occur even for weak signals, making the method inherently robust against over-subtraction.
 
-Ratio-based normalization emphasizes relative spectral deviations by dividing the source BCCS spectrum by the background spectrum. For source $\mathbf{R}^X$, the normalized spectrum $\mathbf{R}^X=[R^X_1,\ldots,\,R^X_N]$ is defineds as
+\subsubsection*{(b) Ratio Method : Normalization to background} 
+
+Ratio-based normalization emphasizes relative spectral deviations by dividing the source BCCS spectrum by the background spectrum. Therefore, the normalized spectrum $\mathbf{R}=[R_1,\ldots,\,R_N]$ is defineds as
 
 \begin{equation}
-R^X_i = \left(\dfrac{B^X_i}{B^{\textrm{bkg}}_i}\right) -1.
+R_i = \left(\dfrac{B_i}{B^{\textrm{bkg}}_i}\right) -1.
 \end{equation}
 
 This produces a dimensionless representation that highlights local contrasts while suppressing global count variability, making it particularly effective when source signals are only slightly above background levels.
 
 
-Direct subtraction provides an absolute estimate of source contributions, while ratio-based normalization highlights relative deviations from background. By combining these complementary perspectives, both methods ensure flexibility and robustness under diverse measurement conditions.
+Direct subtraction provides an absolute estimate of source contributions, while ratio method highlights relative deviations from background. By combining these complementary perspectives, both methods ensure flexibility and robustness under diverse measurement conditions.
 
 \subsection*{Radionuclide Activity Estimation via Linear Spectral Unfolding}
 
-
-For quantitative analysis, the net or ratio-normalized spectrum can be modeled as a linear combination of reference spectra:
+Assume that we already have referece spectra for the set $X$ of radionuclides and would like to identify radioactive source from measure spectrum. For quantitative analysis, measured raw pulse-height spectrum can be modeled as a linear combination of reference spectra and background with positive coefficients :
 
 \begin{equation}
-\textbf{S}^{\textrm{tot}} \approx \sum_{X} \alpha_X \textbf{S}^{X}
+\textbf{C} \approx \sum_{X} \alpha_X \textbf{C}^{X} + \bf{C}^{\textrm{bkg}}
 \end{equation}
 
-\noindent where $\alpha_X$ denotes the contribution of radionuclide $X$. The coefficients $\alpha_X$ are determined by solving the non-negative least squares (NNLS) problem
+\noindent where $\alpha_X$ denotes the contribution of radionuclide $X$. BCCS processing preserves such linearity, therefore, the calculated spectra after direct subtraction methods are
+
+$$
+S_i = \sum_X \alpha_XB_i^X.
+$$
+
+Similary we can deduce equation for ratio method
+
+$$
+R_i = \sum_X \alpha_X \left(\dfrac{B_i^X}{B_i^{\text{bkg}}}\right)
+$$
+
+
+The coefficients $\alpha_X$ are determined by solving the non-negative least squares (NNLS) problem
 
 \begin{equation}
-\min_{\alpha_X \ge 0} \left\| \textbf{S}^{\textrm{tot}} - \sum_{X} \alpha_X \textbf{S}^{X}\right\|^2 .
+\min_{\alpha_X \ge 0} \left\| \textbf{I}^{\textrm{tot}} - \sum_{X} \alpha_X \textbf{I}^{X}\right\|^2 .
 \end{equation}
 
 This approach yields physically meaningful, non-negative activity estimates, even under spectral overlap or low-count conditions. Applied to both BCCS and ratio-normalized spectra, it enables reliable decomposition of mixed radionuclide measurements.
@@ -146,16 +160,18 @@ This approach yields physically meaningful, non-negative activity estimates, eve
 
 %Up to three levels of \textbf{subheading} are permitted. Subheadings should not be numbered.
 
-\subsection*{Spectral Transformation}
+\subsection*{Spectral Transformation of Background and Reference Radionuclides Spectra}
 
-Raw spectra in Figure \ref{fig:bkgref} were acquired for background radiation and three reference sources (Am-241, Cs-137, and Co-60) using a large-volume plastic scintillation detector (30 cm × 180 cm × 5 cm). \ul{As expected These spectra exhibited broad Compton continua} with poor energy resolution, and most counts were concentrated in the low-channel region (channels < 50), reflecting the known limitations of plastic scintillator detectors.
+Raw spectra in Figure \ref{fig:bkgref} (a) were acquired for background radiation and three reference sources (Am-241, Co-60, and Cs-137) using a large-volume plastic scintillation detector (30 cm × 180 cm × 5 cm). Each of Co-60 and Cs-137 are measured at two different source-to-detector distance. As expected These spectra exhibited broad Compton continua with poor energy resolution, and most counts were concentrated in the low-channel region (channels < 50), reflecting the known limitations of plastic scintillator detectors. Co-60 and Cs-137 source has distict reigion which shows apparent difference to backgroud, while Am-241 shows slite difference at low-channel region. As expected, the difference to backgroud become smaller as the source to detector distance get larger. We select the spectra of shorter source-to-detector distance spectrum as reference data for further analysis.
 
-Application of the BCCS method transformed these raw spectra into smooth, monotonically decreasing cumulative distributions(Figure \ref{fig:channelsum}). This process reduced statistical fluctiations in high-channel region while preserving global spectral structure. The resulting enhancement of spectral contrast improved the separability of source and background spectra, particularly under low-count conditions.
+Application of the BCCS method transformed these raw spectra into smooth, monotonically decreasing backward cumulative distributions(Figure \ref{fig:bkgref} (b)). This process reduced statistical fluctiations in high-channel region while preserving global spectral structure. The resulting enhancement of spectral contrast improved the separability of source and background spectra, particularly under low-count conditions. BCCS transform conserves global spectral structure while reducing high-frequency noise. The resulting cumulative spectra show clear separation between radionuclides and background in the low-channel region. The inset shows the marginal difference between the background and reference radionuclieds spectra, especailly Am-241 spectra.
 
-\subsection*{Background Compensation and Source Separation}
+\subsection*{Background compensation}
 
-Two background compensation methods—direct subtraction and ratio-based normalization—were applied to the BCCS spectra. Direct subtraction effectively isolated net source signals by removing background contributions, producing interpretable spectra that retained source-specific decay patterns (Figure \ref{fig:csn}). This approach also remained valid for mixed-source measurements, where the resulting spectra preserved mixture-dependent features reflecting the relative contributions of each radionuclide (Figure \ref{fig:csbrs}).
-Ratio-based normalization (Figures \ref{fig:csbs} and \ref{fig:fi_CSBRS}) emphasized proportional deviations from background, revealing characteristic patterns even under low-count conditions. By suppressing global count variability, this method enhanced pattern recognition and maintained robustness when source signals only slightly exceeded background levels.
+Two background compensation methods—direct subtraction and ratio-based normalization—were applied to the BCCS spectra. Direct subtraction effectively isolated net source signals by removing background contributions, producing interpretable spectra that retained source-specific decay patterns (Figure \ref{fig:bkgref} (c)). This approach also remained valid for mixed-source measurements, where the resulting spectra preserved mixture-dependent features reflecting the relative contributions of each radionuclide (Figure \ref{fig:mixedbccs} (a)).
+Ratio-based normalization (Figure \ref{fig:bkgref} (d)) emphasized proportional deviations from background, revealing characteristic patterns even under low-count conditions. 
+
+By suppressing global count variability, this method enhanced pattern recognition and maintained robustness when source signals only slightly exceeded background levels.  
 
 \subsection*{Quantitative Analysis via Spectral unfolding}
 
@@ -163,7 +179,7 @@ The distinct spectral patterns obtained through background subtraction and ratio
 
 \subsection*{Demonstration in Food Radiation Screening}
 
-The proposed methods were evaluated in a realistic food radiation screening scenario involving Cs-137 and K-40. Measurements were conducted using a plastic scintillation detector with dimensions of 30 cm × 40 cm × 5 cm (W×D×H) covered by 5-cm-thick lead plates. The measuring period was 10 seconds for each spectrum. A reference source was used for Cs-137, and and 600 g of potassium chloride (KCl) was used as the K-40 source, with an activity of approximately 1000 Bq.
+The proposed methods were evaluated in a realistic food radiation screening scenario involving Cs-137 and K-40. Measurements were conducted using a plastic scintillation detector with dimensions of 30 cm $\times$ 40 cm $\times$ 5 cm ($W \times D \times H$) covered by 5-cm-thick lead plates. The measuring period was 10 seconds for each spectrum. A reference source was used for Cs-137, and and 600 g of potassium chloride (KCl) was used as the K-40 source, with an activity of approximately 1000 Bq.
 
 Figure \ref{fig:fi_spe} depicts measured spectra for K-40, Cs-137, and background radiation from a plastic scintillation detector. As shown in the figure, the counts in the measured spectra were approximately 10\% higher than that of background spectrum. It demonstrates that the detector system has sufficient sensitivity to distinguish low-level contamination from background radiation, when appropriate spectral processing methods are utilized. The following figures represent radio-based normalization (Figure \ref{fig:fi_csn}) and direct subtraction (Figure \ref{fig:fi_csbs}) results, verifying that proposed methods clearly separated the spectral features of Cs-137 and K-40. This implies that a large volume plastic scintillation detector has sufficient capability to discriminate anthropogenic contamination from naturally occurring potassium radiation in food products such as seaweed, bananas, or salt. These results validate that the proposed methods as a realistic and robust solution for food safety monitoring, with potential extension to security and environmental radiation screening applications.
 
@@ -224,18 +240,19 @@ M. Moon conceived the study and performed the experiments. J. So developed the a
 \centering
 % \includegraphics[width=\linewidth]{figure/fig01_bkgref.pdf}
 \includegraphics[width=\linewidth]{newfigures/figure1.pdf}
-\caption{Raw gamma-ray spectra acquired from background (black) and reference radionuclides—Am-241 (red), Co-60 (green), and Cs-137 (blue). Source-to-detector distances are indicated in the legend; Co-60 and Cs-137 were measured at two different distances to illustrate distance-dependent attenuation effects. All spectra were obtained under typical radiation portal monitoring conditions and exhibit broad Compton-dominated distributions, with most counts concentrated in the low-energy region (channels $\le$ 60). The inset highlights the marginal difference between the background and Am-241 spectra, visible only in the low-channel region.}
+\caption{(a) Raw gamma-ray spectra acquired from background (black) and reference radionuclides—Am-241 (red), Co-60 (green), and Cs-137 (blue). Source-to-detector distances are indicated in the legend; Co-60 and Cs-137 were measured at two different distances to illustrate distance-dependent attenuation effects. The shoter and longer source-to-detector distance are represented as solid and dashed lines. The inset highlights the marginal difference between the background and Am-241 spectra, visible only in the low-channel region. (b) BCCS-transformed spectra of background and reference radionuclides. The inset shows difference of BCCS spectrum at low channel region. (c) Background-subtracted BCCS spectra of single radionuclides obtained by subtracting the background BCCS spectrum from each source spectrum. (d) Ratio-normalized spectra of single radionuclide obtained by computing the channel-wise ratio of the source-plus-background spectrum to the background spectrum. }
+
 \label{fig:bkgref}
 \end{figure}
 
-\begin{figure}[ht]
-\centering
-% \includegraphics[width=\linewidth]{figure/fig02_channelsum.pdf}
-\includegraphics[width=\linewidth]{newfigures/figure2.pdf}
+% \begin{figure}[ht]
+% \centering
+% % \includegraphics[width=\linewidth]{figure/fig02_channelsum.pdf}
+% \includegraphics[width=\linewidth]{newfigures/figure2.pdf}
 
-\caption{(a) BCCS-transformed spectra of background (black) and reference radionuclides Am-241 (red), Co-60 (green) and Cs-137 (blue). Backward Cumulative Channel Sum (BCCS) enhances global spectral structure while reducing high-frequency noise. The resulting cumulative spectra show clear separation between radionuclides and background in the low-channel region. The inset shows the marginal difference between the background and reference radionuclieds spectra, especailly Am-241 spectra. (b) Background-subtracted BCCS spectra of Am-241 (red), Cs-137 (green), and Co-60 (blue), obtained by subtracting the background BCCS spectrum from each source spectrum. The subtraction process isolates source-specific spectral features, enhancing separability among the radionuclides.}
-\label{fig:channelsum}
-\end{figure}
+% \caption{(a) BCCS-transformed spectra of background (black) and reference radionuclides Am-241 (red), Co-60 (green) and Cs-137 (blue). Backward Cumulative Channel Sum (BCCS) enhances global spectral structure while reducing high-frequency noise. The resulting cumulative spectra show clear separation between radionuclides and background in the low-channel region. The inset shows the marginal difference between the background and reference radionuclieds spectra, especailly Am-241 spectra. (b) Background-subtracted BCCS spectra of Am-241 (red), Cs-137 (green), and Co-60 (blue), obtained by subtracting the background BCCS spectrum from each source spectrum. The subtraction process isolates source-specific spectral features, enhancing separability among the radionuclides.}
+% \label{fig:channelsum}
+% \end{figure}
 
 % \begin{figure}[ht]
 % \centering
@@ -248,9 +265,9 @@ M. Moon conceived the study and performed the experiments. J. So developed the a
 \begin{figure}[ht]
 \centering
 % \includegraphics[width=\linewidth]{figure/fig04_CSBS.pdf}
-\includegraphics[width=\linewidth]{newfigures/figure3.pdf}
-\caption{Background-subtracted spectra of nine mixed radionuclide configurations. The mix composition and source-to-detector distances are indicated in the legend. The first five configurations share the same source-to-detector distance, whereas the remaining four were measured at different distances. The cumulative profiles retain mixture-specific spectral features, enabling quantitative analysis through linear spectral unfolding.}
-\label{fig:csbrs}
+\includegraphics[width=\linewidth]{newfigures/figure2.pdf}
+\caption{Background-subtracted BCCS spectra(a) and Background-normalized BCCS ratio(b) of nine mixed radionuclide configurations. The mix composition and source-to-detector distances are indicated in the legend. The first five configurations share the same source-to-detector distance, whereas the remaining four were measured at different distances. The cumulative profiles retain mixture-specific spectral features, enabling quantitative analysis through linear spectral unfolding.}
+\label{fig:mixedbccs}
 \end{figure}
 
 \newpage
