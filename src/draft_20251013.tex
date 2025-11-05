@@ -119,7 +119,7 @@ This operation yields an interpretable estimate of the source contribution while
 Ratio-based normalization emphasizes relative spectral deviations by dividing the source BCCS spectrum by the background spectrum. Therefore, the normalized spectrum $\mathbf{R}=[R_1,\ldots,\,R_N]$ is defineds as
 
 \begin{equation}
-R_i = \left(\dfrac{B_i}{B^{\textrm{bkg}}_i}\right) -1.
+R_i = \left(\dfrac{B_i}{B^{\textrm{bkg}}_i}\right) -1=\dfrac{S_i}{B_i^{\text{bkg}}}.
 \end{equation}
 
 This produces a dimensionless representation that highlights local contrasts while suppressing global count variability, making it particularly effective when source signals are only slightly above background levels.
@@ -129,29 +129,35 @@ Direct subtraction provides an absolute estimate of source contributions, while 
 
 \subsection*{Radionuclide Activity Estimation via Linear Spectral Unfolding}
 
-Assume that we already have referece spectra for the set $X$ of radionuclides and would like to identify radioactive source from measure spectrum. For quantitative analysis, measured raw pulse-height spectrum can be modeled as a linear combination of reference spectra and background with positive coefficients :
+Assume that we already have referece spectra $\textbf{C}^X$ and its background spectra $\textbf{C}^{X,\text{bkg}}$ for the set $X$ of radionuclides and would like to identify radioactive source from measure spectrum. For quantitative analysis, measured raw pulse-height spectrum can be modeled as a linear combination of reference spectra and background with positive coefficients :
 
 \begin{equation}
-\textbf{C} \approx \sum_{X} \alpha_X \textbf{C}^{X} + \bf{C}^{\textrm{bkg}}
+\textbf{C}^M \approx \sum_{X} \alpha_X (\textbf{C}^{X} - \textbf{C}^{X,\text{bkg}}) + \textbf{C}^{M,\textrm{bkg}}
 \end{equation}
 
 \noindent where $\alpha_X$ denotes the contribution of radionuclide $X$. BCCS processing preserves such linearity, therefore, the calculated spectra after direct subtraction methods are
 
-$$
-S_i = \sum_X \alpha_XB_i^X.
-$$
+\begin{equation}
+S_i^M = \sum_X \alpha_X S_i^X.\label{eq:submethod}
+\end{equation}
 
-Similary we can deduce equation for ratio method
+Similary we can deduce equation for ratio method such that 
 
-$$
-R_i = \sum_X \alpha_X \left(\dfrac{B_i^X}{B_i^{\text{bkg}}}\right)
-$$
+\begin{equation*}
+R_i^M = \sum_X \alpha_X \left(\dfrac{S_i^X}{B_i^{M,\text{bkg}}}\right).
+\end{equation*}
 
-
-The coefficients $\alpha_X$ are determined by solving the non-negative least squares (NNLS) problem
+If it can be assumed that $B_i^{M,\text{bkg}}= B_i^{X,\text{bkg}}$, 
 
 \begin{equation}
-\min_{\alpha_X \ge 0} \left\| \textbf{I}^{\textrm{tot}} - \sum_{X} \alpha_X \textbf{I}^{X}\right\|^2 .
+R_i^M = \sum_X \alpha_X \left(\dfrac{S_i^X}{B_i^{X,\text{bkg}}}\right) = \sum_X \alpha_X R_i^X.\label{eq:ratiomethod}
+\end{equation}
+
+
+For both cases of (\ref{eq:submethod}) and (\ref{eq:ratiomethod}), the coefficients $\alpha_X$ are determined by solving the non-negative least squares (NNLS) problem
+
+\begin{equation}
+\min_{\alpha_X \ge 0} \left\| \textbf{I}^{\text{M}} - \sum_{X} \alpha_X \textbf{I}^{X}\right\|^2 .
 \end{equation}
 
 This approach yields physically meaningful, non-negative activity estimates, even under spectral overlap or low-count conditions. Applied to both BCCS and ratio-normalized spectra, it enables reliable decomposition of mixed radionuclide measurements.
@@ -162,16 +168,20 @@ This approach yields physically meaningful, non-negative activity estimates, eve
 
 \subsection*{Spectral Transformation of Background and Reference Radionuclides Spectra}
 
-Raw spectra in Figure \ref{fig:bkgref} (a) were acquired for background radiation and three reference sources (Am-241, Co-60, and Cs-137) using a large-volume plastic scintillation detector (30 cm × 180 cm × 5 cm). Each of Co-60 and Cs-137 are measured at two different source-to-detector distance. As expected These spectra exhibited broad Compton continua with poor energy resolution, and most counts were concentrated in the low-channel region (channels < 50), reflecting the known limitations of plastic scintillator detectors. Co-60 and Cs-137 source has distict reigion which shows apparent difference to backgroud, while Am-241 shows slite difference at low-channel region. As expected, the difference to backgroud become smaller as the source to detector distance get larger. We select the spectra of shorter source-to-detector distance spectrum as reference data for further analysis.
+Raw spectra in Figure \ref{fig:bkgref} (a) were acquired for background radiation and three reference sources (Am-241, Co-60, and Cs-137) using a large-volume plastic scintillation detector (30 cm × 180 cm × 5 cm). Each of Co-60 and Cs-137 are measured at two different source-to-detector distance. As expected These spectra exhibited broad Compton continua with poor energy resolution, and most counts were concentrated in the low-channel region (channels < 100), reflecting the known limitations of plastic scintillator detectors. Co-60 and Cs-137 source has distict reigion which shows apparent difference to backgroud, while Am-241 shows slight difference at very low channel region(inset in Figure \ref{fig:bkgref} (a)). As expected, the difference to backgroud become smaller as the source to detector distance get larger. We select the spectra of shorter source-to-detector distance spectrum as reference data for further analysis.
 
-Application of the BCCS method transformed these raw spectra into smooth, monotonically decreasing backward cumulative distributions(Figure \ref{fig:bkgref} (b)). This process reduced statistical fluctiations in high-channel region while preserving global spectral structure. The resulting enhancement of spectral contrast improved the separability of source and background spectra, particularly under low-count conditions. BCCS transform conserves global spectral structure while reducing high-frequency noise. The resulting cumulative spectra show clear separation between radionuclides and background in the low-channel region. The inset shows the marginal difference between the background and reference radionuclieds spectra, especailly Am-241 spectra.
+Application of the BCCS method transformed these raw spectra into smooth, monotonically decreasing backward cumulative distributions(Figure \ref{fig:bkgref} (b)). This process reduced statistical fluctiations in high-channel region while preserving global spectral structure. The resulting enhancement of spectral contrast improved the separability of source and background spectra, particularly under low-count conditions. BCCS transform conserves global spectral structure while reducing high-frequency noise. The resulting cumulative spectra show clear separation between radionuclides and background in the low-channel region.
 
 \subsection*{Background compensation}
 
 Two background compensation methods—direct subtraction and ratio-based normalization—were applied to the BCCS spectra. Direct subtraction effectively isolated net source signals by removing background contributions, producing interpretable spectra that retained source-specific decay patterns (Figure \ref{fig:bkgref} (c)). This approach also remained valid for mixed-source measurements, where the resulting spectra preserved mixture-dependent features reflecting the relative contributions of each radionuclide (Figure \ref{fig:mixedbccs} (a)).
-Ratio-based normalization (Figure \ref{fig:bkgref} (d)) emphasized proportional deviations from background, revealing characteristic patterns even under low-count conditions. 
+Ratio-based normalization (Figure \ref{fig:bkgref} (d)) emphasized proportional deviations from background, revealing characteristic patterns even under low-count conditions. By suppressing global count variability, this method enhanced pattern recognition and maintained robustness when source signals only slightly exceeded background levels.  
 
-By suppressing global count variability, this method enhanced pattern recognition and maintained robustness when source signals only slightly exceeded background levels.  
+
+\subsection*{Radioisotope identification}
+
+Figure \ref{fig:mixedbccs} shows background subtracted ($a$) and background normalized ($b$) BCCS spectrum for mixed radioisotope samples with varius configuration of radioisotopes and source to detector distance. 
+
 
 \subsection*{Quantitative Analysis via Spectral unfolding}
 
