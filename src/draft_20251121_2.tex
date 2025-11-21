@@ -72,6 +72,7 @@ Accurate identification of radionuclide using plastic scintillation detectors is
 
 \section*{Introduction}
 
+\subsection*{previous}
 Radiation portal monitors (RPMs) deployed at national borders play an important role in preventing the smuggling of nuclear and radioactive materials. These systems must detect weak radiation signals from high background radiation counts, requiring high detection efficiency. \ul{To enhance gamma-ray detection efficiency, two principal approaches are typically considered: employing high atomic number (high-Z) materials to increase the interaction probability, or increasing the detector volume to improve geometric efficiency. In practice, the latter approach is often implemented using plastic scintillators, which are widely utilized in radiation portal monitors (RPMs) due to their affordability and ease of manufacturing into large-scale detectors.}\cite{Sicilliano2005Comparision, Bertrand2014Current}
 
 Plastic scintillators have poor energy resolution and absence of full energy peaks in their spectra. Therefore, conventional spectroscopic analysis cannot be applied to the plastic. Furthermore, most of counts are concentrated in the low-energy channels\cite{Sicilliano2005Comparision}, making it difficult to distinguish radionuclides signals from background when the signal intensity is slightly higher than background. 
@@ -83,6 +84,24 @@ Building on these advances, our previous work introduced artificial intelligence
 In practical settings, additional challenges arise. Cargo containers often induce baseline suppression—also known as the shadow effect—where both background and source counts are significantly reduced. Observational studies report count losses exceeding 30\%, depending on vehicle geometry and panel position\cite{LoPresti2006BaselineSuppression}. Such suppression degrades gross-count or peak-based methods and reduces identification confidence, especially in low-count scenarios. 
 
 This paper presents a backward cumulative channel sum (BCCS) to address these limitations. BCCS transforms raw plastic scintillator spectra into \ul{backward} cumulative form, emphasizing global spectral structure while reducing high-frequency uncertainties. Unlike conventional background subtraction or AI-based methods that require extensive training or calibration, BCCS is computationally lightweight, interpretable, and well suited for real-time embedded systems. Its performance was evaluated through experiments with single and multiple radionuclides, and it was verified that the BCCS enables accurate and stable nuclide identification—even under low-count and baseline-suppressed conditions—without relying on peak-based features or machine learning. This work provides a practical, scalable, and calibration-free solution for radionuclide identification in radiation portal monitoring systems using plastic scintillators.
+
+\subsection*{current}
+Radiation portal monitors (RPMs) are essential instruments deployed at border crossings, transportation hubs, industrial sites, and nuclear facilities to detect and interdict illicit movement of radioactive materials. Their primary role is to provide rapid, reliable screening of vehicles and cargo while maintaining high throughput under diverse environmental and operational conditions. To meet these requirements, most field-deployed RPMs employ large-volume plastic scintillation detectors, which offer several practical advantages such as mechanical robustness, low cost, fast response time, and high detection efficiency for gamma rays.\cite{Sicilliano2005Comparision, Bertrand2014Current}
+
+However, despite these benefits, plastic scintillators suffer from intrinsically poor energy resolution. The measured gamma-ray spectra are dominated by broad Compton continua, and characteristic photopeaks are either weak or absent, making conventional spectroscopy-based radionuclide identification extremely challenging. This limitation becomes particularly severe in scenarios where the source-to-detector distance is large, the radioactive source is weakly emitting, or background radiation exhibits substantial statistical fluctuations. Under such low net-count conditions, the spectral differences between radionuclides can be easily obscured, reducing the reliability of classification and quantitative analysis.
+
+To address these challenges, numerous signal-processing approaches for plastic-scintillator spectra have been proposed in the literature. Traditional methods include smoothing filters, derivative-based feature extraction, and principal component analysis (PCA). More recently, machine-learning and deep-learning models have demonstrated improved performance in source identification tasks. While these techniques can enhance classification accuracy, they face several practical limitations when applied to RPMs. Many require extensive training datasets collected under conditions that closely match real deployment environments, which is often impractical. Others exhibit high sensitivity to noise or variations in background radiation, limiting their robustness. Moreover, computationally intensive algorithms may not be suitable for real-time operation in embedded RPM systems.
+
+A key challenge in practical RPM applications is the need for reliable preprocessing and background compensation methods that do not rely on high-resolution detectors or large training datasets. Motivated by this need, we propose the Backward Cumulative Channel Sum (BCCS) method as an effective spectral transformation for enhancing the discrimination between radionuclides using plastic scintillators. The BCCS transform accumulates counts from higher to lower channels, producing a smooth, monotonically decreasing cumulative representation. This transformation suppresses high-channel statistical fluctuations while preserving the essential shape characteristics that distinguish different radionuclides. As a result, subtle spectral differences that are difficult to observe in raw spectra become more evident even under low-count or noisy conditions.
+
+To further isolate source-dependent signatures from background contributions, we implement two background-compensation techniques: direct subtraction and background (ratio) normalization. Direct subtraction provides an absolute estimate of source intensity by removing the background cumulative spectrum, while background normalization emphasizes relative deviations by scaling intensities with respect to background levels. These complementary methods offer flexible perspectives—absolute and relative—that are advantageous under different measurement conditions. Importantly, both approaches preserve the linearity of the spectral representation after BCCS transformation, allowing the processed spectra to remain compatible with linear or nonlinear spectral-unfolding techniques.
+
+We demonstrate that the transformed and background-compensated spectra can be quantitatively analyzed using nonlinear least-squares spectral unfolding, enabling estimation of radionuclide contributions in mixed-source measurements. This is particularly relevant for scenarios in which multiple radionuclides contribute to the measured spectrum with varying relative intensities due to different activities or source-to-detector distances. By applying unfolding to experimental data obtained from Am-241, Co-60, and Cs-137—including a range of mixed-source configurations—we show that the proposed method enables both qualitative identification and quantitative activity estimation using only low-resolution plastic scintillators.
+
+The findings in this work indicate that the BCCS-based preprocessing framework can significantly enhance RPM capabilities without requiring hardware modifications or high-resolution detectors. The methods presented here are simple, computationally efficient, and robust against statistical noise, making them suitable for embedded real-time processing in field-deployed RPM systems. Furthermore, the approach generalizes naturally to other low-resolution detection environments where signal extraction under high background is essential.
+
+The remainder of this paper is organized as follows. Section 2 describes the experimental setup, reference-source measurements, and the proposed preprocessing and background-compensation methods. Section 3 presents the spectral transformation results for reference and mixed-source configurations and demonstrates activity estimation through nonlinear spectral unfolding. Section 4 discusses the implications of the findings in the context of RPM applications, highlights limitations, and outlines potential extensions. Section 5 concludes with a summary of the main contributions.
+
 
 \section*{Methods}
 
@@ -187,23 +206,13 @@ The ratio-based normalization method (Figure \ref{fig:bkgref} (d)) emphasized pr
 
 Together, these two approaches provide complementary perspectives: direct subtraction captures absolute source contributions, while ratio normalization highlights relative contrasts. Their combined use supports robust spectral interpretation across a wide range of measurement scenarios, including low-count and mixed-source environments.
 
-\subsection*{ Spectral unfolding and Radioisotope identification}
+\subsection*{Spectral unfolding and Radioisotope identification}
 
-Figure \ref{fig:mixedbccs} (a) presents the mixed-source spectra obtained using the background-subtracted BCCS method, while Figure \ref{fig:mixedbccs} (b) shows the corresponding results produced by background normalization. A comparison of the two approaches indicates that the background-normalized spectra provide a more intuitive representation of source presence, particularly when the overall radiation intensity is relatively high or when the constituent radionuclides exhibit Compton features in different channel regions. In such cases, the ratio-normalized spectra highlight these differences more distinctly, enabling mixed-source compositions to be recognized more readily. This enhanced visual contrast also facilitates subsequent quantitative decomposition using linear spectral unfolding.
+Figure \ref{fig:mixedbccs}(a) presents the mixed-source spectra obtained using the background-subtracted BCCS method, while Figure \ref{fig:mixedbccs}(b) shows the corresponding results produced by background normalization. A comparison of the two approaches indicates that the background-normalized spectra provide a more intuitive visual representation of source presence, particularly when the overall radiation intensity is relatively high or when the constituent radionuclides contain Compton features in different channel regions. In such cases, the ratio-normalized spectra accentuate these differences more distinctly, enabling mixed-source compositions to be recognized more readily. This enhanced visual contrast also facilitates subsequent quantitative decomposition through linear spectral unfolding.
 
-Applying nonlinear least-squares fitting to Eq. \eqref{eqn:llns} enables estimation of the contribution of each radionuclide for both background-compensation methods. Due to the low net counts and the absence of distinctive spectral features in the high-channel region, only the low-channel range ($0\le i \le 100$) is used for the fitting. Figures \ref{fig:fi_fitbgsub} and \ref{fig:fi_fitbgrto} present the fitting results for the background-subtracted and background-normalized spectra. respectively, each showing the estimated contributions of the reference radionuclides. Figure \ref{fig:fi_fitcontrib} summarizes the estimated contributions as a function of source-to-detector distance. The horizontal dashed lines indicate the estimated contributions obtained from samples that do not contain the corresponding radionuclide.
+Applying nonlinear least-squares fitting to Eq. \ref{eqn:llns} enables estimation of the contribution of each radionuclide for both background-compensation methods. Due to the low net counts and the absence of distinctive spectral features in the high-channel region, only the low-channel range ($0 \le i \le 100$) is used for the fitting. Figures \ref{fig:fi_fitbgsub} and \ref{fig:fi_fitbgrto} present the fitting results for the background-subtracted and background-normalized spectra, respectively, each illustrating the estimated contributions of the reference radionuclides.
 
- 
-
-\subsection*{Quantitative Analysis via}
-
-The distinct spectral patterns obtained through background subtraction and ratio normalization provided a stable basis for linear spectral unfolding. By solving NNLS problems, the mixed-source spectra were decomposed into their constituent radionuclide contributions. This quantitative analysis showed that the proposed methods can estimate activities of individual nuclides without relying on energy resolution or the existence of full energy peaks in the spectra, addressing a critical limitation of plastic scintillation detectors.
-
-% \subsection*{Demonstration in Food Radiation Screening}
-
-% The proposed methods were evaluated in a realistic food radiation screening scenario involving Cs-137 and K-40. Measurements were conducted using a plastic scintillation detector with dimensions of 30 cm $\times$ 40 cm $\times$ 5 cm ($W \times D \times H$) covered by 5-cm-thick lead plates. The measuring period was 10 seconds for each spectrum. A reference source was used for Cs-137, and and 600 g of potassium chloride (KCl) was used as the K-40 source, with an activity of approximately 1000 Bq.
-
-% Figure \ref{fig:fi_spe} depicts measured spectra for K-40, Cs-137, and background radiation from a plastic scintillation detector. As shown in the figure, the counts in the measured spectra were approximately 10\% higher than that of background spectrum. It demonstrates that the detector system has sufficient sensitivity to distinguish low-level contamination from background radiation, when appropriate spectral processing methods are utilized. The following figures represent radio-based normalization (Figure \ref{fig:fi_csn}) and direct subtraction (Figure \ref{fig:fi_csbs}) results, verifying that proposed methods clearly separated the spectral features of Cs-137 and K-40. This implies that a large volume plastic scintillation detector has sufficient capability to discriminate anthropogenic contamination from naturally occurring potassium radiation in food products such as seaweed, bananas, or salt. These results validate that the proposed methods as a realistic and robust solution for food safety monitoring, with potential extension to security and environmental radiation screening applications.
+Figure \ref{fig:fi_fitcontrib} summarizes the estimated contributions as a function of source-to-detector distance. The horizontal dashed lines indicate the mean contributions obtained from samples that do not contain the corresponding radionuclide. The monotonic decrease in contribution with increasing distance aligns with general expectations based on geometric attenuation. As observed for Co-60 and Cs-137, when the activity of a radionuclide becomes sufficiently low, its contribution can no longer be reliably determined using this method. These results demonstrate that the proposed data-processing techniques enable effective radionuclide identification and quantitative activity estimation for plastic scintillation detectors.
 
 \section*{Discussion}
 
@@ -211,13 +220,9 @@ This study investigated spectral data processing methods to improve radionuclide
 
 The BCCS method demonstrated its effectiveness in reducing high-frequency statistical uncertainties while enhancing overall spectral contrast, enabling more reliable analysis of low-resolution spectral data. Direct subtraction provided interpretable net spectra by isolating source contributions from background, while ratio-based normalization emphasized relative spectral deviations, improving pattern recognition under low-count or variable background conditions.
 
-Both methods retained distinct spectral features in mixed-source scenarios, supporting quantitative analysis through linear spectral unfolding. The NNLS method enabled the estimation of individual radionuclide contributions without relying on energy peak resolution, one of the limitations of plastic scintillation detectors.
+Both methods retained distinct spectral features in mixed-source scenarios, supporting quantitative analysis through linear spectral unfolding. The NNLS method enabled the quatitative estimation of individual radionuclide contributions without relying on energy peak resolution, one of the limitations of plastic scintillation detectors.
 
-Simulation validation showed good agreement with experimental measurements, with calculated-to-measured ratios ranging from 0.77 to 0.97 across various conditions. This confirmed the reliability of the computational model for system performance prediction and optimization.
-
-Importantly, the practical demonstration using Cs-137 and K-40 in a food radiation screening setup highlighted the system's sensitivity to subtle differences—approximately 10\% above background levels—with less than 5\% relative statistical uncertainty based on repeated measurements. This demonstrates its reliability for detecting weak radioactive contamination in food products.
-
-Beyond food safety, this capability extends to broader applications such as border security, cargo inspection, scrap metal recycling, and environmental radiation monitoring, where differentiating between anthropogenic and naturally occurring radiation is critical.
+This capability extends to broader applications such as border security, cargo inspection, scrap metal recycling, and environmental radiation monitoring, where differentiating between anthropogenic and naturally occurring radiation is critical.
 
 In summary, the complementary strengths of direct subtraction and ratio-based normalization suggest that a hybrid approach may offer optimal performance across diverse operational scenarios. Future work will focus on integrating these methods into field-deployable RPM systems, validating performance in dynamic environments, and extending the framework to incorporate real-time background modeling and adaptive detection algorithms.
 
@@ -231,9 +236,6 @@ This study presented a robust and efficient methodology for radionuclide identif
 
 • Quantitative Analysis Capability: Linear spectral unfolding with NNLS provided physically meaningful estimates of mixed radionuclide contributions.
 
-• Model Validation: Simulation results showed good agreement with experimental data, supporting predictive system design.
-
-• Practical Demonstration: The system successfully detected low-level Cs-137 and K-40 contamination in food, with less than 5\% statistical uncertainty, confirming its applicability to real-world scenarios such as food safety monitoring, border control, cargo screening, and scrap metal recycling.
 
 These results confirm that the proposed methods offer a scalable and interpretable radionuclide identification solution for radiation detectors with poor energy resolution. Future research will aim to validate these techniques in various operational scenarios and enhance their integration into next-generation radiation monitors.
 
@@ -294,44 +296,6 @@ M. Moon conceived the study and performed the experiments. J. So developed the a
 
 \newpage
 
-% \begin{figure}[ht]
-% \centering
-% \includegraphics[width=\linewidth]{figure/fig05_CSRN.pdf}
-% \caption{ Ratio-normalized spectra of single radionuclide—Am-241 (red), Cs-137 (green), and Co-60 (blue)—obtained by computing the channel-wise ratio of the source-plus-background spectrum to the background spectrum. The method emphasizes relative spectral deviations, improving contrast and separability under low-count conditions.}
-% \label{fig:csbs}
-% \end{figure}
-
-\newpage
-
-% \begin{figure}[ht]
-% \centering
-% \includegraphics[width=\linewidth]{figure/fig06_CSBRS.pdf}
-% \caption{Ratio-normalized spectra of four mixed radionuclides configurations: Mixed-1 (Cs-137 \& Co-60, red), Mixed-2 (Am-241 \& Cs-137, green), Mixed-3 (Am-241 \& Co-60, blue), and Mixed-4 (Am-241, Cs-137, \& Co-60, cyan). Ratio-based normalization reveals mixture-specific relative deviations, enabling pattern-based classification and spectral unfolding.}
-% \label{fig:fi_CSBRS}
-% \end{figure}
-
-% \begin{figure}[ht]
-% \centering
-% \includegraphics[width=\linewidth]{figure/fig07_FI_SPE.pdf}
-% \caption{Gamma-ray spectra measured for background (black), Cs-137 (1 kBq, red), K-40 (1 kBq, green), and their combination (blue) using a food radiation screening system. The system successfully distinguishes Cs-137 contamination in food products from the naturally occurring K-40 radiation. Notably, the measured count rates were 428 cps for background, 471 cps for Cs-137, 478 cps for K-40, and 523 cps for the combined sample, representing only about a 10\% increase over background levels. Despite this small difference, repeated measurements showed a statistical uncertainty of less than 5\%, confirming the system's capability to reliably detect such weak contamination signals.}
-% \label{fig:fi_spe}
-% \end{figure}
-
-% \begin{figure}[ht]
-% \centering
-% \includegraphics[width=\linewidth]{figure/fig08_FI_CSN.pdf}
-% \caption{Ratio-based background normalization applied to the measured spectra. This method highlights the spectral differences between Cs-137 and K-40, demonstrating that the food screening system is capable of distinguishing anthropogenic Cs-137 contamination from naturally present K-40 radiation commonly found in foodstuffs such as bananas, seaweed, and salt.}
-% \label{fig:fi_csn}
-% \end{figure}
-
-% \begin{figure}[ht]
-% \centering
-% \includegraphics[width=\linewidth]{figure/fig09_FI_CSRN.pdf}
-% \caption{Background subtraction normalization applied to the measured spectra. After subtracting the background contribution, the net gamma-ray signatures of Cs-137 and K-40 are clearly isolated, showing that the system can differentiate these radionuiclides even under low count conditions. This capability is crucial for food safety monitoring where both artificial and natural radionuclides coexist.}
-% \label{fig:fi_csbs}
-% \end{figure}
-
-
 
 \begin{figure}[ht]
 \centering
@@ -350,7 +314,7 @@ M. Moon conceived the study and performed the experiments. J. So developed the a
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\linewidth]{newfigures/fit_contributions.pdf}
-\caption{Contributions.}
+\caption{Estimated contribution of radioisotopopes for the sample to detector distance. The horizontal dashed lines indicate the estimated contributions obtained from samples that do not contain the corresponding radionuclide.}
 \label{fig:fi_fitcontrib}
 \end{figure}
 

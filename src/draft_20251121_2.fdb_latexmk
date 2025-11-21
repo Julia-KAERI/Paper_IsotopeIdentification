@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex draft_20251119"] 1763698920 "draft_20251119.aux" "draft_20251119.bbl" "draft_20251119" 1763699863 0
+["bibtex draft_20251121_2"] 1763723143 "draft_20251121_2.aux" "draft_20251121_2.bbl" "draft_20251121_2" 1763723145 0
   "./biblio.bib" 1760329622 9716 97d5e4a0fffd3fd535b3464b845aff4d ""
   "./naturemag-doi.bst" 1760329622 36153 a59af0557a0f0c0e857533e984f737bb ""
-  "draft_20251119.aux" 1763699862 6339 f52850c0e923fce156d48e59343da0de "pdflatex"
+  "draft_20251121_2.aux" 1763723145 6804 5d410acbe465019aed6f5b52868d0466 "pdflatex"
   (generated)
-  "draft_20251119.bbl"
-  "draft_20251119.blg"
+  "draft_20251121_2.bbl"
+  "draft_20251121_2.blg"
   (rewritten before read)
-["pdflatex"] 1763699861 "/Users/jiyong/Documents/Papers/IsotpoeIdentification/src/draft_20251119.tex" "draft_20251119.pdf" "draft_20251119" 1763699863 0
-  "/Users/jiyong/Documents/Papers/IsotpoeIdentification/src/draft_20251119.tex" 1763699860 33917 cd3a7ad9ceaf3a6bec565be69ef4108f ""
+["pdflatex"] 1763723143 "/Users/jiyong/Documents/Papers/IsotpoeIdentification/src/draft_20251121_2.tex" "draft_20251121_2.pdf" "draft_20251121_2" 1763723145 0
+  "/Users/jiyong/Documents/Papers/IsotpoeIdentification/src/draft_20251121_2.tex" 1763723141 34270 41c7eea04bb4ff2ac32945f813a42102 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1136768653 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
@@ -172,22 +172,22 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1674016646 4623355 58034c3eb7ddf7eacc726a83d01e26d2 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1672789015 7874810 bfa33868b1ee0a17ddb982f07460daa5 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "draft_20251119.aux" 1763699862 6339 f52850c0e923fce156d48e59343da0de "pdflatex"
-  "draft_20251119.bbl" 1763698920 6954 96002a5460399f78a5699949f84ec707 "bibtex draft_20251119"
-  "draft_20251119.out" 1763699862 96 ac5acb24c46f435285efca46951909cd "pdflatex"
-  "draft_20251119.tex" 1763699860 33917 cd3a7ad9ceaf3a6bec565be69ef4108f ""
+  "draft_20251121_2.aux" 1763723145 6804 5d410acbe465019aed6f5b52868d0466 "pdflatex"
+  "draft_20251121_2.bbl" 1763723143 6954 96002a5460399f78a5699949f84ec707 "bibtex draft_20251121_2"
+  "draft_20251121_2.out" 1763723145 96 ac5acb24c46f435285efca46951909cd "pdflatex"
+  "draft_20251121_2.tex" 1763723141 34270 41c7eea04bb4ff2ac32945f813a42102 ""
   "figure/fit_BGSub.pdf" 1760329622 241941 678b6926f539fd33523058b489adb017 ""
   "jabbrv-ltwa-all.ldf" 1760329622 49107 ef89484545be005458b7162f37634c99 ""
   "jabbrv-ltwa-en.ldf" 1760329622 268657 c239d07b7cc89e14f920c5fc8ed8d12e ""
   "jabbrv.sty" 1760329622 15480 2106da179daf9d5a102407956ba23e0c ""
-  "newfigures/figure1.pdf" 1763683468 197914 ca4350ecbf913c5173f16042a1477f21 ""
-  "newfigures/figure2.pdf" 1763683472 184787 25fc2cc003eb33dd36b5e29c3e04ac9d ""
+  "newfigures/figure1.pdf" 1763718685 197914 7c040364a77fb6e9af327547ebeae534 ""
+  "newfigures/figure2.pdf" 1763718688 184787 8ab7de6b54c23ba909697a5602b2232a ""
   "newfigures/fit_BGRto.pdf" 1763686016 234650 db3df8fa1dddb38a860d956bbfdca3c7 ""
-  "newfigures/fit_contributions.pdf" 1763688165 121877 f42943374c4b6562d6613e1aabee80ea ""
+  "newfigures/fit_contributions.pdf" 1763718698 121877 9f9550399fe4f8b7449ad1bce03545b2 ""
   "wlscirep.cls" 1760329622 5824 2bca8e85f20d8d313a7747a78c480ad7 ""
   (generated)
-  "draft_20251119.aux"
-  "draft_20251119.log"
-  "draft_20251119.out"
-  "draft_20251119.pdf"
+  "draft_20251121_2.aux"
+  "draft_20251121_2.log"
+  "draft_20251121_2.out"
+  "draft_20251121_2.pdf"
   (rewritten before read)

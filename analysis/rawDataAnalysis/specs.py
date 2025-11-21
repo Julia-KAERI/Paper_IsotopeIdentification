@@ -346,3 +346,18 @@ def bccsfit(params, spectrum, refspecs, i0=3, plot=False):
         plt.title("Spectrum Fit")
         plt.show()
     return fr1
+
+
+def sag(d):
+    """
+    calculate solid angle for 30 cm x 180 cm size detector with sample-to detector distance
+    
+    """
+
+    xr = np.arange(-15, 15.05, 0.1)
+    yr = np.arange(-90, 90.05, 0.1)
+    dx = xr[1]-xr[0]
+    dy = yr[1]-yr[0]
+    X, Y = np.meshgrid(xr, yr)
+    Rd, Rxy = np.sqrt(X**2+Y**2+d**2), np.sqrt(X**2+Y**2)
+    return np.sum(dx*dy*Rxy/Rd**3)
