@@ -1,0 +1,762 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Refsum",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "Siclliano2005Comparison.html",
+    "href": "Siclliano2005Comparison.html",
+    "title": "1  Siciliano et al. (2005)",
+    "section": "",
+    "text": "1.1 연구 목적\nCite : Siciliano et al. (2005)\n본 논문은 방사선 포털 모니터(RPM)에서 널리 쓰이는 PVT(Plastic Scintillator) 와 NaI(Tl) 검출기를 비교하여, 국경 검문소에서 핵물질 탐지 성능을 평가하는 데 목적이 있다.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Siciliano et al. (2005)</span>"
+    ]
+  },
+  {
+    "objectID": "Siclliano2005Comparison.html#두-검출기의-특성-비교",
+    "href": "Siclliano2005Comparison.html#두-검출기의-특성-비교",
+    "title": "1  Siciliano et al. (2005)",
+    "section": "1.2 두 검출기의 특성 비교",
+    "text": "1.2 두 검출기의 특성 비교\n\n\n\n\n\n\n\nNaI(Tl)\nPVT(or plastic)\n\n\n\n\n- 고밀도, 고원자번호 →  높은 intrinsic efficiency 뛰어난 에너지 분해능, photopeak 명확\n- 저밀도 → intrinsic 효율은 낮지만 대형 제작 가능 → absolute efficiency는 NaI보다 커질 수 있음\n\n\n- 동위원소 식별 가능\n- 에너지 정보는 제한적(Compton continuum)\n\n\n- 고가, 온도·충격에 취약\n- 저가, 내환경성 우수",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Siciliano et al. (2005)</span>"
+    ]
+  },
+  {
+    "objectID": "Siclliano2005Comparison.html#실험-스펙트럼-비교",
+    "href": "Siclliano2005Comparison.html#실험-스펙트럼-비교",
+    "title": "1  Siciliano et al. (2005)",
+    "section": "1.3 실험 스펙트럼 비교",
+    "text": "1.3 실험 스펙트럼 비교\n\nNaI(Tl): 명확한 photopeak\n\nPVT: 저에너지에 몰린 Compton 분포\n\n일부 에너지 창(Window)을 활용한 분석 가능",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Siciliano et al. (2005)</span>"
+    ]
+  },
+  {
+    "objectID": "Siclliano2005Comparison.html#mcnp-시뮬레이션-결과",
+    "href": "Siclliano2005Comparison.html#mcnp-시뮬레이션-결과",
+    "title": "1  Siciliano et al. (2005)",
+    "section": "1.4 MCNP 시뮬레이션 결과",
+    "text": "1.4 MCNP 시뮬레이션 결과\n\nNaI(Tl) intrinsic efficiency: 200 keV 근처에서 90%\nPVT intrinsic efficiency: 100 keV 근처 40–50%\n절대 효율은 PVT가 더 높음(Fig. 5)\n최적 두께:\n\nNaI(Tl): 약 1 cm\nPVT: 10–20 cm",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Siciliano et al. (2005)</span>"
+    ]
+  },
+  {
+    "objectID": "Siclliano2005Comparison.html#cargo-감쇠-분석",
+    "href": "Siclliano2005Comparison.html#cargo-감쇠-분석",
+    "title": "1  Siciliano et al. (2005)",
+    "section": "1.5 Cargo 감쇠 분석",
+    "text": "1.5 Cargo 감쇠 분석\n\n100 keV 이하: 감쇠 105 배\n1.5 MeV 이상: 감쇠 10 배\nPVT: 원래 스펙트럼이 featureless → cargo 영향 상대적으로 덜 치명적\nBare / Cargo 모두 PVT:NaI 비는 5:1",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Siciliano et al. (2005)</span>"
+    ]
+  },
+  {
+    "objectID": "Siclliano2005Comparison.html#결론-요약",
+    "href": "Siclliano2005Comparison.html#결론-요약",
+    "title": "1  Siciliano et al. (2005)",
+    "section": "1.6 결론 요약",
+    "text": "1.6 결론 요약\n\n\n\n항목\nPVT\nNaI(Tl)\n\n\n\n\n비용\n⭐ 매우 낮음\n높음\n\n\n크기 확장성\n⭐ 대형 제작 용이\n제한적\n\n\n분해능\n낮음\n⭐ 매우 높음\n\n\n동위원소 식별\n제한적\n⭐ 가능\n\n\n내환경성\n⭐ 강함\n취약\n\n\n1차 검사\n⭐ 적합\n비경제적\n\n\n2차 검사\n일부 가능\n⭐ 최적\n\n\n\n요약:\n1차 검문에는 PVT, 정밀 식별이 필요한 2차 검문에는 NaI(Tl) 이 적합하다.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Siciliano et al. (2005)</span>"
+    ]
+  },
+  {
+    "objectID": "Siclliano2005Comparison.html#활용도",
+    "href": "Siclliano2005Comparison.html#활용도",
+    "title": "1  Siciliano et al. (2005)",
+    "section": "1.7 활용도",
+    "text": "1.7 활용도\n\n논문 Introduction의 리뷰 자료\n\nRPM detector 비교 근거\n\nBackground compensation, spectral analysis 논문 인용 근거로 활용 가능\n\n\n\n\n\n\nSiciliano, E. R., J. H. Ely, R. T. Kouzes, B. D. Milbrath, J. E. Schweppe, and D. C. Stromswold. 2005. “Comparison of PVT and NaI(tl) Scintillators for Vehicle Portal Monitor Applications.” Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment 550 (3): 647–74. https://doi.org/https://doi.org/10.1016/j.nima.2005.05.056.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Siciliano et al. (2005)</span>"
+    ]
+  },
+  {
+    "objectID": "Bertrand2014Current.html",
+    "href": "Bertrand2014Current.html",
+    "title": "2  Bertrand (2014)",
+    "section": "",
+    "text": "2.1 플라스틱 섬광체의 기본 구조\nCITE : Bertrand, Hamel, and Sguerra (2014)\n플라스틱 섬광체(Plastic Scintillators, PS)의 화학적·구조적 개선 현황을 광범위하게 정리한 리뷰 논문이다. PS는 빠른 응답속도, 낮은 비용, 대형 제작 용이성 등의 장점이 있으나, 고전적으로 낮은 광출력과 낮은 에너지 분해능이 한계로 지적되어 왔다. 이 논문은 이러한 한계를 극복하기 위한 최신 개선 방향을 정리한다.\n플라스틱 섬광체는 다음과 같은 성분으로 이루어진다.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bertrand (2014)</span>"
+    ]
+  },
+  {
+    "objectID": "Bertrand2014Current.html#플라스틱-섬광체의-기본-구조",
+    "href": "Bertrand2014Current.html#플라스틱-섬광체의-기본-구조",
+    "title": "2  Bertrand (2014)",
+    "section": "",
+    "text": "고분자 매트릭스(polymer matrix): PVT, PS(polystyrene), PMMA 등\n\n1차 형광체(primary fluor): 에너지를 흡수해 UV 광 방출\n\n2차 형광체(secondary fluor, wavelength shifter): UV → 가시광 변환\n\n첨가제(additives): 광출력 향상, 기능성 강화 등",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bertrand (2014)</span>"
+    ]
+  },
+  {
+    "objectID": "Bertrand2014Current.html#주요-성능-개선-전략",
+    "href": "Bertrand2014Current.html#주요-성능-개선-전략",
+    "title": "2  Bertrand (2014)",
+    "section": "2.2 주요 성능 개선 전략",
+    "text": "2.2 주요 성능 개선 전략\n\n2.2.1 광출력(light yield) 향상\n\n형광체 농도 최적화\n\n높은 양자효율을 가진 새로운 WLS(wavelength shifter) 도입\n\n공중합(co-polymerization)을 통한 투명도 개선\n\n자기흡수(self‑absorption) 감소 설계",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bertrand (2014)</span>"
+    ]
+  },
+  {
+    "objectID": "Bertrand2014Current.html#펄스-형태-판별psd-기능을-갖춘-플라스틱-섬광체",
+    "href": "Bertrand2014Current.html#펄스-형태-판별psd-기능을-갖춘-플라스틱-섬광체",
+    "title": "2  Bertrand (2014)",
+    "section": "2.3 펄스 형태 판별(PSD) 기능을 갖춘 플라스틱 섬광체",
+    "text": "2.3 펄스 형태 판별(PSD) 기능을 갖춘 플라스틱 섬광체\n과거에는 액체 섬광체만 가능했던 중성자/감마 구분(PSD) 기능이 고분자 화학의 발전으로 PS에서도 가능해졌다.\n\n느린 성분(slow component)과 빠른 성분(fast component)이 공존하도록 도핑\n\n중성자 대비 감마의 파형 차이를 분석\n\n핵보안/핵물질 검출 분야에서 매우 중요한 기능",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bertrand (2014)</span>"
+    ]
+  },
+  {
+    "objectID": "Bertrand2014Current.html#나노복합체nanocomposite-플라스틱-섬광체",
+    "href": "Bertrand2014Current.html#나노복합체nanocomposite-플라스틱-섬광체",
+    "title": "2  Bertrand (2014)",
+    "section": "2.4 나노복합체(nanocomposite) 플라스틱 섬광체",
+    "text": "2.4 나노복합체(nanocomposite) 플라스틱 섬광체\n나노입자 혼합을 통해 다음과 같은 특성이 향상됨:\n\n고 Z-원소 나노입자(Bi, Pb 계열) → 감마선 상호작용 확률 증가\n\n퀀텀닷(QD) → 발광 파장 조정 및 광학 특성 향상\n\n기계적 강도 향상\n\n새로운 스펙트럼 엔지니어링 가능",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bertrand (2014)</span>"
+    ]
+  },
+  {
+    "objectID": "Bertrand2014Current.html#기능성-도핑-및-파장공학",
+    "href": "Bertrand2014Current.html#기능성-도핑-및-파장공학",
+    "title": "2  Bertrand (2014)",
+    "section": "2.5 기능성 도핑 및 파장공학",
+    "text": "2.5 기능성 도핑 및 파장공학\n\n2.5.1 Gd-도핑\n\n중성자 포획 단면적이 큰 Gd를 첨가해 중성자 검출 감도 향상\n\n\n\n2.5.2 Cl-함유 고분자\n\n체렌코프 광과 섬광광 분리를 가능하게 함\n\n고에너지 물리 실험에 유리\n\n\n\n2.5.3 UV-투명 고분자\n\n이중 판독(dual‑readout) 방식 가능\n\nTOF-PET 등 의료 영상 분야에 적용",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bertrand (2014)</span>"
+    ]
+  },
+  {
+    "objectID": "Bertrand2014Current.html#응용-분야",
+    "href": "Bertrand2014Current.html#응용-분야",
+    "title": "2  Bertrand (2014)",
+    "section": "2.6 응용 분야",
+    "text": "2.6 응용 분야\n개량된 PS는 다음 분야에서 성능을 크게 향상시킴:\n\n국경 핵물질 탐지(RPM, 보안 분야)\n\nPET·TOF-PET 의료 영상장치\n\n입자 물리 실험의 대면적 검출기\n\n중성자/감마 듀얼 모드 검출 시스템",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bertrand (2014)</span>"
+    ]
+  },
+  {
+    "objectID": "Bertrand2014Current.html#결론",
+    "href": "Bertrand2014Current.html#결론",
+    "title": "2  Bertrand (2014)",
+    "section": "2.7 결론",
+    "text": "2.7 결론\n플라스틱 섬광체는 전통적 한계(낮은 에너지 분해능)를 가지지만, 최근의 화학적 수정·나노도핑·파장 엔지니어링을 통해:\n\n광출력 증가\n\nPSD 기능 확보\n\n고 Z-content 구현\n\n맞춤형 광학 특성 설계\n\n가 가능해졌으며, 저비용·대형 제작이 필요한 분야에서 경쟁력이 더욱 강화되었다.\n\n\n\n\n\nBertrand, Guillaume H. V., Matthieu Hamel, and Fabien Sguerra. 2014. “Current Status on Plastic Scintillators Modifications.” Chemistry – A European Journal 20 (48): 15660–85. https://doi.org/https://doi.org/10.1002/chem.201404093.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bertrand (2014)</span>"
+    ]
+  },
+  {
+    "objectID": "Ely2006EWindow.html",
+    "href": "Ely2006EWindow.html",
+    "title": "3  Ely2006EWindow",
+    "section": "",
+    "text": "3.1 연구 목적\nCite : Ely et al. (2006)\n플라스틱 섬광체(PVT)는 RPM(방사선 포털 모니터)에서 가장 널리 사용되는 감마 검출기이다. 그러나 낮은 Z값과 컴프턴 산란이 지배적이기 때문에 photopeak이 존재하지 않으며 동위원소 식별이 불가능하다. 이 논문은 제한된 에너지 정보를 어떻게 활용하면 NORM(자연방사성물질)로 인한 nuisance alarm을 줄일 수 있는가를 분석한다.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Ely2006EWindow</span>"
+    ]
+  },
+  {
+    "objectID": "Ely2006EWindow.html#플라스틱-섬광체의-감마-상호작용-특성",
+    "href": "Ely2006EWindow.html#플라스틱-섬광체의-감마-상호작용-특성",
+    "title": "3  Ely2006EWindow",
+    "section": "3.2 플라스틱 섬광체의 감마 상호작용 특성",
+    "text": "3.2 플라스틱 섬광체의 감마 상호작용 특성\n\n컴프턴 산란이 지배적 → 연속적인 컴프턴 분포만 관측됨\n\nPhotoelectric absorption은 매우 저에너지(&lt;50 keV)에서만 의미 있음\n\nFull-energy peak이 형성되지 않는 이유\n\n낮은 Z → 대부분 컴프턴\n\n긴 mean free path → multiple scattering 부족\n\n광수 통계가 낮아 에너지 분해능이 매우 낮음\n\n\n이로 인해 PVT 기반 스펙트럼은 에너지 구분이 매우 제한적이다.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Ely2006EWindow</span>"
+    ]
+  },
+  {
+    "objectID": "Ely2006EWindow.html#에너지-윈도잉energy-windowing-기법",
+    "href": "Ely2006EWindow.html#에너지-윈도잉energy-windowing-기법",
+    "title": "3  Ely2006EWindow",
+    "section": "3.3 에너지 윈도잉(Energy Windowing) 기법",
+    "text": "3.3 에너지 윈도잉(Energy Windowing) 기법\nPVT에서 가능한 최소한의 스펙트럼 정보를 활용하여 저에너지/고에너지 윈도 비율(Ratio)을 사용하는 방법.\n\n3.3.1 단순 Gross Count의 한계\n배경 대비 총계수 증가만 비교하면\n\n비료(대표적 NORM)\n\n플루토늄\n\n이 동일한 크기의 증가를 보여 구분할 수 없음.\n\n\n3.3.2 Ratio 기반 판별\n저에너지 윈도 / 고에너지 윈도 비율을 사용하면:\n\n비료(NORM): 배경과 비슷한 비율\n플루토늄(SNM): 스펙트럼 형태가 달라 비율이 유의하게 증가\n\n따라서 Ratio가 NORM nuisance alarm을 크게 줄이는 핵심 기법임.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Ely2006EWindow</span>"
+    ]
+  },
+  {
+    "objectID": "Ely2006EWindow.html#실차량fertilizer-truck-실험-결과",
+    "href": "Ely2006EWindow.html#실차량fertilizer-truck-실험-결과",
+    "title": "3  Ely2006EWindow",
+    "section": "3.4 실차량(fertilizer truck) 실험 결과",
+    "text": "3.4 실차량(fertilizer truck) 실험 결과\n(논문 Fig.3 기반)\n\n차량 통과 시 Low/High window 모두 증가\n\n그러나 Low/High 비율은 배경과 거의 동일\n→ 비료 적재 차량은 NORM으로 정확히 분류 가능",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Ely2006EWindow</span>"
+    ]
+  },
+  {
+    "objectID": "Ely2006EWindow.html#대규모-차량-데이터-기반-알고리즘-평가",
+    "href": "Ely2006EWindow.html#대규모-차량-데이터-기반-알고리즘-평가",
+    "title": "3  Ely2006EWindow",
+    "section": "3.5 대규모 차량 데이터 기반 알고리즘 평가",
+    "text": "3.5 대규모 차량 데이터 기반 알고리즘 평가\n수천 대의 실제 RPM 차량 데이터에 57Co 가상 신호를 주입(injection)하여 Gross counting vs Ratio vs 고급 알고리즘을 비교.\n결과:\n\nGross count 알고리즘\n\n높은 sensitivity\n\n그러나 NORM alarm(오경보) 비율 매우 높음\n\nRatio 알고리즘\n\nsensitivity 유지\n\nNORM alarm 대폭 감소\n\n고급 알고리즘(PCA, Fisher discriminant, Neural network 등)\n\nRatio보다 더 나은 가능성 존재",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Ely2006EWindow</span>"
+    ]
+  },
+  {
+    "objectID": "Ely2006EWindow.html#한계점",
+    "href": "Ely2006EWindow.html#한계점",
+    "title": "3  Ely2006EWindow",
+    "section": "3.6 한계점",
+    "text": "3.6 한계점\n\n의료 방사성핵종(예: Tc-99m)은 SNM과 PVT 스펙트럼 형태가 유사 → 구분 어려움\n\nPMT, 전자회로는 환경 변화에 민감\n\npedestrian / 차량 검사 중 medical isotope 비중이 높으면 Ratio 방식 효과 떨어짐",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Ely2006EWindow</span>"
+    ]
+  },
+  {
+    "objectID": "Ely2006EWindow.html#결론",
+    "href": "Ely2006EWindow.html#결론",
+    "title": "3  Ely2006EWindow",
+    "section": "3.7 결론",
+    "text": "3.7 결론\n\nPVT의 제한적 에너지 분해능에도 불구하고, 에너지 윈도 비율(Ratio) 분석만으로 대부분의 NORM을 효과적으로 제거할 수 있음\n\nSNM 탐지 sensitivity는 유지하면서 nuisance alarm 비율을 크게 줄임\n\n추가적인 PCA, Fisher-LDA, Neural Network 기반 다변량 알고리즘이 유망\n\n그러나 동위원소 식별은 NaI(Tl) 같은 스펙트로스코픽 검출기에 비해 제한적임\n\n넓은 설치 규모가 필요한 RPM에서는 비용·신뢰성을 고려할 때 여전히 PVT가 실용적 선택\n\n\n\n\n\n\nEly, James, Richard Kouzes, John Schweppe, Edward Siciliano, Denis Strachan, and Dennis Weier. 2006. “The Use of Energy Windowing to Discriminate SNM from NORM in Radiation Portal Monitors.” Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment 560 (2): 373–87. https://doi.org/https://doi.org/10.1016/j.nima.2006.01.053.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Ely2006EWindow</span>"
+    ]
+  },
+  {
+    "objectID": "Hevener2013EWindow.html",
+    "href": "Hevener2013EWindow.html",
+    "title": "4  Hevener2013EWindow",
+    "section": "",
+    "text": "4.1 연구 목적\nCite : Hevener, Yim, and Baird (2013)\n방사선 포털 모니터(RPM)는 핵물질 불법 반입을 방지하기 위해 전 세계에 배치되어 있으며, 대부분 PVT 플라스틱 섬광체 기반의 단순 Gross Count(GC) 방식에 의존하고 있다. 본문 연구는 에너지 윈도잉(Energy Windowing, EW) 알고리즘을 개선하여:\n을 1차 검사 단계에서 식별할 수 있도록 하는 것이 목표이다.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Hevener2013EWindow</span>"
+    ]
+  },
+  {
+    "objectID": "Hevener2013EWindow.html#연구-목적",
+    "href": "Hevener2013EWindow.html#연구-목적",
+    "title": "4  Hevener2013EWindow",
+    "section": "",
+    "text": "SNM(특수핵물질)\n\nRDD 위협 핵종\n\n40K·Granite 등 NORM\n\nDU",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Hevener2013EWindow</span>"
+    ]
+  },
+  {
+    "objectID": "Hevener2013EWindow.html#pvt의-에너지-정보-한계",
+    "href": "Hevener2013EWindow.html#pvt의-에너지-정보-한계",
+    "title": "4  Hevener2013EWindow",
+    "section": "4.2 PVT의 에너지 정보 한계",
+    "text": "4.2 PVT의 에너지 정보 한계\n\n낮은 Z 재질 → photopeak 없음\n\nCompton continuum만 존재, edge도 완만\n\n스펙트럼 기반 동위원소 식별 불가능\n→ 그러나 윈도 분할(Windowing) 을 통해 스펙트럼 형태 차이를 활용 가능.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Hevener2013EWindow</span>"
+    ]
+  },
+  {
+    "objectID": "Hevener2013EWindow.html#기존-윈도잉-방식의-문제점",
+    "href": "Hevener2013EWindow.html#기존-윈도잉-방식의-문제점",
+    "title": "4  Hevener2013EWindow",
+    "section": "4.3 기존 윈도잉 방식의 문제점",
+    "text": "4.3 기존 윈도잉 방식의 문제점\n\n부적절한 보정(calibration)\n\n잘못된 핵종을 기준으로 창을 설정하면 성능 저하\n\n단순한 2윈도 구조\n\nhigh-energy masking 발생\n\nNORM과 위협 핵종 구분 어려움",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Hevener2013EWindow</span>"
+    ]
+  },
+  {
+    "objectID": "Hevener2013EWindow.html#새로운-ew-알고리즘의-핵심",
+    "href": "Hevener2013EWindow.html#새로운-ew-알고리즘의-핵심",
+    "title": "4  Hevener2013EWindow",
+    "section": "4.4 새로운 EW 알고리즘의 핵심",
+    "text": "4.4 새로운 EW 알고리즘의 핵심\n\n4.4.1 S/√B 기반 최적 창 설정\n각 채널에 대해 S/√B(signal-to-noise)를 계산하여 최대값을 주는 지점을 Low-energy window의 상한으로 설정.\n\n\n4.4.2 보정 핵종 사용\n\nHEU → 57Co\n\nWGPu → 133Ba\n\nDU → 60Co\n\nCs-137, 40K → 실제 핵종\n(사용 불가능한 고위험 핵종은 proxy로 대체)\n\n\n\n4.4.3 조정된 보상비율(Adjusted Compensated Ratio)\n기존 Ely 식을 확장한 형태:\n\nLow window + High window를 연속적으로 구성하여 통계적 불확실성 최소화\nHigh-energy masking에 강함",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Hevener2013EWindow</span>"
+    ]
+  },
+  {
+    "objectID": "Hevener2013EWindow.html#알고리즘-작동-방식",
+    "href": "Hevener2013EWindow.html#알고리즘-작동-방식",
+    "title": "4  Hevener2013EWindow",
+    "section": "4.5 알고리즘 작동 방식",
+    "text": "4.5 알고리즘 작동 방식\n\n차량 진입 전 60초간 배경수집\n\n차량 통과 시 Low/High window count 획득\n\n보상비율 Ri 계산\n\n임계값 초과 시 해당 윈도의 핵종 alarm\n\n여러 윈도 동시 alarms 시 Alarm Library 기반 해석",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Hevener2013EWindow</span>"
+    ]
+  },
+  {
+    "objectID": "Hevener2013EWindow.html#실데이터-기반-평가-결과",
+    "href": "Hevener2013EWindow.html#실데이터-기반-평가-결과",
+    "title": "4  Hevener2013EWindow",
+    "section": "4.6 실데이터 기반 평가 결과",
+    "text": "4.6 실데이터 기반 평가 결과\nORNL 실제 차량 데이터와 432개 조합의 injection 테스트 수행.\n\n4.6.1 민감도(Sensitivity)\n\nHEU·WGPu: 555–1110 cps 범위에서 100% 도달\n\nCs-137: 더 낮은 cps에서 100%\n\n40K cargo: masking 영향으로 더 높은 cps 필요\n\n\n\n4.6.2 Masking에 대한 강인성\n\n기존 57Co, 133Ba 알고리즘 대비\n새 알고리즘이 가장 masking에 강함\n\n\n\n4.6.3 Granite Cargo 문제\n\nGranite 자체가 WGPu·Cs-137 윈도에서 alarm을 발생\n→ HEU·WGPu 식별 방해\n→ Alarm Library로 완화 가능\n\n\n\n4.6.4 Precision\n\n대부분의 핵종에서 낮은 cps에서 100% 달성\n\nDU alarm은 40K 영향으로 방해받음\n\n\n\n4.6.5 F1 Score\n\n비-NORM cargo: 2220 cps 이하에서 모든 핵종 높은 점수\n\nK-40 cargo: 3330 cps 이하에서 최적\n\nGranite cargo: 전반적으로 저하 (예상된 결과)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Hevener2013EWindow</span>"
+    ]
+  },
+  {
+    "objectID": "Hevener2013EWindow.html#결론",
+    "href": "Hevener2013EWindow.html#결론",
+    "title": "4  Hevener2013EWindow",
+    "section": "4.7 결론",
+    "text": "4.7 결론\n새로운 EW 알고리즘은 기존 대비 다음을 크게 개선:\n\nSNM·RDD·NORM을 1차 검사 단계에서 식별 가능\n\nHigh-energy masking 억제\n\n창을 핵종별로 최적화하여 검출능 증가\n\nRPM 2차 검사 부담 감소, 판독 속도 향상\n\n제한점:\n\nGranite·의료 핵종 등 고에너지 구성물에 대해 완전한 식별 어려움\n\nProxy 핵종과의 스펙트럼 차이 존재\n\n실제 HEU, WGPu, DU 기반 확장 보정 필요",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Hevener2013EWindow</span>"
+    ]
+  },
+  {
+    "objectID": "Hevener2013EWindow.html#요약",
+    "href": "Hevener2013EWindow.html#요약",
+    "title": "4  Hevener2013EWindow",
+    "section": "4.8 요약",
+    "text": "4.8 요약\n새 알고리즘은 PVT 기반 RPM의 스펙트럼 활용 능력을 비약적으로 향상시키며, 단순 GC 대비 실제 운용 효율성을 크게 높일 수 있다.\n\n\n\n\nHevener, Ryne, Man-Sung Yim, and Ken Baird. 2013. “Investigation of Energy Windowing Algorithms for Effective Cargo Screening with Radiation Portal Monitors.” Radiation Measurements 58: 113–20. https://doi.org/https://doi.org/10.1016/j.radmeas.2013.08.004.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Hevener2013EWindow</span>"
+    ]
+  },
+  {
+    "objectID": "Lee2020EWeight.html",
+    "href": "Lee2020EWeight.html",
+    "title": "5  Lee2020EWeight",
+    "section": "",
+    "text": "5.1 연구 목적\nCite : Lee et al. (2020)\n플라스틱 섬광체(PVT)는 RPM에서 널리 사용되지만,\n본 논문은 각 채널의 에너지 값을 가중치로 곱하는 Energy‑Weighted(EW) 알고리즘을 이용해 PVT에서도 Compton edge 영역을 단일 peak처럼 강화하여 방사성 핵종을 식별할 수 있는지 검증하는 데 목적이 있다.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lee2020EWeight</span>"
+    ]
+  },
+  {
+    "objectID": "Lee2020EWeight.html#연구-목적",
+    "href": "Lee2020EWeight.html#연구-목적",
+    "title": "5  Lee2020EWeight",
+    "section": "",
+    "text": "낮은 Z로 인해 컴프턴 산란이 지배적이고\n\n에너지 분해능이 매우 낮아\n\nphotopeak이 형성되지 않으며 동위원소 식별이 거의 불가능하다.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lee2020EWeight</span>"
+    ]
+  },
+  {
+    "objectID": "Lee2020EWeight.html#energyweightedew-알고리즘-개요",
+    "href": "Lee2020EWeight.html#energyweightedew-알고리즘-개요",
+    "title": "5  Lee2020EWeight",
+    "section": "5.2 Energy‑Weighted(EW) 알고리즘 개요",
+    "text": "5.2 Energy‑Weighted(EW) 알고리즘 개요\n논문 Eq.(1)에 따라 각 채널의 count Ci에 해당 채널의 에너지 Ei를 곱해\nCEW,i = Ci × Ei 로 변환한다.\n이 기법은(페이지 2–3, Fig. 1):\n\nCompton edge에서 counts 증가 × energy 증가가 동시에 일어나\n\nCompton edge → 단일 peak 형태로 부각된다.\n\n기존 PVT 스펙트럼이 불연속적이고 featureless한 것과 달리, 에너지 가중을 하면 동위원소별 특징적 peak가 생긴다는 점이 핵심.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lee2020EWeight</span>"
+    ]
+  },
+  {
+    "objectID": "Lee2020EWeight.html#실험-시스템-구성-proofofprinciple-rpm",
+    "href": "Lee2020EWeight.html#실험-시스템-구성-proofofprinciple-rpm",
+    "title": "5  Lee2020EWeight",
+    "section": "5.3 실험 시스템 구성 (Proof‑of‑principle RPM)",
+    "text": "5.3 실험 시스템 구성 (Proof‑of‑principle RPM)\n(페이지 3–4, Fig. 2)\n\nPVT(BC‑408) 100 × 50 × 5 cm³\n\nTrapezoidal light guide + PMT\n\nPreamplifier + shaper amplifier\n\nLabVIEW 기반 실시간 GUI(Fig. 3):\n\n순수 스펙트럼 / 가중 스펙트럼 동시 표시\n\n\nshaping time 0.5 μs, HV = 1.0 kV로 최적화\n\n&gt;",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lee2020EWeight</span>"
+    ]
+  },
+  {
+    "objectID": "Lee2020EWeight.html#정적static-소스-측정-결과",
+    "href": "Lee2020EWeight.html#정적static-소스-측정-결과",
+    "title": "5  Lee2020EWeight",
+    "section": "5.4 정적(static) 소스 측정 결과",
+    "text": "5.4 정적(static) 소스 측정 결과\n(페이지 5, Fig. 5)\n측정 핵종: 22Na, 226Ra, 137Cs, 60Co EW 스펙트럼 특징:\n\n\n\n핵종\n이론적 Compton edge (MeV)\nEW 스펙트럼 특징\n\n\n\n\n137Cs\n0.477\n명확한 단일 peak\n\n\n60Co\n1.014\n명확한 단일 peak\n\n\n22Na\n0.340 & 1.068\n반양전자 소멸피크·광전피크 특징 반영\n\n\n226Ra\n0.429\n약하지만 분명한 peak\n\n\n\n결론: PVT에서도 EW를 적용하면 Compton edge 위치를 peak 형태로 선명하게 식별할 수 있음.\n&gt;",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lee2020EWeight</span>"
+    ]
+  },
+  {
+    "objectID": "Lee2020EWeight.html#차폐steel-shielding-실험-결과",
+    "href": "Lee2020EWeight.html#차폐steel-shielding-실험-결과",
+    "title": "5  Lee2020EWeight",
+    "section": "5.5 차폐(steel shielding) 실험 결과",
+    "text": "5.5 차폐(steel shielding) 실험 결과\n(페이지 4–5, Fig. 6)\n\n80×80 cm² 철판(1.6–8 mm)으로 137Cs와 60Co 차폐\n\npeak intensity는 감소하지만 peak 위치는 이론값 대비 0.015–0.021 MeV 내외 차이\n→ 차폐된 상황에서도 식별 가능\n\n특기사항:\n\n60Co는 얇은 철판에서 오히려 total count 증가 → 산란 증가 때문으로 해석\n\n&gt;",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lee2020EWeight</span>"
+    ]
+  },
+  {
+    "objectID": "Lee2020EWeight.html#이동moving-소스-실험",
+    "href": "Lee2020EWeight.html#이동moving-소스-실험",
+    "title": "5  Lee2020EWeight",
+    "section": "5.6 이동(moving) 소스 실험",
+    "text": "5.6 이동(moving) 소스 실험\n(페이지 5, Fig. 7–8)\n\n속도 1 m/s로 7 m 구간 반복 이동\n\nraw EW 스펙트럼은 statistical fluctuation 매우 큼\n\nFFT smoothing 적용 →\n\n137Cs 평균 오차: 0.076 MeV\n\n60Co 평균 오차: 0.036 MeV\n→ 이동 소스에서도 peak 위치를 안정적으로 식별 가능",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lee2020EWeight</span>"
+    ]
+  },
+  {
+    "objectID": "Lee2020EWeight.html#근접한-에너지-핵종예-137cs-vs-226ra-구분",
+    "href": "Lee2020EWeight.html#근접한-에너지-핵종예-137cs-vs-226ra-구분",
+    "title": "5  Lee2020EWeight",
+    "section": "5.7 근접한 에너지 핵종(예: 137Cs vs 226Ra) 구분",
+    "text": "5.7 근접한 에너지 핵종(예: 137Cs vs 226Ra) 구분\n(페이지 6, Fig. 9)\n두 핵종의 Compton edge 차이는 0.05 MeV로 매우 가까움.\n그러나 다음 특징으로 구분 가능:\n\n226Ra: 214Bi daughter peak → 0.3 MeV 부근 명확한 peak\n\n137Cs: 0.7 MeV 이상에서 count 거의 없음\n\n측정 시간 증가(5→50→500 s) → 통계적 안정성 증가\n\n결론: EW 스펙트럼의 “2차 특징 영역(secondary shape region)”을 활용하면 유사 에너지 핵종도 구분 가능",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lee2020EWeight</span>"
+    ]
+  },
+  {
+    "objectID": "Lee2020EWeight.html#결론",
+    "href": "Lee2020EWeight.html#결론",
+    "title": "5  Lee2020EWeight",
+    "section": "5.8 결론",
+    "text": "5.8 결론\n본 연구는 PVT 기반 RPM에서도 에너지 가중 스펙트럼을 통해 핵종 식별이 가능함을 실험적으로 입증했다.\n핵심 결론:\n\n차폐·이동 소스에서도 peak 위치 안정적 (오차 &lt; 3%)\n\n낮은 에너지 분해능을 보완하여 사실상 “pseudo photopeak” 기능 제공\n\nNORM과 인공 핵종의 1차적 구분 가능\n\n유사 에너지 핵종(137Cs vs 226Ra)도 스펙트럼 세부 구조로 구분 가능\n\n실제 상용 RPM에서도 후속 검증 필요\n\n\n의의:\n기존 Gross count / Energy window 방식의 한계를 넘어서, PVT 기반 RPM의 실질적 스펙트럼 분석 능력을 확장한 연구이다.\n\n\n\n\nLee, Hyun Cheol, Wook-geun Shin, Hyun Joon Choi, Chang-Il Choi, Chang Su Park, Hong-Suk Kim, and Chul Hee Min. 2020. “Radioisotope Identification Using an Energy-Weighted Algorithm with a Proof-of-Principle Radiation Portal Monitor Based on Plastic Scintillators.” Applied Radiation and Isotopes 156: 109010. https://doi.org/https://doi.org/10.1016/j.apradiso.2019.109010.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lee2020EWeight</span>"
+    ]
+  },
+  {
+    "objectID": "Paff2017Spectral.html",
+    "href": "Paff2017Spectral.html",
+    "title": "6  Paff2017Spectral",
+    "section": "",
+    "text": "6.1 연구 목적\nCite : Paff et al. (2017)\n플라스틱/유기 섬광체 기반 RPM은 낮은 Z와 컴프턴 산란 지배로 인해 다음과 같은 한계가 있다.\n본 논문의 목표는 유기 섬광체 측정 Pulse Height Distribution(PHD)을 이용해 이동하는 핵종을 실시간(on-the-fly)으로 식별 가능한 새로운 알고리즘 을 개발·검증하는 것이다.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Paff2017Spectral</span>"
+    ]
+  },
+  {
+    "objectID": "Paff2017Spectral.html#연구-목적",
+    "href": "Paff2017Spectral.html#연구-목적",
+    "title": "6  Paff2017Spectral",
+    "section": "",
+    "text": "photopeak 부재\n\n높은 통계적 불확실성(3초 측정)\n\nNORM·의료 핵종으로 인한 nuisance alarm 과다",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Paff2017Spectral</span>"
+    ]
+  },
+  {
+    "objectID": "Paff2017Spectral.html#알고리즘-개요",
+    "href": "Paff2017Spectral.html#알고리즘-개요",
+    "title": "6  Paff2017Spectral",
+    "section": "6.2 알고리즘 개요",
+    "text": "6.2 알고리즘 개요\n새 알고리즘은 다음 3단계로 구성된다.\n\n6.2.1 PHD → CDF 변환\nPulse Height Distribution을 누적분포함수(CDF)로 변환해 노이즈 영향을 줄이고 스펙트럼 형태 정보를 강화한다.\n\n\n6.2.2 CDF → Power Spectral Density(PSD) 변환\nFFT 기반 DFT를 이용해 CDF의 주파수 성분(스펙트럼 형태의 변화율)을 PSD로 변환한다. (파일 p.3–4의 Eq. (1)–(3)) 이 PSD는 유기 섬광체 스펙트럼의 shape signature를 잘 보존한다.\n\n\n6.2.3 Spectral Angle Mapper(SAM) 매칭\n측정 PSD와 라이브러리 PSD 간의 각도 α를 계산해 가장 작은 α를 주는 핵종을 선택한다(파일 p.4–5의 Eq. (4)). SAM은 영상 스펙트럼 분석(지표 식별) 분야에서 사용하는 고전적 기법을 RPM에 적용한 것이다.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Paff2017Spectral</span>"
+    ]
+  },
+  {
+    "objectID": "Paff2017Spectral.html#측정-데이터-및-실험-구성",
+    "href": "Paff2017Spectral.html#측정-데이터-및-실험-구성",
+    "title": "6  Paff2017Spectral",
+    "section": "6.3 측정 데이터 및 실험 구성",
+    "text": "6.3 측정 데이터 및 실험 구성\n\n6.3.1 실험 데이터셋\n유기 액체섬광체 EJ309 기반 pedestrian RPM에서 획득한 실측 데이터 두 종류:\n\nDataset 1: 이동 속도 1.2 m/s, 계수량 충분(쉬운 조건)\n\nDataset 2: 이동 속도 2.2 m/s, 계수량 적음(어려운 조건)\n\n측정 핵종(파일 p.5 Table 1): 57Co, 133Ba, 137Cs, 60Co, 241Am, HEU, WGPu\n의료 핵종(파일 p.5 Table 2): 99mTc, 123I, 201Tl, 131I, 67Ga, 111In",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Paff2017Spectral</span>"
+    ]
+  },
+  {
+    "objectID": "Paff2017Spectral.html#결과-요약",
+    "href": "Paff2017Spectral.html#결과-요약",
+    "title": "6  Paff2017Spectral",
+    "section": "6.4 결과 요약",
+    "text": "6.4 결과 요약\n\n6.4.1 방사선 검출 여부\nDataset 1에서는 대부분의 핵종이 100% 검출됨.\nDataset 2에서는 저에너지(241Am, 57Co)는 약 50–60%만 검출됨.\n\n\n6.4.2 핵종 식별 정확도\n다음 결과는 매우 중요함 (파일 p.6, Table 3):\n\n\n\n핵종\nDataset 1 정확도\nDataset 2 정확도\n\n\n\n\n137Cs\n100%\n100%\n\n\nWGPu\n100%\n93%\n\n\nHEU\n100%\n60%\n\n\n57Co\n100%\n67%\n\n\n\n저계수 조건에서도 일부 핵종은 정확히 식별되었으며, 이는 유기 섬광체 기반 RPM에서 사실상 최초로 높은 정확도 식별을 달성한 연구임.\n\n\n6.4.3 SAM α-value 분석\n파일 p.6 Table 4–5에 따르면:\n\nDataset 1의 α값은 전체적으로 매우 작음(우수한 매칭 품질)\n\nDataset 2는 α값이 증가하지만 여전히 다른 핵종보다 구분 가능\n\n\n\n6.4.4 오경보 방지 능력 (Negative identification)\n파일 p.6 Fig. 5 / Table 6\n\n배경, 선형함수, 제곱함수 등 “핵종이 아닌 스펙트럼”에 대해\nα값이 높게 나타나 잘못된 핵종 식별을 하지 않음\n→ 오경보 가능성이 매우 낮음.\n\n\n\n6.4.5 기존 알고리즘 대비 성능\n파일 p.7 Table 7에서 F-score 비교:\n\n\n\n알고리즘\nF-score\n\n\n\n\nLeast Squares (PHD)\n0.73\n\n\nLeast Squares (CDF)\n0.82\n\n\n새 알고리즘(PSD+SAM)\n1.00\n\n\n\nDataset 2(어려운 조건)에서도 F-score = 0.91로 매우 높음.\n→ 기존 대비 획기적인 성능 향상.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Paff2017Spectral</span>"
+    ]
+  },
+  {
+    "objectID": "Paff2017Spectral.html#결론",
+    "href": "Paff2017Spectral.html#결론",
+    "title": "6  Paff2017Spectral",
+    "section": "6.5 결론",
+    "text": "6.5 결론\n이 연구는 유기 섬광체 기반 RPM에서도 이동 핵종을 실시간으로 높은 정확도로 식별할 수 있음을 실증한 최초의 사례 중 하나 이다.\n핵심 성과:\n\n고속 이동(1.2–2.2 m/s) 조건에서도 robust한 핵종 식별\n\nHEU / WGPu 포함한 SNM 성공적 식별\n\n의료 핵종(99mTc·123I·131I 등)과 산업·NORM 핵종도 구분\n\nF-score 1.00(완벽한 성능) 달성\n\nnuisance alarm을 획기적으로 줄일 가능성 제시\n\n의의:\n\n비용 저렴한 유기 섬광체 기반 RPM에 사실상 스펙트럼 기반 핵종 식별 기능 부여\n\n국경 방사선 감시의 효율성과 정확도 향상\n\nNORM / 의료 핵종으로 인한 대량 nuisance alarm 문제 해결 가능성",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Paff2017Spectral</span>"
+    ]
+  },
+  {
+    "objectID": "Paff2017Spectral.html#요약-문장",
+    "href": "Paff2017Spectral.html#요약-문장",
+    "title": "6  Paff2017Spectral",
+    "section": "6.6 요약 문장",
+    "text": "6.6 요약 문장\nFFT 기반 PSD + SAM 조합은 유기 섬광체에서 스펙트럼 특징을 극대화하여 SNM·산업·의료 핵종을 실시간으로 높은 정확도로 식별하는 데 최적의 알고리즘임을 입증했다.\n\n\n\n\nPaff, Marc Gerrit, Angela Di Fulvio, Shaun D. Clarke, and Sara A. Pozzi. 2017. “Radionuclide Identification Algorithm for Organic Scintillator-Based Radiation Portal Monitor.” Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment 849: 41–48. https://doi.org/https://doi.org/10.1016/j.nima.2017.01.009.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Paff2017Spectral</span>"
+    ]
+  },
+  {
+    "objectID": "Kim2019InvMat.html",
+    "href": "Kim2019InvMat.html",
+    "title": "7  Kim2019InvMat",
+    "section": "",
+    "text": "7.1 연구 목적\nCite : Kim et al. (2019)\n방사선 포털 모니터(RPM)는 측정 시간이 매우 짧고(0.1–10 s), 플라스틱 섬광체(PVT)의 낮은 분해능 때문에\n본 연구에서는 기존 Gross count / Energy windowing 방식의 한계를 극복하기 위해 Inverse Calibration Matrix(ICM) 알고리즘을 이용한 고정밀 핵종 식별(RIID)을 제안하고 검증한다.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Kim2019InvMat</span>"
+    ]
+  },
+  {
+    "objectID": "Kim2019InvMat.html#연구-목적",
+    "href": "Kim2019InvMat.html#연구-목적",
+    "title": "7  Kim2019InvMat",
+    "section": "",
+    "text": "스펙트럼 기반 핵종 식별이 어렵고\n\nNORM·배경 방사선으로 인한 오경보(false alarms)가 빈번하다.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Kim2019InvMat</span>"
+    ]
+  },
+  {
+    "objectID": "Kim2019InvMat.html#실험-장치-및-데이터",
+    "href": "Kim2019InvMat.html#실험-장치-및-데이터",
+    "title": "7  Kim2019InvMat",
+    "section": "7.2 실험 장치 및 데이터",
+    "text": "7.2 실험 장치 및 데이터\n\n7.2.1 대형 PVT 기반 스펙트럼 측정 시스템 (p.2 Fig.1)\n\n대형 PVT scintillator + 4 PMT\n\n신호 합산 및 shaping 후 MCA(2014채널) 입력\n\n측정 시간: 0.1, 0.2, 0.5, 1, 5, 10, 50 s\n\n\n\n7.2.2 측정 핵종 (Table 1)\n\n133Ba, 137Cs, 60Co, 22Na,\n\n40K 함유 비료, 배경(BG)\n\n측정 거리: 2 m",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Kim2019InvMat</span>"
+    ]
+  },
+  {
+    "objectID": "Kim2019InvMat.html#icminverse-calibration-matrix-알고리즘",
+    "href": "Kim2019InvMat.html#icminverse-calibration-matrix-알고리즘",
+    "title": "7  Kim2019InvMat",
+    "section": "7.3 ICM(Inverse Calibration Matrix) 알고리즘",
+    "text": "7.3 ICM(Inverse Calibration Matrix) 알고리즘\n\n7.3.1 기본 개념 (p.2–3)\n스펙트럼 식별을 위해 다음 절차를 수행한다.\n\n100 s 동안 측정한 고품질 스펙트럼을 열(column)로 갖는 Calibration Matrix 생성\n\n측정 스펙트럼(0.1–50 s)을 총계수로 정규화하여 Sample Vector 생성\n\n연산 수행:\n\n\nResult = Normalized_Calibration_Matrix × Normalized_Sample_Vector\n\n\n결과 값이\n\n1에 가까운 열 → 해당 핵종\n\n0에 가까운 열 → 비해당 핵종\n\n\n즉, 스펙트럼의 형태(tendency)를 기반으로 비교하는 PCA 계열 알고리즘이다.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Kim2019InvMat</span>"
+    ]
+  },
+  {
+    "objectID": "Kim2019InvMat.html#실험-결과",
+    "href": "Kim2019InvMat.html#실험-결과",
+    "title": "7  Kim2019InvMat",
+    "section": "7.4 실험 결과",
+    "text": "7.4 실험 결과\n\n7.4.1 스펙트럼 식별 성능 (p.4 Fig.4)\n0.1 s ~ 50 s 모든 측정에서 모든 핵종이 정확히 식별됨.\n특히:\n\n0.1 s와 같이 count가 매우 적은 경우에도\n\n배경과 거의 동일하게 보이는 40K 비료 스펙트럼도 ICM으로 문제없이 분류됨.\n\n\n\n7.4.2 반복 측정 기반 정확도 (p.4 Table 2)\n\n\n\n측정 시간\nBG\n133Ba\n60Co\n137Cs\n22Na\n비료(40K)\n\n\n\n\n0.1 s\n61%\n83%\n90%\n62%\n65%\n53%\n\n\n0.2 s\n92%\n87%\n93%\n81%\n78%\n61%\n\n\n0.5 s\n99%\n98%\n98%\n94%\n95%\n83%\n\n\n\n\n1초 이상에서는 모든 핵종 100% 정확도 달성\n\n노이즈가 큰 초단시간에서도 스펙트럼 “형태”만으로 안정적 식별이 가능함을 의미한다.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Kim2019InvMat</span>"
+    ]
+  },
+  {
+    "objectID": "Kim2019InvMat.html#결론",
+    "href": "Kim2019InvMat.html#결론",
+    "title": "7  Kim2019InvMat",
+    "section": "7.5 결론",
+    "text": "7.5 결론\n\nICM 알고리즘은 PVT RPM의 낮은 에너지 분해능과 짧은 측정 시간의 한계를 극복한다.\n\n0.1 s 측정에서도 다중 핵종 식별 가능\n\n기존 Gross count / Window 방식 대비 월등한 식별 성능\n\n특히 BG와 유사한 40K 비료까지 안정적으로 구별\n\n제한점:\n- 본 연구는 소수의 산업·NORM·대표 핵종만 사용\n- 실제 컨테이너의 다양한 방사선 패턴 적용 필요",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Kim2019InvMat</span>"
+    ]
+  },
+  {
+    "objectID": "Kim2019InvMat.html#핵심-요약",
+    "href": "Kim2019InvMat.html#핵심-요약",
+    "title": "7  Kim2019InvMat",
+    "section": "7.6 핵심 요약",
+    "text": "7.6 핵심 요약\nICM 알고리즘은 PVT 기반 RPM에서도 매우 짧은 측정 시간(0.1–1 s)에서 높은 신뢰도로 핵종을 식별할 수 있는 강력한 PCA 기반 RIID 기법이다.\n\n\n\n\nKim, Yewon, Myungsoo Kim, Kyung Taek Lim, Jongbum Kim, and Gyuseong Cho. 2019. “Inverse Calibration Matrix Algorithm for Radiation Detection Portal Monitors.” Radiation Physics and Chemistry 155: 127–32. https://doi.org/https://doi.org/10.1016/j.radphyschem.2018.07.022.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Kim2019InvMat</span>"
+    ]
+  },
+  {
+    "objectID": "Kouzes2006Response.html",
+    "href": "Kouzes2006Response.html",
+    "title": "8  Kouzes2006Response",
+    "section": "",
+    "text": "8.1 연구 목적\nCite : Kouzes and Siciliano (2006)\n이 논문은 방사선 포털 모니터(RPM)가 의료 방사성핵종(radiopharmaceuticals) 에 어떻게 반응하는지 평가하고, 이들이 국경 검문소에서 발생시키는 nuisance alarm(오경보) 의 규모와 영향력을 정량적으로 분석한다.\n핵심 목표:",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Kouzes2006Response</span>"
+    ]
+  },
+  {
+    "objectID": "Kouzes2006Response.html#연구-목적",
+    "href": "Kouzes2006Response.html#연구-목적",
+    "title": "8  Kouzes2006Response",
+    "section": "",
+    "text": "미국 의료 시스템에서 사용되는 의료 핵종의 종류, 사용량, 투여량 조사\n\n이 핵종들의 감마 방출 특성을 이용해 MCNP 기반 RPM 응답 시뮬레이션 수행\n\n그 결과를 기반으로 국경에서 발생하는 의료 핵종 오경보 비율을 추정",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Kouzes2006Response</span>"
+    ]
+  },
+  {
+    "objectID": "Kouzes2006Response.html#의료-핵종-사용-현황",
+    "href": "Kouzes2006Response.html#의료-핵종-사용-현황",
+    "title": "8  Kouzes2006Response",
+    "section": "8.2 의료 핵종 사용 현황",
+    "text": "8.2 의료 핵종 사용 현황\n\n\n\nTable 8.1: Table 1 in Paper\n\n\n\n\n\n\n\n2001년 미국 내 의료 핵의학 절차: 1,439만 건\n\n이 중 약 92%가 진단용, 8%가 치료용\n\n사용되는 전체 방사성의약품은 45개 이상이지만, 실제 핵종은 단 17종\n\n이 중 RPM이 탐지할 가능성이 높은 방사성 핵종은 9종\n\n가장 중요한 핵종:  99mTc\n\n전체 진단 절차의 90% 이상을 차지\n\n반감기 6시간, 140 keV 감마 → RPM에서 매우 잘 검출됨\n\n그 외 빈번한 핵종:\n\n131I, 67Ga, 61Cr, 201Tl, 111In, 123I, 153Sm\n\n대부분 30–250 keV 감마를 방출 → RPM의 Low-energy 영역에서 강한 반응",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Kouzes2006Response</span>"
+    ]
+  },
+  {
+    "objectID": "Kouzes2006Response.html#핵종별-감마-붕괴-특성",
+    "href": "Kouzes2006Response.html#핵종별-감마-붕괴-특성",
+    "title": "8  Kouzes2006Response",
+    "section": "8.3 3. 핵종별 감마 붕괴 특성",
+    "text": "8.3 3. 핵종별 감마 붕괴 특성\n\n\n\nTable 8.2: Table 2 in Paper\n\n\n\n\n\n\nTable 2는 다음 정보를 포함: - 반감기\n- 주요 감마 에너지\n- branching fraction(%BF)\n- 평균 투여량(mCi)\n- 초당 방출 감마 개수\n핵심 관찰\n- 대부분의 의료핵종은 250 keV 이하 감마가 지배적 → RPM의 Low-energy 윈도에서 강한 카운트\n- 67Ga, 51Cr, 131I 등 일부는 250 keV 이상 감마도 방출 → High-energy 윈도에서도 신호 발생\n- 99mTc의 경우 6시간 반감기이지만 투여량이 매우 크기 때문에 오경보 원인 1위",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Kouzes2006Response</span>"
+    ]
+  },
+  {
+    "objectID": "Kouzes2006Response.html#rpm-모델링mcnp-구성-p.69-fig.-46",
+    "href": "Kouzes2006Response.html#rpm-모델링mcnp-구성-p.69-fig.-46",
+    "title": "8  Kouzes2006Response",
+    "section": "8.4 RPM 모델링(MCNP) 구성 (p.6–9, Fig. 4–6)",
+    "text": "8.4 RPM 모델링(MCNP) 구성 (p.6–9, Fig. 4–6)\n\n실제 국경에서 사용하는 트럭용 포털을 기반으로 모델 구축\n\n1개 차선은 4개의 플라스틱 패널(PVT) 검출기, 인접 차선의 검출기도 포함해 총 8개 패널의 response 계산\n\n의학 핵종은 사람 몸에서 나오는 것으로 가정 → 높이 1.5 m, 한쪽 패널에 가까운 위치로 모델링\n\n두 차선 간 간섭(cross-talk)도 평가",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Kouzes2006Response</span>"
+    ]
+  },
+  {
+    "objectID": "Kouzes2006Response.html#시뮬레이션-결과",
+    "href": "Kouzes2006Response.html#시뮬레이션-결과",
+    "title": "8  Kouzes2006Response",
+    "section": "8.5 시뮬레이션 결과",
+    "text": "8.5 시뮬레이션 결과\n\n8.5.1 Lane-1 (핵종이 있는 차선) 응답 (p.10–11, Fig. 7)\n99mTc 예시:\n\n차량이 가까워질수록 bottom/passenger 패널에서 카운트 급증\n\n검출기 배치에 따른 비대칭성이 뚜렷함\n\nLow-energy(5–250 keV)에서 매우 높은 카운트 생성\n\n\n\n8.5.2 Lane-2(인접 차선) cross-talk 응답 (p.10–11, Fig. 8)\n\nLane-2에서도 상당한 gamma가 검출됨\n\npassenger-side가 driver-side보다 10배 이상 많이 측정\n\nHigh-energy 감마를 방출하는 ⁶⁷Ga, ¹³¹I, ⁵¹Cr에서 cross-talk가 특히 큼\n\n\n\n8.5.3 Cross-talk 비율 (p.11)\n\nLane-2 / Lane-1 비율은 11–18% 수준\n\n즉, 의료핵종을 가진 승객 1명 → 두 차선 모두 오경보 발생 가능",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Kouzes2006Response</span>"
+    ]
+  },
+  {
+    "objectID": "Kouzes2006Response.html#핵종별-오경보-지속-시간-p.12-fig.-9",
+    "href": "Kouzes2006Response.html#핵종별-오경보-지속-시간-p.12-fig.-9",
+    "title": "8  Kouzes2006Response",
+    "section": "8.6 핵종별 오경보 지속 시간 (p.12, Fig. 9)",
+    "text": "8.6 핵종별 오경보 지속 시간 (p.12, Fig. 9)\n핵종별 RPM alarm 지속 가능 기간:\n\n\n\n핵종\n오경보 가능 기간\n\n\n\n\n99mTc\n3.4일\n\n\n¹²³I\n~6일\n\n\n²⁰¹Tl\n~5일\n\n\n⁶⁷Ga\n~8일\n\n\n⁵¹Cr\n~10일\n\n\n¹³¹I\n115일 이상 (치료용)\n\n\n¹¹¹In\n~9일\n\n\n¹⁵³Sm\n~10일\n\n\n\n특히 ¹³¹I 등 치료용 핵종은 몇 주 ~ 수개월 동안 RPM에서 알람 가능.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Kouzes2006Response</span>"
+    ]
+  },
+  {
+    "objectID": "Kouzes2006Response.html#오경보-발생-확률-p.1213",
+    "href": "Kouzes2006Response.html#오경보-발생-확률-p.1213",
+    "title": "8  Kouzes2006Response",
+    "section": "8.7 오경보 발생 확률 (p.12–13)",
+    "text": "8.7 오경보 발생 확률 (p.12–13)\n미국 기준:\n\n99mTc 진단 건수: 연 1,316만 건\n1명당 평균 3일 동안 RPM에서 검출 가능\n\n따라서 오경보 확률:\n\n1/2581명 ≈ 차량 기준 1/1300대\n\n이 값은 실제 국경 데이터(1/500~1/2000 차량)와 일치.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Kouzes2006Response</span>"
+    ]
+  },
+  {
+    "objectID": "Kouzes2006Response.html#결론-p.1314",
+    "href": "Kouzes2006Response.html#결론-p.1314",
+    "title": "8  Kouzes2006Response",
+    "section": "8.8 8. 결론 (p.13–14)",
+    "text": "8.8 8. 결론 (p.13–14)\n\n의료 방사성핵종은 RPM nuisance alarm의 가장 큰 원인\n\n대부분의 핵종은 Lane-1뿐 아니라 Lane-2에서도 cross-talk alarm을 일으킴\n\n99mTc는 가장 빈번하며, 131I는 가장 오래 지속\n\n의료 핵종 알람은 RPM 운영 부담 증가, 필수적인 2차 검사 증가, 여러 차선의 동시 경보(cross-lane alarm)까지 유발\n\n미래 과제: 의료 핵종을 자동 분류할 수 있는 고급 알고리즘 필요",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Kouzes2006Response</span>"
+    ]
+  },
+  {
+    "objectID": "Kouzes2006Response.html#핵심-요약-문장",
+    "href": "Kouzes2006Response.html#핵심-요약-문장",
+    "title": "8  Kouzes2006Response",
+    "section": "8.9 핵심 요약 문장",
+    "text": "8.9 핵심 요약 문장\n“의료 방사성핵종은 미국 국경 RPM에서 발생하는 오경보의 주요 원인이며, 하루 평균 약 1/1300 차량이 의료핵종으로 인해 알람을 발생시킨다.”\n\n\n\n\nKouzes, Richard T., and Edward R. Siciliano. 2006. “The Response of Radiation Portal Monitors to Medical Radionuclides at Border Crossings.” Radiation Measurements 41 (5): 499–512. https://doi.org/https://doi.org/10.1016/j.radmeas.2005.10.005.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Kouzes2006Response</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "9  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Bertrand, Guillaume H. V., Matthieu Hamel, and Fabien Sguerra. 2014.\n“Current Status on Plastic Scintillators Modifications.”\nChemistry – A European Journal 20 (48): 15660–85.\nhttps://doi.org/https://doi.org/10.1002/chem.201404093.\n\n\nEly, James, Richard Kouzes, John Schweppe, Edward Siciliano, Denis\nStrachan, and Dennis Weier. 2006. “The Use of Energy Windowing to\nDiscriminate SNM from NORM in Radiation Portal Monitors.”\nNuclear Instruments and Methods in Physics Research Section A:\nAccelerators, Spectrometers, Detectors and Associated Equipment 560\n(2): 373–87. https://doi.org/https://doi.org/10.1016/j.nima.2006.01.053.\n\n\nHevener, Ryne, Man-Sung Yim, and Ken Baird. 2013. “Investigation\nof Energy Windowing Algorithms for Effective Cargo Screening with\nRadiation Portal Monitors.” Radiation Measurements 58:\n113–20. https://doi.org/https://doi.org/10.1016/j.radmeas.2013.08.004.\n\n\nKim, Yewon, Myungsoo Kim, Kyung Taek Lim, Jongbum Kim, and Gyuseong Cho.\n2019. “Inverse Calibration Matrix Algorithm for Radiation\nDetection Portal Monitors.” Radiation Physics and\nChemistry 155: 127–32. https://doi.org/https://doi.org/10.1016/j.radphyschem.2018.07.022.\n\n\nLee, Hyun Cheol, Wook-geun Shin, Hyun Joon Choi, Chang-Il Choi, Chang Su\nPark, Hong-Suk Kim, and Chul Hee Min. 2020. “Radioisotope\nIdentification Using an Energy-Weighted Algorithm with a\nProof-of-Principle Radiation Portal Monitor Based on Plastic\nScintillators.” Applied Radiation and Isotopes 156:\n109010. https://doi.org/https://doi.org/10.1016/j.apradiso.2019.109010.\n\n\nPaff, Marc Gerrit, Angela Di Fulvio, Shaun D. Clarke, and Sara A. Pozzi.\n2017. “Radionuclide Identification Algorithm for Organic\nScintillator-Based Radiation Portal Monitor.” Nuclear\nInstruments and Methods in Physics Research Section A: Accelerators,\nSpectrometers, Detectors and Associated Equipment 849: 41–48.\nhttps://doi.org/https://doi.org/10.1016/j.nima.2017.01.009.\n\n\nSiciliano, E. R., J. H. Ely, R. T. Kouzes, B. D. Milbrath, J. E.\nSchweppe, and D. C. Stromswold. 2005. “Comparison of PVT and\nNaI(tl) Scintillators for Vehicle Portal Monitor Applications.”\nNuclear Instruments and Methods in Physics Research Section A:\nAccelerators, Spectrometers, Detectors and Associated Equipment 550\n(3): 647–74. https://doi.org/https://doi.org/10.1016/j.nima.2005.05.056.",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "Runkle2006Analysis.html",
+    "href": "Runkle2006Analysis.html",
+    "title": "9  Runkle2006Analysis",
+    "section": "",
+    "text": "9.1 연구 목적\nCite : Runkle et al. (2006)\n이 논문은 PCA(Principal Component Analysis) + Mahalanobis Distance(MD)를 활용해 방사선 포털 모니터(RPM)의 1차 검사(primary screening)에서 이상치 기반(anomaly-based) 방사선 탐지를 수행하는 방법을 제안한다.\n핵심 목표:",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Runkle2006Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "Runkle2006Analysis.html#rpm-시스템-및-데이터-p.12-fig.-12",
+    "href": "Runkle2006Analysis.html#rpm-시스템-및-데이터-p.12-fig.-12",
+    "title": "9  Runkle2006Analysis",
+    "section": "9.2 RPM 시스템 및 데이터 (p.1–2, Fig. 1–2)",
+    "text": "9.2 RPM 시스템 및 데이터 (p.1–2, Fig. 1–2)\n\n9.2.1 사용된 RPM 종류\n\nPVT-RPM\n\n대형 PVT 패널 1개\n\n512채널 MCA\n\nphotopeak 없음, Compton edge만 존재\n\nNaI(Tl)-RPM\n\n10×10×41 cm 결정 4개\n\n8% 에너지 분해능 → 스펙트럼 구조가 풍부\n\n3000 keV까지 512채널\n\n\n\n\n9.2.2 정상 차량 스펙트럼 (benign population)\n\n약 2000대 차량의 스펙트럼\n\n차량 속도 약 2 m/s\n\n핵물질은 중심 1초 구간에서 절반 이상의 계수 발생 → 각 차량의 중심 1초 스펙트럼 선택\n\n\n\n9.2.3 NORM 스펙트럼 예시(Fig. 2)\n\nK-40 지배 스펙트럼\n\nTh 지배 스펙트럼\n→ 매우 빈번하게 등장하는 nuisance source",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Runkle2006Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "Runkle2006Analysis.html#pca-기반-분석-방법",
+    "href": "Runkle2006Analysis.html#pca-기반-분석-방법",
+    "title": "9  Runkle2006Analysis",
+    "section": "9.3 PCA 기반 분석 방법",
+    "text": "9.3 PCA 기반 분석 방법\n\n9.3.1 에너지 스펙트럼 decimation\n\nNaI-RPM → 35개 bin\n\nPVT-RPM → 8개 bin\n(해상도 및 Compton 분해능 고려)\n\n\n\n9.3.2 PCA 수행 (p.2–3)\n\n정상 스펙트럼의 공분산 행렬을 기반으로 PCA 수행\n\nPC1 = 배경 형태(backgound-like) (Fig. 3)\n\n고차 PC = 점점 높은 에너지 영역의 구조 반영 (Fig. 4)\n\n\n\n9.3.3 PC 공간에서 anomaly 특징 (Fig. 5)\n\nanomaly(D.U., 232Th)는 정상군 평균과 다른 방향으로 큰 PC score를 가짐\n\nNaI에서는 고에너지 peak가 반영되어 고차 PC에서 차이가 큼\n\nPVT에서는 low-energy variation이 지배적",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Runkle2006Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "Runkle2006Analysis.html#mahalanobis-distancemd를-통한-이상치-판단",
+    "href": "Runkle2006Analysis.html#mahalanobis-distancemd를-통한-이상치-판단",
+    "title": "9  Runkle2006Analysis",
+    "section": "9.4 Mahalanobis Distance(MD)를 통한 이상치 판단",
+    "text": "9.4 Mahalanobis Distance(MD)를 통한 이상치 판단\nMD 특징: - PCA 변환 후, 각 PC의 분산을 고려해 거리 계산\n- PC1처럼 분산이 큰 축은 가중치 작음\n- 고차 PC(분산 낮음)는 anomaly 판별에 더 민감하게 작용\nAlarm threshold 설정 방법\n- 예: N/FAP = 0.01\n→ 정상군 MD의 상위 1% 값을 threshold로 사용\n- threshold 초과 = anomaly → 2차 검사 대상",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Runkle2006Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "Runkle2006Analysis.html#injection-study-기반-성능-평가-p.45-fig.-67",
+    "href": "Runkle2006Analysis.html#injection-study-기반-성능-평가-p.45-fig.-67",
+    "title": "9  Runkle2006Analysis",
+    "section": "9.5 Injection Study 기반 성능 평가 (p.4–5, Fig. 6–7)",
+    "text": "9.5 Injection Study 기반 성능 평가 (p.4–5, Fig. 6–7)\n\n9.5.1 실험 개요\n\n정상군의 MD 분포 기반으로 alarm threshold 설정\n\nanomaly(232Th, DU, Ba)에서 일정 count를 정상 스펙트럼에 덧붙임(injection)\n\nthreshold 초과 여부 확인 → MDC(Minimum Detectable Counts) 계산\n\n\n\n9.5.2 5.2 결과 (Fig. 7–8)\nNaI-RPM이 PVT-RPM보다 약 2배 민감\n- NaI는 photopeak 존재 → anomaly 차이가 PC에서 잘 반영\n- PVT는 Compton만 존재하지만 PCA/MD로 여전히 anomaly 분리 가능\nPCA/MD vs Gross Count\n- 낮은 N/FAP(현실 국경환경)에서 PCA/MD가 훨씬 우수\n- 높은 N/FAP에서는 GC와 유사해짐\n→ 이유: NORM 스펙트럼 tail 때문에 정상군 내부의 변동이 커짐\nNORM 대비 anomaly 분리 성능\n- 양 RPM 모두 anomaly가 NORM보다 작은 계수로도 탐지 가능\n- anomaly MDC가 NORM MDC보다 2–3배 낮음\n→ PCA/MD는 NORM suppression에 효과적",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Runkle2006Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "Runkle2006Analysis.html#결론-및-의의-p.56",
+    "href": "Runkle2006Analysis.html#결론-및-의의-p.56",
+    "title": "9  Runkle2006Analysis",
+    "section": "9.6 결론 및 의의 (p.5–6)",
+    "text": "9.6 결론 및 의의 (p.5–6)\n\n9.6.1 알고리즘 성능 요약\n\nPCA/MD는 기존 gross-count 방식의 한계를 극복\n\nNaI-RPM에서 특히 강력하지만 PVT에서도 실용적\n\nanomaly vs NORM 구분 성능이 우수\n\nPVT에서도 spectroscopic-like anomaly detection 가능\n\n\n\n9.6.2 한계\n\ncount-rate sensitivity가 남아 있어 shape-only metric 필요\n\nMD + spectral angle 혼합 metric 제안됨\n\n향후 log-count 변환, bin 구조 개선 등 연구 필요",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Runkle2006Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "Runkle2006Analysis.html#핵심-요약-문장",
+    "href": "Runkle2006Analysis.html#핵심-요약-문장",
+    "title": "9  Runkle2006Analysis",
+    "section": "9.7 핵심 요약 문장",
+    "text": "9.7 핵심 요약 문장\n“PCA + Mahalanobis Distance 기반 알고리즘은 RPM 1차 검사에서 NORM·비료 같은 nuisance source를 억제하고, 핵물질 anomaly를 기존 gross-count 방식보다 훨씬 높은 민감도로 검출한다.”\n\n\n\n\nRunkle, R. C., M. F. Tardiff, K. K. Anderson, D. K. Carlson, and L. E. Smith. 2006. “Analysis of Spectroscopic Radiation Portal Monitor Data Using Principal Components Analysis.” IEEE Transactions on Nuclear Science 53 (3): 1418–23. https://doi.org/10.1109/TNS.2006.874883.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Runkle2006Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "Runkle2006Analysis.html#연구-목적",
+    "href": "Runkle2006Analysis.html#연구-목적",
+    "title": "9  Runkle2006Analysis",
+    "section": "",
+    "text": "정상 차량군(benign vehicles)의 스펙트럼 분포를 정의하고\n\n새로 들어온 차량의 스펙트럼이 정상군에서 벗어나는 정도를 정량화하여\n\nNORM·비료 같은 nuisance source는 통과시키고, 핵물질·산업원전 등 anomaly는 빠르게 탐지하는 알고리즘 개발.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Runkle2006Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "Runkle2006Analysis.html#핵심-요약-문장-pca-mahalanobis-distance-기반-알고리즘은-rpm-1차-검사에서-norm비료-같은-nuisance-source를-억제하고-핵물질-anomaly를-기존-gross-count-방식보다-훨씬-높은-민감도로-검출한다.",
+    "href": "Runkle2006Analysis.html#핵심-요약-문장-pca-mahalanobis-distance-기반-알고리즘은-rpm-1차-검사에서-norm비료-같은-nuisance-source를-억제하고-핵물질-anomaly를-기존-gross-count-방식보다-훨씬-높은-민감도로-검출한다.",
+    "title": "9  Runkle2006Analysis",
+    "section": "9.7 핵심 요약 문장 “PCA + Mahalanobis Distance 기반 알고리즘은 RPM 1차 검사에서 NORM·비료 같은 nuisance source를 억제하고, 핵물질 anomaly를 기존 gross-count 방식보다 훨씬 높은 민감도로 검출한다.”",
+    "text": "9.7 핵심 요약 문장 “PCA + Mahalanobis Distance 기반 알고리즘은 RPM 1차 검사에서 NORM·비료 같은 nuisance source를 억제하고, 핵물질 anomaly를 기존 gross-count 방식보다 훨씬 높은 민감도로 검출한다.”\n\n\n\n\nRunkle, R. C., M. F. Tardiff, K. K. Anderson, D. K. Carlson, and L. E. Smith. 2006. “Analysis of Spectroscopic Radiation Portal Monitor Data Using Principal Components Analysis.” IEEE Transactions on Nuclear Science 53 (3): 1418–23. https://doi.org/10.1109/TNS.2006.874883.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Runkle2006Analysis</span>"
+    ]
+  }
+]

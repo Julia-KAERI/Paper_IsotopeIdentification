@@ -1,0 +1,137 @@
+---
+title: "Runkle2006Analysis"
+number-sections: true
+number-depth : 3
+crossref:
+  chapters: true
+---
+
+{{< include latexmacros.qmd >}}
+
+
+Cite : @Runkle2006Analysis
+
+
+## 연구 목적  
+
+이 논문은 **PCA(Principal Component Analysis) + Mahalanobis Distance(MD)**를 활용해 방사선 포털 모니터(RPM)의 **1차 검사(primary screening)에서 이상치 기반(anomaly-based) 방사선 탐지**를 수행하는 방법을 제안한다.
+
+핵심 목표:  
+
+- 정상 차량군(benign vehicles)의 스펙트럼 분포를 정의하고  
+- 새로 들어온 차량의 스펙트럼이 정상군에서 벗어나는 정도를 정량화하여  
+- **NORM·비료 같은 nuisance source는 통과시키고**, **핵물질·산업원전 등 anomaly는 빠르게 탐지**하는 알고리즘 개발.
+
+</br>
+
+## RPM 시스템 및 데이터 (p.1–2, Fig. 1–2)
+
+### 사용된 RPM 종류  
+
+- **PVT-RPM**  
+  - 대형 PVT 패널 1개  
+  - 512채널 MCA  
+  - photopeak 없음, Compton edge만 존재  
+
+- **NaI(Tl)-RPM**  
+  - 10×10×41 cm 결정 4개  
+  - 8% 에너지 분해능 → 스펙트럼 구조가 풍부  
+  - 3000 keV까지 512채널
+
+### 정상 차량 스펙트럼 (benign population)  
+
+- 약 **2000대 차량의 스펙트럼**  
+- 차량 속도 약 2 m/s  
+- 핵물질은 중심 1초 구간에서 절반 이상의 계수 발생 → **각 차량의 중심 1초 스펙트럼 선택**
+
+### NORM 스펙트럼 예시(Fig. 2)  
+
+- K-40 지배 스펙트럼  
+- Th 지배 스펙트럼  
+→ 매우 빈번하게 등장하는 nuisance source
+
+</br>
+
+## PCA 기반 분석 방법
+
+### 에너지 스펙트럼 decimation  
+
+- NaI-RPM → 35개 bin  
+- PVT-RPM → 8개 bin  
+(해상도 및 Compton 분해능 고려)
+
+### PCA 수행 (p.2–3)  
+
+- 정상 스펙트럼의 **공분산 행렬**을 기반으로 PCA 수행  
+- **PC1 = 배경 형태(backgound-like)** (Fig. 3)  
+- 고차 PC = 점점 높은 에너지 영역의 구조 반영 (Fig. 4)
+
+### PC 공간에서 anomaly 특징 (Fig. 5)  
+
+- anomaly(D.U., 232Th)는 정상군 평균과 다른 방향으로 큰 PC score를 가짐  
+- NaI에서는 고에너지 peak가 반영되어 고차 PC에서 차이가 큼  
+- PVT에서는 low-energy variation이 지배적
+
+</br>
+
+## Mahalanobis Distance(MD)를 통한 이상치 판단
+
+MD 특징:
+- PCA 변환 후, 각 PC의 분산을 고려해 거리 계산  
+- PC1처럼 분산이 큰 축은 가중치 작음  
+- 고차 PC(분산 낮음)는 anomaly 판별에 더 민감하게 작용
+
+**Alarm threshold 설정 방법**  
+- 예: N/FAP = 0.01  
+  → 정상군 MD의 상위 1% 값을 threshold로 사용  
+- threshold 초과 = anomaly → 2차 검사 대상
+
+</br>
+
+## Injection Study 기반 성능 평가 (p.4–5, Fig. 6–7)
+
+### 실험 개요  
+
+1. 정상군의 MD 분포 기반으로 alarm threshold 설정  
+2. anomaly(232Th, DU, Ba)에서 일정 count를 정상 스펙트럼에 덧붙임(injection)  
+3. threshold 초과 여부 확인 → **MDC(Minimum Detectable Counts)** 계산
+
+### 5.2 결과 (Fig. 7–8)
+
+**NaI-RPM이 PVT-RPM보다 약 2배 민감**  
+- NaI는 photopeak 존재 → anomaly 차이가 PC에서 잘 반영  
+- PVT는 Compton만 존재하지만 PCA/MD로 여전히 anomaly 분리 가능
+
+**PCA/MD vs Gross Count**  
+- 낮은 N/FAP(현실 국경환경)에서 **PCA/MD가 훨씬 우수**  
+- 높은 N/FAP에서는 GC와 유사해짐  
+  → 이유: NORM 스펙트럼 tail 때문에 정상군 내부의 변동이 커짐
+
+**NORM 대비 anomaly 분리 성능**  
+- 양 RPM 모두 anomaly가 NORM보다 작은 계수로도 탐지 가능  
+- anomaly MDC가 NORM MDC보다 2–3배 낮음  
+  → PCA/MD는 NORM suppression에 효과적
+
+</br>
+
+## 결론 및 의의 (p.5–6)
+
+### 알고리즘 성능 요약  
+
+- PCA/MD는 기존 gross-count 방식의 한계를 극복  
+- NaI-RPM에서 특히 강력하지만 PVT에서도 실용적  
+- anomaly vs NORM 구분 성능이 우수  
+- PVT에서도 spectroscopic-like anomaly detection 가능
+
+### 한계  
+
+- count-rate sensitivity가 남아 있어 shape-only metric 필요  
+- MD + spectral angle 혼합 metric 제안됨  
+- 향후 log-count 변환, bin 구조 개선 등 연구 필요
+
+</br>
+
+## 핵심 요약 문장  
+
+**“PCA + Mahalanobis Distance 기반 알고리즘은 RPM 1차 검사에서 NORM·비료 같은 nuisance source를 억제하고, 핵물질 anomaly를  기존 gross-count 방식보다 훨씬 높은 민감도로 검출한다.”**
+

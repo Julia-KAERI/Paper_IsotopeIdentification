@@ -1,0 +1,35 @@
+project:
+  type: book
+  output-dir : docs
+
+book:
+  title: "Refsum"
+  author: "Norah Jones"
+  date: "12/3/2025"
+  chapters:
+    - index.qmd
+    - Siclliano2005Comparison.qmd
+    - Bertrand2014Current.qmd
+    - Ely2006EWindow.qmd
+    - Hevener2013EWindow.qmd
+    - Lee2020EWeight.qmd
+    - Paff2017Spectral.qmd
+    - Kim2019InvMat.qmd
+    - Kouzes2006Response.qmd
+    - Runkle2006Analysis.qmd
+    - summary.qmd
+    - references.qmd
+
+# bibliography: references.bib
+bibliography: ../../papers/biblio.bib
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    fontsize: 0.9em
+  # pdf:
+  #   documentclass: scrreprt
+
+
+
