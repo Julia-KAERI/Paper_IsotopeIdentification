@@ -68,6 +68,16 @@
   \doiprefix\url{https://doi.org/10.1016/j.nima.2017.01.009}
   (\bibinfo{year}{2017}).
 
+\bibitem{Runkle2006Analysis}
+\bibinfo{author}{Runkle, R.}, \bibinfo{author}{Tardiff, M.},
+  \bibinfo{author}{Anderson, K.}, \bibinfo{author}{Carlson, D.} \&
+  \bibinfo{author}{Smith, L.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Analysis of spectroscopic radiation
+  portal monitor data using principal components analysis}}.
+\newblock {\emph{\JournalTitle{IEEE Transactions on Nuclear Science}}}
+  \textbf{\bibinfo{volume}{53}}, \bibinfo{pages}{1418--1423},
+  \doiprefix\url{10.1109/TNS.2006.874883} (\bibinfo{year}{2006}).
+
 \bibitem{Kim2019InvMat}
 \bibinfo{author}{Kim, Y.}, \bibinfo{author}{Kim, M.}, \bibinfo{author}{Lim,
   K.~T.}, \bibinfo{author}{Kim, J.} \& \bibinfo{author}{Cho, G.}
@@ -107,34 +117,5 @@
   \textbf{\bibinfo{volume}{46}}, \bibinfo{pages}{204--212},
   \doiprefix\url{https://doi.org/10.14407/jrpr.2021.00206}
   (\bibinfo{year}{2021}).
-
-\bibitem{Jeon2021PseudoGamma}
-\bibinfo{author}{Jeon, B.}, \bibinfo{author}{Kim, J.}, \bibinfo{author}{Lee,
-  E.}, \bibinfo{author}{Moon, M.} \& \bibinfo{author}{Cho, G.}
-\newblock \bibinfo{journal}{\bibinfo{title}{Pseudo-gamma spectroscopy based on
-  plastic scintillation detectors using multitask learning}}.
-\newblock {\emph{\JournalTitle{Sensors}}} \textbf{\bibinfo{volume}{21}},
-  \doiprefix\url{https://doi.org/10.3390/s21030684} (\bibinfo{year}{2021}).
-
-\bibitem{Jeon2023Explanation}
-\bibinfo{author}{Jeon, B.}, \bibinfo{author}{Kim, J.} \& \bibinfo{author}{and,
-  M.~M.}
-\newblock \bibinfo{journal}{\bibinfo{title}{Explanation of deep learning-based
-  radioisotope identifier for plastic scintillation detector}}.
-\newblock {\emph{\JournalTitle{Nuclear Technology}}}
-  \textbf{\bibinfo{volume}{209}}, \bibinfo{pages}{1--14},
-  \doiprefix\url{https://doi.org/10.1080/00295450.2022.2096389}
-  (\bibinfo{year}{2023}).
-
-\bibitem{LoPresti2006BaselineSuppression}
-\bibinfo{author}{{Lo Presti}, C.~A.}, \bibinfo{author}{Weier, D.~R.},
-  \bibinfo{author}{Kouzes, R.~T.} \& \bibinfo{author}{Schweppe, J.~E.}
-\newblock \bibinfo{journal}{\bibinfo{title}{Baseline suppression of vehicle
-  portal monitor gamma count profiles: A characterization study}}.
-\newblock {\emph{\JournalTitle{Nuclear Instruments and Methods in Physics
-  Research Section A: Accelerators, Spectrometers, Detectors and Associated
-  Equipment}}} \textbf{\bibinfo{volume}{562}}, \bibinfo{pages}{281--297},
-  \doiprefix\url{https://doi.org/10.1016/j.nima.2006.02.156}
-  (\bibinfo{year}{2006}).
 
 \end{thebibliography}
