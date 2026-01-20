@@ -27,6 +27,12 @@ Cite : @Sicilliano2005Comparision
 </br>
 
 ## 실험 스펙트럼 비교
+::: {layout-ncol=2}
+![](figures/NaI_photopeak_example.png)
+
+![](figures/PVT_example.png)
+:::
+
 
 - NaI(Tl): 명확한 photopeak  
 - PVT: 저에너지에 몰린 Compton 분포  
