@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Hevener2013EWindow – Refsum</title>
+<title>3&nbsp; Ely2006EnergyWindow – Refsum</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,8 +50,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Lee2020EWeight.html" rel="next">
-<link href="./Ely2008EnergyWindow.html" rel="prev">
+<link href="./Ely2008EnergyWindow.html" rel="next">
+<link href="./Bertrand2014Current.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -131,7 +131,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Hevener2013EWindow.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Hevener2013EWindow</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Ely2006EnergyWindowing.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Ely2006EnergyWindow</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -176,7 +176,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Ely2006EnergyWindowing.html" class="sidebar-item-text sidebar-link">
+  <a href="./Ely2006EnergyWindowing.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Ely2006EnergyWindow</span></span></a>
   </div>
 </li>
@@ -188,7 +188,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Hevener2013EWindow.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Hevener2013EWindow.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Hevener2013EWindow</span></span></a>
   </div>
 </li>
@@ -244,26 +244,31 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#연구-목적" id="toc-연구-목적" class="nav-link active" data-scroll-target="#연구-목적"><span class="header-section-number">5.1</span> 연구 목적</a></li>
-  <li><a href="#pvt의-에너지-정보-한계" id="toc-pvt의-에너지-정보-한계" class="nav-link" data-scroll-target="#pvt의-에너지-정보-한계"><span class="header-section-number">5.2</span> PVT의 에너지 정보 한계</a></li>
-  <li><a href="#기존-윈도잉-방식의-문제점" id="toc-기존-윈도잉-방식의-문제점" class="nav-link" data-scroll-target="#기존-윈도잉-방식의-문제점"><span class="header-section-number">5.3</span> 기존 윈도잉 방식의 문제점</a></li>
-  <li><a href="#새로운-ew-알고리즘의-핵심" id="toc-새로운-ew-알고리즘의-핵심" class="nav-link" data-scroll-target="#새로운-ew-알고리즘의-핵심"><span class="header-section-number">5.4</span> 새로운 EW 알고리즘의 핵심</a>
+  <li><a href="#연구-배경과-목적" id="toc-연구-배경과-목적" class="nav-link active" data-scroll-target="#연구-배경과-목적"><span class="header-section-number">3.1</span> 연구 배경과 목적</a></li>
+  <li><a href="#pvt-검출기와-스펙트럼-특성" id="toc-pvt-검출기와-스펙트럼-특성" class="nav-link" data-scroll-target="#pvt-검출기와-스펙트럼-특성"><span class="header-section-number">3.2</span> PVT 검출기와 스펙트럼 특성</a></li>
+  <li><a href="#norm-vs-snm-스펙트럼-차이" id="toc-norm-vs-snm-스펙트럼-차이" class="nav-link" data-scroll-target="#norm-vs-snm-스펙트럼-차이"><span class="header-section-number">3.3</span> NORM vs SNM 스펙트럼 차이</a>
   <ul class="collapse">
-  <li><a href="#sb-기반-최적-창-설정" id="toc-sb-기반-최적-창-설정" class="nav-link" data-scroll-target="#sb-기반-최적-창-설정"><span class="header-section-number">5.4.1</span> S/√B 기반 최적 창 설정</a></li>
-  <li><a href="#보정-핵종-사용" id="toc-보정-핵종-사용" class="nav-link" data-scroll-target="#보정-핵종-사용"><span class="header-section-number">5.4.2</span> 보정 핵종 사용</a></li>
-  <li><a href="#조정된-보상비율adjusted-compensated-ratio" id="toc-조정된-보상비율adjusted-compensated-ratio" class="nav-link" data-scroll-target="#조정된-보상비율adjusted-compensated-ratio"><span class="header-section-number">5.4.3</span> 조정된 보상비율(Adjusted Compensated Ratio)</a></li>
+  <li><a href="#norm" id="toc-norm" class="nav-link" data-scroll-target="#norm"><span class="header-section-number">3.3.1</span> NORM</a></li>
+  <li><a href="#snm-heu-wgpu" id="toc-snm-heu-wgpu" class="nav-link" data-scroll-target="#snm-heu-wgpu"><span class="header-section-number">3.3.2</span> SNM (HEU, WGPu)</a></li>
   </ul></li>
-  <li><a href="#알고리즘-작동-방식" id="toc-알고리즘-작동-방식" class="nav-link" data-scroll-target="#알고리즘-작동-방식"><span class="header-section-number">5.5</span> 알고리즘 작동 방식</a></li>
-  <li><a href="#실데이터-기반-평가-결과" id="toc-실데이터-기반-평가-결과" class="nav-link" data-scroll-target="#실데이터-기반-평가-결과"><span class="header-section-number">5.6</span> 실데이터 기반 평가 결과</a>
+  <li><a href="#energy-windowingew-알고리즘-개념" id="toc-energy-windowingew-알고리즘-개념" class="nav-link" data-scroll-target="#energy-windowingew-알고리즘-개념"><span class="header-section-number">3.4</span> Energy Windowing(EW) 알고리즘 개념</a>
   <ul class="collapse">
-  <li><a href="#민감도sensitivity" id="toc-민감도sensitivity" class="nav-link" data-scroll-target="#민감도sensitivity"><span class="header-section-number">5.6.1</span> 민감도(Sensitivity)</a></li>
-  <li><a href="#masking에-대한-강인성" id="toc-masking에-대한-강인성" class="nav-link" data-scroll-target="#masking에-대한-강인성"><span class="header-section-number">5.6.2</span> Masking에 대한 강인성</a></li>
-  <li><a href="#granite-cargo-문제" id="toc-granite-cargo-문제" class="nav-link" data-scroll-target="#granite-cargo-문제"><span class="header-section-number">5.6.3</span> Granite Cargo 문제</a></li>
-  <li><a href="#precision" id="toc-precision" class="nav-link" data-scroll-target="#precision"><span class="header-section-number">5.6.4</span> Precision</a></li>
-  <li><a href="#f1-score" id="toc-f1-score" class="nav-link" data-scroll-target="#f1-score"><span class="header-section-number">5.6.5</span> F1 Score</a></li>
+  <li><a href="#기본-아이디어" id="toc-기본-아이디어" class="nav-link" data-scroll-target="#기본-아이디어"><span class="header-section-number">3.4.1</span> 기본 아이디어</a></li>
   </ul></li>
-  <li><a href="#결론" id="toc-결론" class="nav-link" data-scroll-target="#결론"><span class="header-section-number">5.7</span> 결론</a></li>
-  <li><a href="#요약" id="toc-요약" class="nav-link" data-scroll-target="#요약"><span class="header-section-number">5.8</span> 요약</a></li>
+  <li><a href="#gross-count-방식의-한계" id="toc-gross-count-방식의-한계" class="nav-link" data-scroll-target="#gross-count-방식의-한계"><span class="header-section-number">3.5</span> Gross-count 방식의 한계</a></li>
+  <li><a href="#ew-알고리즘의-장점" id="toc-ew-알고리즘의-장점" class="nav-link" data-scroll-target="#ew-알고리즘의-장점"><span class="header-section-number">3.6</span> EW 알고리즘의 장점</a>
+  <ul class="collapse">
+  <li><a href="#norm-억제-능력" id="toc-norm-억제-능력" class="nav-link" data-scroll-target="#norm-억제-능력"><span class="header-section-number">3.6.1</span> NORM 억제 능력</a></li>
+  <li><a href="#shadow-shielding-완화" id="toc-shadow-shielding-완화" class="nav-link" data-scroll-target="#shadow-shielding-완화"><span class="header-section-number">3.6.2</span> Shadow shielding 완화</a></li>
+  </ul></li>
+  <li><a href="#다중-윈도ew-시스템" id="toc-다중-윈도ew-시스템" class="nav-link" data-scroll-target="#다중-윈도ew-시스템"><span class="header-section-number">3.7</span> 다중 윈도(EW) 시스템</a>
+  <ul class="collapse">
+  <li><a href="#윈도-5-윈도-확장" id="toc-윈도-5-윈도-확장" class="nav-link" data-scroll-target="#윈도-5-윈도-확장"><span class="header-section-number">3.7.1</span> 3-윈도, 5-윈도 확장</a></li>
+  <li><a href="#injection-study-결과" id="toc-injection-study-결과" class="nav-link" data-scroll-target="#injection-study-결과"><span class="header-section-number">3.7.2</span> Injection study 결과</a></li>
+  </ul></li>
+  <li><a href="#핵심-결과-정리" id="toc-핵심-결과-정리" class="nav-link" data-scroll-target="#핵심-결과-정리"><span class="header-section-number">3.8</span> 핵심 결과 정리</a></li>
+  <li><a href="#한계와-주의점" id="toc-한계와-주의점" class="nav-link" data-scroll-target="#한계와-주의점"><span class="header-section-number">3.9</span> 한계와 주의점</a></li>
+  <li><a href="#결론" id="toc-결론" class="nav-link" data-scroll-target="#결론"><span class="header-section-number">3.10</span> 10. 결론</a></li>
   </ul>
 </nav>
     </div>
@@ -272,7 +277,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Hevener2013EWindow</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Ely2006EnergyWindow</span></h1>
 </div>
 
 
@@ -289,181 +294,203 @@ window.Quarto = {
 </header>
 
 
-<div class="hidden">
-<p>% %</p>
-%
-<p><span class="math display">\[
-\DeclarePairedDelimiters{\set}{\{}{\}}
-\DeclareMathOperator*{\argmax}{argmax}
+<p><strong>The use of energy windowing to discriminate SNM from NORM in radiation portal monitors</strong>, <em>Nuclear Instruments and Methods in Physics Research A 560 (2006) 373–387</em></p>
+<ul>
+<li>Cite : <span class="citation" data-cites="Ely2006TheUse">Ely et al. (<a href="references.html#ref-Ely2006TheUse" role="doc-biblioref">2006</a>)</span></li>
+</ul>
+<section id="연구-배경과-목적" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="연구-배경과-목적"><span class="header-section-number">3.1</span> 연구 배경과 목적</h2>
+<p>방사선 포털 모니터(RPM)는 국경·항만에서 핵물질(SNM)을 탐지하기 위해 널리 사용되며, 대부분 <strong>PVT(플라스틱 섬광체)</strong> 기반의 <strong>gross-count 검출기</strong>를 사용한다. 그러나 PVT는 분광 성능이 부족하여 <strong>NORM(자연방사성물질)</strong> 과 <strong>의료 방사성핵종</strong> 으로 인한 <strong>nuisance alarm</strong>이 빈번하게 발생한다.</p>
+<p>본 논문의 목적은 <strong>Energy Windowing(EW)</strong> 알고리즘을 통해</p>
+<ul>
+<li>NORM으로 인한 nuisance alarm을 줄이면서<br>
+</li>
+<li>SNM 탐지 민감도를 유지 또는 향상</li>
+</ul>
+<p>할 수 있음을 <strong>실험 데이터와 실제 차량 통과 데이터</strong>를 통해 검증하는 것이다.</p>
+<p><br></p>
+</section>
+<section id="pvt-검출기와-스펙트럼-특성" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="pvt-검출기와-스펙트럼-특성"><span class="header-section-number">3.2</span> PVT 검출기와 스펙트럼 특성</h2>
+<ul>
+<li>PVT에서는 <strong>Compton 산란이 지배적</strong> → photo peak 없음<br>
+</li>
+<li>스펙트럼은 <strong>Compton continuum</strong> 형태<br>
+</li>
+<li>그럼에도 불구하고 <strong>Compton edge 위치 차이</strong>로 인해 감마선 에너지에 따른 <strong>스펙트럼 형태 차이(shape difference)</strong>는 존재 → EW는 이 <strong>거친 에너지 정보(crude spectroscopy)</strong>를 활용하는 방법이다.</li>
+</ul>
+<p><br></p>
+</section>
+<section id="norm-vs-snm-스펙트럼-차이" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="norm-vs-snm-스펙트럼-차이"><span class="header-section-number">3.3</span> NORM vs SNM 스펙트럼 차이</h2>
+<section id="norm" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="norm"><span class="header-section-number">3.3.1</span> NORM</h3>
+<ul>
+<li>주된 기여: <sup>40</sup>K, U/Th decay chain<br>
+</li>
+<li>저·중·고에너지 영역에 걸쳐 <strong>배경과 유사한 스펙트럼 형태</strong></li>
+</ul>
+</section>
+<section id="snm-heu-wgpu" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="snm-heu-wgpu"><span class="header-section-number">3.3.2</span> SNM (HEU, WGPu)</h3>
+<ul>
+<li><strong>저에너지 감마선 성분이 상대적으로 강함</strong></li>
+<li>고에너지 영역은 배경과 유사</li>
+</ul>
+<p>➡️ <strong>“저에너지 대비 고에너지 비율”</strong>이 NORM과 SNM을 구분하는 핵심 지표</p>
+<p><br></p>
+</section>
+</section>
+<section id="energy-windowingew-알고리즘-개념" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="energy-windowingew-알고리즘-개념"><span class="header-section-number">3.4</span> Energy Windowing(EW) 알고리즘 개념</h2>
+<section id="기본-아이디어" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="기본-아이디어"><span class="header-section-number">3.4.1</span> 기본 아이디어</h3>
+<ul>
+<li>전체 에너지 스펙트럼을 <strong>2–5개의 에너지 윈도(window)</strong>로 분할<br>
+</li>
+<li>각 윈도에서 계수를 합산<br>
+</li>
+<li><strong>윈도 간 계수 비율(ratio)</strong>을 계산하여 배경과 비교</li>
+</ul>
+<p>대표적인 2-윈도 예: <span class="math display">\[
+R_{EW} = \frac{N_{low}}{N_{high}}
 \]</span></p>
-</div>
-<p>Cite : <span class="citation" data-cites="Hevener2013EWindow">Hevener, Yim, and Baird (<a href="references.html#ref-Hevener2013EWindow" role="doc-biblioref">2013</a>)</span></p>
-<p><br></p>
-<section id="연구-목적" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="연구-목적"><span class="header-section-number">5.1</span> 연구 목적</h2>
-<p>방사선 포털 모니터(RPM)는 핵물질 불법 반입을 방지하기 위해 전 세계에 배치되어 있으며, 대부분 <strong>PVT 플라스틱 섬광체</strong> 기반의 단순 <strong>Gross Count(GC)</strong> 방식에 의존하고 있다. 본문 연구는 <strong>에너지 윈도잉(Energy Windowing, EW)</strong> 알고리즘을 개선하여:</p>
-<ul>
-<li>SNM(특수핵물질)<br>
-</li>
-<li>RDD 위협 핵종<br>
-</li>
-<li>40K·Granite 등 NORM<br>
-</li>
-<li>DU</li>
-</ul>
-<p>을 <strong>1차 검사 단계에서 식별</strong>할 수 있도록 하는 것이 목표이다.</p>
+<p>NORM → 배경과 유사한 ratio<br>
+SNM → <strong>저에너지 비율 증가 → ratio 변화</strong></p>
 <p><br></p>
 </section>
-<section id="pvt의-에너지-정보-한계" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="pvt의-에너지-정보-한계"><span class="header-section-number">5.2</span> PVT의 에너지 정보 한계</h2>
-<ul>
-<li>낮은 <span class="math inline">\(Z\)</span> 재질 → photopeak 없음<br>
-</li>
-<li>Compton continuum만 존재, edge도 완만<br>
-</li>
-<li>스펙트럼 기반 동위원소 식별 불가능 → 그러나 <strong>윈도 분할(Windowing)</strong> 을 통해 스펙트럼 형태 차이를 활용 가능.</li>
-</ul>
-<p><br></p>
 </section>
-<section id="기존-윈도잉-방식의-문제점" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="기존-윈도잉-방식의-문제점"><span class="header-section-number">5.3</span> 기존 윈도잉 방식의 문제점</h2>
-<p><span class="citation" data-cites="Ely2006EWindow">(<a href="references.html#ref-Ely2006EWindow" role="doc-biblioref"><strong>Ely2006EWindow?</strong></a>)</span></p>
-<ol type="1">
-<li><strong>부적절한 보정(calibration)</strong>
+<section id="gross-count-방식의-한계" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="gross-count-방식의-한계"><span class="header-section-number">3.5</span> Gross-count 방식의 한계</h2>
 <ul>
-<li>잘못된 핵종을 기준으로 창을 설정하면 성능 저하</li>
+<li>NORM도 전체 계수를 증가시킴<br>
+</li>
+<li>단순 threshold 방식에서는
+<ul>
+<li>NORM<br>
+</li>
+<li>SNM<br>
+을 구분 불가</li>
 </ul></li>
-<li><strong>단순한 2윈도 구조</strong>
+</ul>
+<p>➡️ 민감도를 높이면 nuisance alarm 급증<br>
+➡️ nuisance를 줄이면 SNM 탐지 민감도 저하</p>
+<p><br></p>
+</section>
+<section id="ew-알고리즘의-장점" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="ew-알고리즘의-장점"><span class="header-section-number">3.6</span> EW 알고리즘의 장점</h2>
+<section id="norm-억제-능력" class="level3" data-number="3.6.1">
+<h3 data-number="3.6.1" class="anchored" data-anchor-id="norm-억제-능력"><span class="header-section-number">3.6.1</span> NORM 억제 능력</h3>
 <ul>
-<li>high-energy masking 발생<br>
+<li>EW ratio는 <strong>스펙트럼 “형태”</strong>를 비교<br>
 </li>
-<li>NORM과 위협 핵종 구분 어려움</li>
+<li>NORM은 배경과 동일한 형태 → ratio 변화 없음<br>
+</li>
+<li>실제 차량 데이터에서 <strong>NORM alarm 대폭 감소</strong></li>
+</ul>
+</section>
+<section id="shadow-shielding-완화" class="level3" data-number="3.6.2">
+<h3 data-number="3.6.2" class="anchored" data-anchor-id="shadow-shielding-완화"><span class="header-section-number">3.6.2</span> Shadow shielding 완화</h3>
+<ul>
+<li>차량이 통과하면 배경이 차폐되어 count 감소(shadow shielding)<br>
+</li>
+<li>Gross-count는 민감도 저하<br>
+</li>
+<li>EW ratio는 <strong>비율 기반</strong>이므로 shadow shielding에 둔감</li>
+</ul>
+<p>→ 특히 <strong>다중 패널 합(sum of panels)</strong>에서 효과 극대화</p>
+<p><br></p>
+</section>
+</section>
+<section id="다중-윈도ew-시스템" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="다중-윈도ew-시스템"><span class="header-section-number">3.7</span> 다중 윈도(EW) 시스템</h2>
+<section id="윈도-5-윈도-확장" class="level3" data-number="3.7.1">
+<h3 data-number="3.7.1" class="anchored" data-anchor-id="윈도-5-윈도-확장"><span class="header-section-number">3.7.1</span> 3-윈도, 5-윈도 확장</h3>
+<ul>
+<li>서로 다른 핵종은 <strong>서로 다른 에너지 구간</strong>에서 차이를 보임<br>
+</li>
+<li>5-윈도 시스템에서는
+<ul>
+<li>57Co<br>
+</li>
+<li>133Ba<br>
+</li>
+<li>DU<br>
+</li>
+<li>HEU / WGPu<br>
+에 대해 <strong>각각 최적의 ratio가 다름</strong></li>
 </ul></li>
-</ol>
-<p><br></p>
-</section>
-<section id="새로운-ew-알고리즘의-핵심" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="새로운-ew-알고리즘의-핵심"><span class="header-section-number">5.4</span> 새로운 EW 알고리즘의 핵심</h2>
-<section id="sb-기반-최적-창-설정" class="level3" data-number="5.4.1">
-<h3 data-number="5.4.1" class="anchored" data-anchor-id="sb-기반-최적-창-설정"><span class="header-section-number">5.4.1</span> S/√B 기반 최적 창 설정</h3>
-<p>각 채널에 대해 <strong>S/√B(signal-to-noise)</strong>를 계산하여 최대값을 주는 지점을 Low-energy window의 상한으로 설정.</p>
-</section>
-<section id="보정-핵종-사용" class="level3" data-number="5.4.2">
-<h3 data-number="5.4.2" class="anchored" data-anchor-id="보정-핵종-사용"><span class="header-section-number">5.4.2</span> 보정 핵종 사용</h3>
-<ul>
-<li>HEU → 57Co<br>
-</li>
-<li>WGPu → 133Ba<br>
-</li>
-<li>DU → 60Co<br>
-</li>
-<li>Cs-137, 40K → 실제 핵종<br>
-(사용 불가능한 고위험 핵종은 proxy로 대체)</li>
 </ul>
 </section>
-<section id="조정된-보상비율adjusted-compensated-ratio" class="level3" data-number="5.4.3">
-<h3 data-number="5.4.3" class="anchored" data-anchor-id="조정된-보상비율adjusted-compensated-ratio"><span class="header-section-number">5.4.3</span> 조정된 보상비율(Adjusted Compensated Ratio)</h3>
-<p>기존 Ely 식을 확장한 형태:</p>
+<section id="injection-study-결과" class="level3" data-number="3.7.2">
+<h3 data-number="3.7.2" class="anchored" data-anchor-id="injection-study-결과"><span class="header-section-number">3.7.2</span> Injection study 결과</h3>
 <ul>
-<li>Low window + High window를 연속적으로 구성하여 통계적 불확실성 최소화</li>
-<li>High-energy masking에 강함</li>
+<li>실제 차량 데이터(약 20,000대)에<br>
+<strong>가상 SNM 신호를 주입</strong>하여 분석<br>
+</li>
+<li>동일 nuisance alarm rate 조건에서
+<ul>
+<li><strong>EW가 gross-count보다 훨씬 낮은 injected counts에서 95% 탐지 달성</strong></li>
+</ul></li>
 </ul>
 <p><br></p>
 </section>
 </section>
-<section id="알고리즘-작동-방식" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="알고리즘-작동-방식"><span class="header-section-number">5.5</span> 알고리즘 작동 방식</h2>
-<ol type="1">
-<li>차량 진입 전 60초간 배경수집<br>
-</li>
-<li>차량 통과 시 Low/High window count 획득<br>
-</li>
-<li>보상비율 Ri 계산<br>
-</li>
-<li>임계값 초과 시 해당 윈도의 핵종 alarm<br>
-</li>
-<li>여러 윈도 동시 alarms 시 <strong>Alarm Library</strong> 기반 해석</li>
-</ol>
-<p><br></p>
+<section id="핵심-결과-정리" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="핵심-결과-정리"><span class="header-section-number">3.8</span> 핵심 결과 정리</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>Gross Count</th>
+<th>Energy Windowing</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NORM 억제</td>
+<td>❌ 매우 약함</td>
+<td>✅ 매우 효과적</td>
+</tr>
+<tr class="even">
+<td>SNM 민감도</td>
+<td>NORM 억제 시 감소</td>
+<td>유지 또는 향상</td>
+</tr>
+<tr class="odd">
+<td>Shadow shielding</td>
+<td>취약</td>
+<td>강인</td>
+</tr>
+<tr class="even">
+<td>실제 RPM 적용</td>
+<td>제한적</td>
+<td>이미 상용 시스템 적용</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="실데이터-기반-평가-결과" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="실데이터-기반-평가-결과"><span class="header-section-number">5.6</span> 실데이터 기반 평가 결과</h2>
-<p>ORNL 실제 차량 데이터와 432개 조합의 injection 테스트 수행.</p>
-<section id="민감도sensitivity" class="level3" data-number="5.6.1">
-<h3 data-number="5.6.1" class="anchored" data-anchor-id="민감도sensitivity"><span class="header-section-number">5.6.1</span> 민감도(Sensitivity)</h3>
+<section id="한계와-주의점" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="한계와-주의점"><span class="header-section-number">3.9</span> 한계와 주의점</h2>
 <ul>
-<li>HEU·WGPu: 555–1110 cps 범위에서 100% 도달<br>
+<li>EW는 <strong>의료 방사성핵종 vs SNM 구분에는 효과 없음</strong> (둘 다 저에너지 감마 지배)<br>
 </li>
-<li>Cs-137: 더 낮은 cps에서 100%<br>
-</li>
-<li>40K cargo: masking 영향으로 더 높은 cps 필요</li>
-</ul>
-</section>
-<section id="masking에-대한-강인성" class="level3" data-number="5.6.2">
-<h3 data-number="5.6.2" class="anchored" data-anchor-id="masking에-대한-강인성"><span class="header-section-number">5.6.2</span> Masking에 대한 강인성</h3>
-<ul>
-<li>기존 57Co, 133Ba 알고리즘 대비<br>
-<strong>새 알고리즘이 가장 masking에 강함</strong></li>
-</ul>
-</section>
-<section id="granite-cargo-문제" class="level3" data-number="5.6.3">
-<h3 data-number="5.6.3" class="anchored" data-anchor-id="granite-cargo-문제"><span class="header-section-number">5.6.3</span> Granite Cargo 문제</h3>
-<ul>
-<li>Granite 자체가 WGPu·Cs-137 윈도에서 alarm을 발생<br>
-→ HEU·WGPu 식별 방해<br>
-→ Alarm Library로 완화 가능</li>
-</ul>
-</section>
-<section id="precision" class="level3" data-number="5.6.4">
-<h3 data-number="5.6.4" class="anchored" data-anchor-id="precision"><span class="header-section-number">5.6.4</span> Precision</h3>
-<ul>
-<li>대부분의 핵종에서 낮은 cps에서 100% 달성<br>
-</li>
-<li>DU alarm은 40K 영향으로 방해받음</li>
-</ul>
-</section>
-<section id="f1-score" class="level3" data-number="5.6.5">
-<h3 data-number="5.6.5" class="anchored" data-anchor-id="f1-score"><span class="header-section-number">5.6.5</span> F1 Score</h3>
-<ul>
-<li>비-NORM cargo: 2220 cps 이하에서 모든 핵종 높은 점수<br>
-</li>
-<li>K-40 cargo: 3330 cps 이하에서 최적<br>
-</li>
-<li>Granite cargo: 전반적으로 저하 (예상된 결과)</li>
+<li>EW는 <strong>gross-count를 대체하지 않음</strong> → <strong>gross-count + EW 병행 사용이 필수</strong></li>
 </ul>
 <p><br></p>
 </section>
-</section>
-<section id="결론" class="level2" data-number="5.7">
-<h2 data-number="5.7" class="anchored" data-anchor-id="결론"><span class="header-section-number">5.7</span> 결론</h2>
-<p>새로운 EW 알고리즘은 기존 대비 다음을 크게 개선:</p>
-<ul>
-<li>SNM·RDD·NORM을 <strong>1차 검사 단계에서 식별 가능</strong><br>
-</li>
-<li>High-energy masking 억제<br>
-</li>
-<li>창을 핵종별로 최적화하여 검출능 증가<br>
-</li>
-<li>RPM 2차 검사 부담 감소, 판독 속도 향상</li>
-</ul>
-<p>제한점:</p>
-<ul>
-<li>Granite·의료 핵종 등 고에너지 구성물에 대해 완전한 식별 어려움<br>
-</li>
-<li>Proxy 핵종과의 스펙트럼 차이 존재<br>
-</li>
-<li>실제 HEU, WGPu, DU 기반 확장 보정 필요</li>
-</ul>
-<p><br></p>
-</section>
-<section id="요약" class="level2" data-number="5.8">
-<h2 data-number="5.8" class="anchored" data-anchor-id="요약"><span class="header-section-number">5.8</span> 요약</h2>
-<p>새 알고리즘은 PVT 기반 RPM의 <strong>스펙트럼 활용 능력</strong>을 비약적으로 향상시키며, 단순 GC 대비 실제 운용 효율성을 크게 높일 수 있다.</p>
+<section id="결론" class="level2" data-number="3.10">
+<h2 data-number="3.10" class="anchored" data-anchor-id="결론"><span class="header-section-number">3.10</span> 10. 결론</h2>
+<p>본 논문은 다음을 명확히 보여준다.</p>
+<blockquote class="blockquote">
+<p><strong>Energy Windowing은 PVT 기반 RPM에서 NORM nuisance alarm을 크게 줄이면서 SNM 탐지 민감도를 유지할 수 있는 가장 실용적이고 검증된 알고리즘이다.</strong></p>
+</blockquote>
+<p>이는 이후 EW, ratio 기반 알고리즘, PCA/ICM 등 <strong>RPM 스펙트럼 분석 기법의 출발점이 되는 핵심 논문</strong>이다.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-Hevener2013EWindow" class="csl-entry" role="listitem">
-Hevener, Ryne, Man-Sung Yim, and Ken Baird. 2013. <span>“Investigation of Energy Windowing Algorithms for Effective Cargo Screening with Radiation Portal Monitors.”</span> <em>Radiation Measurements</em> 58: 113–20. https://doi.org/<a href="https://doi.org/10.1016/j.radmeas.2013.08.004">https://doi.org/10.1016/j.radmeas.2013.08.004</a>.
+<div id="ref-Ely2006TheUse" class="csl-entry" role="listitem">
+Ely, James, Richard Kouzes, John Schweppe, Edward Siciliano, Denis Strachan, and Dennis Weier. 2006. <span>“The Use of Energy Windowing to Discriminate SNM from NORM in Radiation Portal Monitors.”</span> <em>Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment</em> 560 (2): 373–87. https://doi.org/<a href="https://doi.org/10.1016/j.nima.2006.01.053">https://doi.org/10.1016/j.nima.2006.01.053</a>.
 </div>
 </div>
 </section>
@@ -870,13 +897,13 @@ Hevener, Ryne, Man-Sung Yim, and Ken Baird. 2013. <span>“Investigation of Ener
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Ely2008EnergyWindow.html" class="pagination-link" aria-label="Ely2008EnergyWindow">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Ely2008EnergyWindow</span></span>
+      <a href="./Bertrand2014Current.html" class="pagination-link" aria-label="Bertrand (2014)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Bertrand (2014)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Lee2020EWeight.html" class="pagination-link" aria-label="Lee2020EWeight">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lee2020EWeight</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Ely2008EnergyWindow.html" class="pagination-link" aria-label="Ely2008EnergyWindow">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Ely2008EnergyWindow</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

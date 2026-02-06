@@ -28,14 +28,15 @@ Cite : @Hevener2013EWindow
 
 ## PVT의 에너지 정보 한계  
 
-- 낮은 Z 재질 → photopeak 없음  
+- 낮은 $Z$ 재질 → photopeak 없음  
 - Compton continuum만 존재, edge도 완만  
-- 스펙트럼 기반 동위원소 식별 불가능  
-→ 그러나 **윈도 분할(Windowing)** 을 통해 스펙트럼 형태 차이를 활용 가능.
+- 스펙트럼 기반 동위원소 식별 불가능 → 그러나 **윈도 분할(Windowing)** 을 통해 스펙트럼 형태 차이를 활용 가능.
 
 </br>
 
 ## 기존 윈도잉 방식의 문제점
+
+@Ely2006EWindow
 
 1. **부적절한 보정(calibration)**  
    - 잘못된 핵종을 기준으로 창을 설정하면 성능 저하  

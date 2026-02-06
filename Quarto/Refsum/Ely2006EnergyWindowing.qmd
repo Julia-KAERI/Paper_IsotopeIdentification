@@ -1,0 +1,137 @@
+---
+title: "Ely2006EnergyWindow"
+number-sections: true
+number-depth : 3
+crossref:
+  chapters: true
+---
+
+
+**The use of energy windowing to discriminate SNM from NORM in radiation portal monitors**, *Nuclear Instruments and Methods in Physics Research A 560 (2006) 373–387*  
+
+- Cite : @Ely2006TheUse
+
+
+## 연구 배경과 목적  
+방사선 포털 모니터(RPM)는 국경·항만에서 핵물질(SNM)을 탐지하기 위해 널리 사용되며, 대부분 **PVT(플라스틱 섬광체)** 기반의 **gross-count 검출기**를 사용한다. 그러나 PVT는 분광 성능이 부족하여 **NORM(자연방사성물질)** 과 **의료 방사성핵종** 으로 인한 **nuisance alarm**이 빈번하게 발생한다.  
+
+본 논문의 목적은 **Energy Windowing(EW)** 알고리즘을 통해  
+
+- NORM으로 인한 nuisance alarm을 줄이면서  
+- SNM 탐지 민감도를 유지 또는 향상  
+
+할 수 있음을 **실험 데이터와 실제 차량 통과 데이터**를 통해 검증하는 것이다.  
+
+</br>
+
+## PVT 검출기와 스펙트럼 특성  
+
+- PVT에서는 **Compton 산란이 지배적** → photo peak 없음  
+- 스펙트럼은 **Compton continuum** 형태  
+- 그럼에도 불구하고 **Compton edge 위치 차이**로 인해 감마선 에너지에 따른 **스펙트럼 형태 차이(shape difference)**는 존재 → EW는 이 **거친 에너지 정보(crude spectroscopy)**를 활용하는 방법이다.
+
+</br>
+
+## NORM vs SNM 스펙트럼 차이  
+
+### NORM
+
+- 주된 기여: <sup>40</sup>K, U/Th decay chain  
+- 저·중·고에너지 영역에 걸쳐 **배경과 유사한 스펙트럼 형태**
+
+###  SNM (HEU, WGPu)
+- **저에너지 감마선 성분이 상대적으로 강함**
+- 고에너지 영역은 배경과 유사  
+
+➡️ **“저에너지 대비 고에너지 비율”**이 NORM과 SNM을 구분하는 핵심 지표
+
+</br>
+
+## Energy Windowing(EW) 알고리즘 개념  
+
+### 기본 아이디어  
+- 전체 에너지 스펙트럼을 **2–5개의 에너지 윈도(window)**로 분할  
+- 각 윈도에서 계수를 합산  
+- **윈도 간 계수 비율(ratio)**을 계산하여 배경과 비교  
+
+대표적인 2-윈도 예:
+$$
+R_{EW} = \frac{N_{low}}{N_{high}}
+$$
+
+NORM → 배경과 유사한 ratio  
+SNM → **저에너지 비율 증가 → ratio 변화**
+
+</br>
+
+## Gross-count 방식의 한계  
+- NORM도 전체 계수를 증가시킴  
+- 단순 threshold 방식에서는  
+  - NORM  
+  - SNM  
+을 구분 불가  
+
+➡️ 민감도를 높이면 nuisance alarm 급증  
+➡️ nuisance를 줄이면 SNM 탐지 민감도 저하
+
+</br>
+
+##  EW 알고리즘의 장점  
+
+### NORM 억제 능력  
+- EW ratio는 **스펙트럼 “형태”**를 비교  
+- NORM은 배경과 동일한 형태 → ratio 변화 없음  
+- 실제 차량 데이터에서 **NORM alarm 대폭 감소**
+
+### Shadow shielding 완화  
+- 차량이 통과하면 배경이 차폐되어 count 감소(shadow shielding)  
+- Gross-count는 민감도 저하  
+- EW ratio는 **비율 기반**이므로 shadow shielding에 둔감  
+
+→ 특히 **다중 패널 합(sum of panels)**에서 효과 극대화
+
+</br>
+
+## 다중 윈도(EW) 시스템  
+
+### 3-윈도, 5-윈도 확장  
+- 서로 다른 핵종은 **서로 다른 에너지 구간**에서 차이를 보임  
+- 5-윈도 시스템에서는  
+  - 57Co  
+  - 133Ba  
+  - DU  
+  - HEU / WGPu  
+에 대해 **각각 최적의 ratio가 다름**
+
+### Injection study 결과  
+- 실제 차량 데이터(약 20,000대)에  
+  **가상 SNM 신호를 주입**하여 분석  
+- 동일 nuisance alarm rate 조건에서  
+  - **EW가 gross-count보다 훨씬 낮은 injected counts에서 95% 탐지 달성**
+
+</br>
+
+## 핵심 결과 정리  
+
+| 항목 | Gross Count | Energy Windowing |
+|------|------------|------------------|
+| NORM 억제 | ❌ 매우 약함 | ✅ 매우 효과적 |
+| SNM 민감도 | NORM 억제 시 감소 | 유지 또는 향상 |
+| Shadow shielding | 취약 | 강인 |
+| 실제 RPM 적용 | 제한적 | 이미 상용 시스템 적용 |
+
+
+
+## 한계와 주의점  
+- EW는 **의료 방사성핵종 vs SNM 구분에는 효과 없음** (둘 다 저에너지 감마 지배)  
+- EW는 **gross-count를 대체하지 않음** → **gross-count + EW 병행 사용이 필수**
+
+</br>
+
+## 10. 결론  
+
+본 논문은 다음을 명확히 보여준다.
+
+> **Energy Windowing은 PVT 기반 RPM에서 NORM nuisance alarm을 크게 줄이면서  SNM 탐지 민감도를 유지할 수 있는  가장 실용적이고 검증된 알고리즘이다.**
+
+이는 이후 EW, ratio 기반 알고리즘, PCA/ICM 등 **RPM 스펙트럼 분석 기법의 출발점이 되는 핵심 논문**이다.

@@ -16,11 +16,20 @@ Cite : @Sicilliano2005Comparision
 
 본 논문은 방사선 포털 모니터(RPM)에서 널리 쓰이는 **PVT(Plastic Scintillator)** 와 **NaI(Tl)** 검출기를 비교하여, 국경 검문소에서 핵물질 탐지 성능을 평가하는 데 목적이 있다.
 
+### RMP system 성능 지표
+
+1. Adequate spatial coverage
+2. Rapid and accurate screening : time bin ~ 0.1 sec. 
+3. NORM(naturally occurring radioactive materials) identification
+4. Durability
+5. Affordable costs
+
+
 ## 두 검출기의 특성 비교
 
 |  NaI(Tl) | PVT(or plastic) |
 |:------|:--------|
-| - 고밀도, 고원자번호 →  </br>  **높은 intrinsic efficiency** **뛰어난 에너지 분해능**, photopeak 명확 | - 저밀도 → intrinsic 효율은 낮지만 **대형 제작 가능 </br>→ absolute efficiency는 NaI보다 커질 수 있음**|
+| - 고밀도, 고원자번호 →  **높은 intrinsic efficiency** **뛰어난 에너지 분해능**, photopeak 명확 | - 저밀도 → intrinsic 효율은 낮지만 **대형 제작 가능 → absolute efficiency는 NaI보다 커질 수 있음**|
 | - 동위원소 식별 가능 | - 에너지 정보는 제한적(Compton continuum) |
 |- 고가, 온도·충격에 취약 | - 저가, 내환경성 우수
 

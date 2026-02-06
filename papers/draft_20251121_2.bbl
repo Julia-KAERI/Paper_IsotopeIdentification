@@ -27,16 +27,6 @@
   \doiprefix\url{https://doi.org/10.1002/chem.201404093}
   (\bibinfo{year}{2014}).
 
-\bibitem{Ely2006EWindow}
-\bibinfo{author}{Ely, J.} \emph{et~al.}
-\newblock \bibinfo{journal}{\bibinfo{title}{The use of energy windowing to
-  discriminate snm from norm in radiation portal monitors}}.
-\newblock {\emph{\JournalTitle{Nuclear Instruments and Methods in Physics
-  Research Section A: Accelerators, Spectrometers, Detectors and Associated
-  Equipment}}} \textbf{\bibinfo{volume}{560}}, \bibinfo{pages}{373--387},
-  \doiprefix\url{https://doi.org/10.1016/j.nima.2006.01.053}
-  (\bibinfo{year}{2006}).
-
 \bibitem{Hevener2013EWindow}
 \bibinfo{author}{Hevener, R.}, \bibinfo{author}{Yim, M.-S.} \&
   \bibinfo{author}{Baird, K.}

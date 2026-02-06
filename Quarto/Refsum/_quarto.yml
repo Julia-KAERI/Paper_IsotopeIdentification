@@ -10,7 +10,8 @@ book:
     - index.qmd
     - Siclliano2005Comparison.qmd
     - Bertrand2014Current.qmd
-    - Ely2006EWindow.qmd
+    - Ely2006EnergyWindowing.qmd
+    - Ely2008EnergyWindow.qmd
     - Hevener2013EWindow.qmd
     - Lee2020EWeight.qmd
     - Paff2017Spectral.qmd
