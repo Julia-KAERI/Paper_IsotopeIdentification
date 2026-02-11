@@ -1,0 +1,138 @@
+\documentclass{article}
+\usepackage{charter}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr,graphicx}
+\usepackage{xspace}
+
+\fancypagestyle{firstpage}{%
+  \fancyhf{} % Clear header/footer
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{1pt}%
+  % Add more detail here if needed
+}
+\fancypagestyle{otherpages}{%
+  \fancyhf{}% Clear header/footer
+  \renewcommand{\headrulewidth}{1pt}%
+  \renewcommand{\footrulewidth}{1pt}%
+  % Add more detail here if needed
+}
+
+\AtBeginDocument{\thispagestyle{firstpage}}
+\pagestyle{otherpages}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex}
+
+\begin{document}
+
+\vspace*{\dimexpr-\headsep-\headheight-1pt}
+
+% \includegraphics[width=1in]{logo.jpg}
+
+\rule{\linewidth}{1pt}
+
+\bigskip
+
+
+%----------------------------------------------------------------------------------------
+%	YOU ONLY NEED TO FILL IN THE FOLLOWING LATEX MACROS
+%----------------------------------------------------------------------------------------
+
+% Title of the paper
+\newcommand{\PaperTitle}{Paper's Title\xspace}
+
+% Full name of the authors
+\newcommand{\AuthorOne}{Myungkook Moon\xspace}
+\newcommand{\AuthorTwo}{Ji-Yong So\xspace}
+\newcommand{\AuthorThree}{Byongil Jeon}
+% \newcommand{\AuthorFour}{Author \#4\xspace}
+
+% Institution
+\newcommand{\Institution}{Korea Atomic Energy Research Institute\xspace}
+\newcommand{\InstitutionAddress}{111, Daedeok-Daero 989 Beon-Gil, Yuseong-gu, \xspace}
+\newcommand{\City}{Daejeon,  \xspace}
+\newcommand{\Country}{Republic of Korea, 34057\xspace}
+\newcommand{\Email}{moonmk@kaeri.re.kr\xspace}
+
+
+% Full name of the Journal's Editor in Chief
+\newcommand{\EditorInChief}{Name of Editor in Chief\xspace}
+
+% Journal
+\newcommand{\Journal}{Name of the Journal\xspace}
+
+% Body
+\newcommand{\Contribution}{X\xspace}
+\newcommand{\Problem}{Y\xspace}
+\newcommand{\Solution}{Z\xspace}
+\newcommand{\Evaluation}{D\xspace}
+\newcommand{\NoveltyClaim}{E\xspace}
+
+% List of contributions
+\newcommand{\ContributionOne}{Contribution A.\xspace}
+\newcommand{\ContributionTwo}{Contribution B.\xspace}
+\newcommand{\ContributionThree}{Contribution C.\xspace}
+\newcommand{\ContributionFour}{Contribution D.\xspace}
+
+% Suggested editors
+\newcommand{\EditorOne}{Editor \#1\xspace}
+\newcommand{\EditorOneExpertise}{A\xspace}
+
+\newcommand{\EditorTwo}{Editor \#2\xspace}
+\newcommand{\EditorTwoExpertise}{B\xspace}
+
+\newcommand{\EditorThree}{Editor \#3\xspace}
+\newcommand{\EditorThreeExpertise}{C\xspace}
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\hfill
+\begin{tabular}{ l @{} }
+  \today \\[12pt] % Date
+  \Institution\\
+  \InstitutionAddress\\
+  \City, \Country
+\end{tabular}
+
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+\bigskip
+
+Dear Editors,
+
+\bigskip
+
+We are pleased to submit our manuscript entitled "Nuclide Identification in Low-Resolution Gamma Spectra Via Channel Sum Normalization" for consideration for publication in Scientific Reports.
+
+In this study, we propose a novel spectral transformation technique—Channel Sum Normalization (CSN)—that enables reliable nuclide identification using low-resolution plastic scintillation detectors, especially under low-count and high-background conditions. Unlike conventional peak-based methods, CSN emphasizes global spectral structure through cumulative transformation, and it is computationally efficient, calibration-free, and well-suited for embedded real-time systems.
+
+We validate our approach through extensive experiments involving single and mixed-source radionuclides, background compensation, and spectral unmixing. Our results demonstrate that CSN, combined with direct subtraction or ratio-based normalization, can enhance spectral contrast and robustness, enabling accurate isotope identification in radiation portal monitoring and food safety applications.
+
+This work introduces a scalable and interpretable method that can be applied directly to existing systems without hardware modification. We believe it will be of broad interest to the journal’s readership in the areas of radiation detection, security screening, and applied nuclear instrumentation.
+
+All authors have approved the manuscript and declare no competing interests. The work is original, has not been published elsewhere, and is not under consideration by another journal.
+Thank you for your consideration. We look forward to your response.
+\bigskip
+
+Sincerely yours,
+
+\vspace{50pt}
+
+\AuthorOne\\ \\On behalf of \AuthorTwo and \AuthorThree
+
+\bigskip
+
+Neutron Science Division
+
+Korea Atomic Energy Research Institute
+
+Daejeon, Republic of Korea
+
+Email: moonmk@kaeri.re.kr
+
+\end{document}

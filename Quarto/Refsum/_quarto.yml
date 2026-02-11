@@ -13,10 +13,11 @@ book:
     - Ely2006EnergyWindowing.qmd
     - Ely2008EnergyWindow.qmd
     - Hevener2013EWindow.qmd
-    - Lee2020EWeight.qmd
+    - Lee2020Radioisotope.qmd
+    - Lee2023Radionuclide.qmd
     - Paff2017Spectral.qmd
-    - Kim2019InvMat.qmd
     - Kouzes2006Response.qmd
+    - Kim2019InvMat.qmd
     - Runkle2006Analysis.qmd
     - summary.qmd
     - references.qmd

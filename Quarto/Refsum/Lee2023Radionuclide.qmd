@@ -1,0 +1,142 @@
+---
+title: "Lee2023Radionuclide"
+number-sections: true
+number-depth : 3
+crossref:
+  chapters: true
+---
+
+{{< include latexmacros.qmd >}}
+
+
+Cite : @Lee2023Radionuclide
+
+**Radionuclide identification based on energy-weighted algorithm and machine learning applied to a multi-array plastic scintillator**  *Nuclear Engineering and Technology 55 (2023) 3907–3912*  
+
+</br>
+
+
+
+## 연구 배경과 목적  
+
+공항·항만에 설치된 방사선 포털 모니터(RPM)는 주로 **대형 PVT(플라스틱 섬광체)**를 사용하지만, 낮은 에너지 분해능과 광자 수집 효율 문제로 **동위원소 식별(RIID)**이 거의 불가능하다.  
+
+본 연구의 목적은 다음 두 가지이다.  
+1. **다중 배열(multi-array) 플라스틱 섬광체**를 이용해 광자 수집 효율을 향상시키고  
+2. **에너지 가중(Energy-weighted) 알고리즘 + CNN(Convolutional Neural Network)**을 적용하여  
+   이동 중인 방사선원 조건에서도 핵종 식별 가능성을 실험적으로 검증하는 것
+
+</br>
+
+## 다중 배열 플라스틱 섬광체 검출기
+
+### 검출기 구조  
+- **14개 육각형 PVT 섬광체(EJ-200)**  
+- 각 섬광체: 지름 24 cm, 두께 15 cm  
+- 전체 면적: **50 × 100 cm²**  
+- 각 섬광체마다 개별 PMT 부착 → 광자 수집 효율 증가  
+- 기존 단일 패널 PVT 대비 **Compton 최대 영역에서 계수 증가**
+
+### 에너지 가중 알고리즘  
+각 채널의 계수에 에너지를 곱해 스펙트럼을 변환:
+
+$$
+C_{EW,i} = C_i \times E_i
+$$
+
+- Compton edge 근처가 **단일 피크처럼 강조(Compton maximum)**  
+- PVT에서도 사실상 **pseudo-photopeak** 형성
+
+</br>
+
+## 실험 조건 및 데이터 획득  
+
+- 실험 장소: KINAC RPM 시험장  
+- 측정 핵종:
+  - **<sup>137</sup>Cs**, **<sup>60</sup>Co**, **<sup>226</sup>Ra**, **<sup>40</sup>K(KCl 250 kg)**  
+- 측정 조건:
+  - 정지(static): 60 s  
+  - 이동(moving): **10, 20, 30 km/h**  
+- ANSI 권고 속도(10 km/h)보다 높은 조건까지 실험  
+- 각 조건에서 **30회 반복 측정**
+
+</br>
+
+## 에너지 가중 스펙트럼 특성
+
+### 이동 조건에서의 스펙트럼  
+- 측정 시간 ≤ 2 s → 통계적 변동성 증가  
+- 그럼에도 불구하고:
+  - **<sup>137</sup>Cs**: 평균 피크 ≈ 0.494 MeV  
+  - **<sup>60</sup>Co**: 평균 피크 ≈ 1.041 MeV  
+- 이 값들은 이론적 Compton edge와 잘 일치
+
+### 핵종별 특징  
+- **<sup>226</sup>Ra**: 딸핵종 <sup>214</sup>Bi(609 keV) 영향 → 0.43 MeV 부근 피크  
+- **<sup>40</sup>K**: 부피원(volume source) + 자기차폐 → 피크가 넓고 약함  
+- 결과적으로 핵종별 **에너지 가중 스펙트럼 형태 차이 유지**
+
+</br>
+
+## CNN 기반 핵종 식별 방법
+
+### 입력 데이터 구성  
+- 에너지 가중 스펙트럼을 **1D 이미지(1024 채널)**로 변환  
+- 데이터 부족 문제 해결을 위해 **스펙트럼 재조합**:
+  - 각 핵종당 1000개 스펙트럼 생성  
+  - 700개: 학습(training)  
+  - 300개: 테스트(test)
+
+### CNN 구조  
+- LeNet-5 기반 CNN  
+- 3×3 convolution filter, 4개 convolution layer  
+- ReLU 활성화 함수, max pooling  
+- 출력 클래스: **4개 핵종**
+
+</br>
+
+## 핵종 식별 성능 평가
+
+### 이동 조건 분류 결과  
+- **<sup>137</sup>Cs**: 모든 속도에서 **100% 식별**  
+- **<sup>60</sup>Co**: ≥ 90% 식별  
+- **<sup>226</sup>Ra**: 속도 증가 시 일부 <sup>137</sup>Cs 로 오인, 그래도 ≥ 73% 식별  
+- **<sup>40</sup>K**: 약 70% 수준, 주된 오인은 <sup>60</sup>Co  
+
+### 정량적 성능 지표  
+
+| 핵종 | Precision | Recall | F-score |
+|----|-----------|--------|--------|
+| <sup>137</sup>Cs | 0.84 | 1.00 | 0.91 |
+| <sup>60</sup>Co | 0.80 | 0.95 | 0.87 |
+| <sup>226</sup>Ra | 1.00 | 0.81 | 0.89 |
+| <sup>40</sup>K | 0.94 | 0.76 | 0.84 |
+
+→ **이동 조건에서도 최소 70% 이상의 핵종 식별 가능**
+
+</br>
+
+## 의의와 한계
+
+### 의의  
+- PVT 기반 RPM에서도  
+  **에너지 가중 알고리즘 + CNN** 조합으로  
+  **실질적인 핵종 식별 가능성**을 최초로 실험적으로 입증  
+- 다중 배열 구조가 **통계적 변동성 감소**에 효과적  
+- 실제 운용 환경(고속 이동 조건)을 고려한 현실적 연구
+
+### 한계  
+- **<sup>40</sup>K vs <sup>60</sup>Co** 구분이 여전히 어려움  
+- 단일 핵종 조건 위주 → **혼합 핵종(composite source)** 미검증  
+- 실제 현장 적용 전 추가 데이터 학습 필요
+
+---
+
+## 결론  
+본 연구는 다음을 명확히 보여준다.
+
+> **다중 배열 PVT 검출기와 에너지 가중 스펙트럼을 CNN으로 분석하면,  
+이동 중인 조건에서도 기존 PVT RPM에서는 불가능했던  
+‘동위원소 식별’이 실질적으로 가능하다.**
+
+이는 향후 **차세대 지능형 RPM** 개발을 위한 중요한 기반 연구이다.

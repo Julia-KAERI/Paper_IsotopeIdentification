@@ -34,8 +34,8 @@ Cite : @Kim2019InvMat
 
 ### 측정 핵종 (Table 1)
 
-- **133Ba**, **137Cs**, **60Co**, **22Na**,  
-- **40K 함유 비료**, **배경(BG)**  
+- **<sup>133</sup>Ba**, **<sup>137</sup>Cs**, **<sup>60</sup>Co**, **<sup>22</sup>Na**,  
+- **<sup>40</sup>K 함유 비료**, **배경(BG)**  
 - 측정 거리: 2 m
 
 </br>
@@ -46,11 +46,13 @@ Cite : @Kim2019InvMat
 
 스펙트럼 식별을 위해 다음 절차를 수행한다.
 
-1. **100 s 동안 측정한 고품질 스펙트럼**을 열(column)로 갖는 Calibration Matrix 생성  
-2. 측정 스펙트럼(0.1–50 s)을 **총계수로 정규화**하여 Sample Vector 생성  
+1. **100 s 동안 측정한 고품질 스펙트럼**을 열(column)로 갖는 Calibration Matrix $\bf{M}$ 생성. $n$ 채널 스팩트럼에 기준 핵종이 $m$ 개라면 $\bf{M}$ 은 $n\times m$ 행렬임. 
+2. 측정 스펙트럼(0.1–50 s)을 **총계수로 정규화**하여 Sample Vector $\bf{v}$ 생성  
 3. 연산 수행:  
 
-> **Result = Normalized_Calibration_Matrix × Normalized_Sample_Vector**
+$$
+\bf{v}=\bf{Ma}
+$$
 
 4. 결과 값이  
    - **1에 가까운 열** → 해당 핵종  
