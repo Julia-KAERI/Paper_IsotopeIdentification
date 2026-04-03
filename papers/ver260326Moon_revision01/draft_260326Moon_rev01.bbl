@@ -1,0 +1,91 @@
+\begin{thebibliography}{1}
+\urlstyle{rm}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname doiprefix\endcsname\relax\def\doiprefix{DOI: }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{Sicilliano2005Comparision}
+\bibinfo{author}{Siciliano, E.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Comparison of pvt and nai(tl)
+  scintillators for vehicle portal monitor applications}}.
+\newblock {\emph{\JournalTitle{Nuclear Instruments and Methods in Physics
+  Research Section A: Accelerators, Spectrometers, Detectors and Associated
+  Equipment}}} \textbf{\bibinfo{volume}{550}}, \bibinfo{pages}{647--674},
+  \doiprefix\url{https://doi.org/10.1016/j.nima.2005.05.056}
+  (\bibinfo{year}{2005}).
+
+\bibitem{Bertrand2014Current}
+\bibinfo{author}{Bertrand, G. H.~V.}, \bibinfo{author}{Hamel, M.} \&
+  \bibinfo{author}{Sguerra, F.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Current status on plastic
+  scintillators modifications}}.
+\newblock {\emph{\JournalTitle{Chemistry -- A European Journal}}}
+  \textbf{\bibinfo{volume}{20}}, \bibinfo{pages}{15660--15685},
+  \doiprefix\url{https://doi.org/10.1002/chem.201404093}
+  (\bibinfo{year}{2014}).
+
+\bibitem{Ely2006TheUse}
+\bibinfo{author}{Ely, J.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{The use of energy windowing to
+  discriminate snm from norm in radiation portal monitors}}.
+\newblock {\emph{\JournalTitle{Nuclear Instruments and Methods in Physics
+  Research Section A: Accelerators, Spectrometers, Detectors and Associated
+  Equipment}}} \textbf{\bibinfo{volume}{560}}, \bibinfo{pages}{373--387},
+  \doiprefix\url{https://doi.org/10.1016/j.nima.2006.01.053}
+  (\bibinfo{year}{2006}).
+
+\bibitem{Hevener2013EWindow}
+\bibinfo{author}{Hevener, R.}, \bibinfo{author}{Yim, M.-S.} \&
+  \bibinfo{author}{Baird, K.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Investigation of energy windowing
+  algorithms for effective cargo screening with radiation portal monitors}}.
+\newblock {\emph{\JournalTitle{Radiation Measurements}}}
+  \textbf{\bibinfo{volume}{58}}, \bibinfo{pages}{113--120},
+  \doiprefix\url{https://doi.org/10.1016/j.radmeas.2013.08.004}
+  (\bibinfo{year}{2013}).
+
+\bibitem{Lee2020Radioisotope}
+\bibinfo{author}{Lee, H.~C.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Radioisotope identification using
+  an energy-weighted algorithm with a proof-of-principle radiation portal
+  monitor based on plastic scintillators}}.
+\newblock {\emph{\JournalTitle{Applied Radiation and Isotopes}}}
+  \textbf{\bibinfo{volume}{156}}, \bibinfo{pages}{109010},
+  \doiprefix\url{https://doi.org/10.1016/j.apradiso.2019.109010}
+  (\bibinfo{year}{2020}).
+
+\bibitem{Paff2017Spectral}
+\bibinfo{author}{Paff, M.~G.}, \bibinfo{author}{Fulvio, A.~D.},
+  \bibinfo{author}{Clarke, S.~D.} \& \bibinfo{author}{Pozzi, S.~A.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Radionuclide identification
+  algorithm for organic scintillator-based radiation portal monitor}}.
+\newblock {\emph{\JournalTitle{Nuclear Instruments and Methods in Physics
+  Research Section A: Accelerators, Spectrometers, Detectors and Associated
+  Equipment}}} \textbf{\bibinfo{volume}{849}}, \bibinfo{pages}{41--48},
+  \doiprefix\url{https://doi.org/10.1016/j.nima.2017.01.009}
+  (\bibinfo{year}{2017}).
+
+\bibitem{Runkle2006Analysis}
+\bibinfo{author}{Runkle, R.}, \bibinfo{author}{Tardiff, M.},
+  \bibinfo{author}{Anderson, K.}, \bibinfo{author}{Carlson, D.} \&
+  \bibinfo{author}{Smith, L.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Analysis of spectroscopic radiation
+  portal monitor data using principal components analysis}}.
+\newblock {\emph{\JournalTitle{IEEE Transactions on Nuclear Science}}}
+  \textbf{\bibinfo{volume}{53}}, \bibinfo{pages}{1418--1423},
+  \doiprefix\url{10.1109/TNS.2006.874883} (\bibinfo{year}{2006}).
+
+\bibitem{Kim2019InvMat}
+\bibinfo{author}{Kim, Y.}, \bibinfo{author}{Kim, M.}, \bibinfo{author}{Lim,
+  K.~T.}, \bibinfo{author}{Kim, J.} \& \bibinfo{author}{Cho, G.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Inverse calibration matrix
+  algorithm for radiation detection portal monitors}}.
+\newblock {\emph{\JournalTitle{Radiation Physics and Chemistry}}}
+  \textbf{\bibinfo{volume}{155}}, \bibinfo{pages}{127--132},
+  \doiprefix\url{https://doi.org/10.1016/j.radphyschem.2018.07.022}
+  (\bibinfo{year}{2019}).
+
+\end{thebibliography}
