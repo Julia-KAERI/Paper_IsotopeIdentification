@@ -88,4 +88,10 @@
   \doiprefix\url{https://doi.org/10.1016/j.radphyschem.2018.07.022}
   (\bibinfo{year}{2019}).
 
+\bibitem{Unpublished1}
+\bibinfo{author}{Ji-Yong~So, M.~M.}
+\newblock \bibinfo{title}{Real-time validation of bccs-based radionuclide
+  identification under container-transfer conditions} (\bibinfo{year}{2026}).
+\newblock \bibinfo{note}{In preparation}.
+
 \end{thebibliography}
