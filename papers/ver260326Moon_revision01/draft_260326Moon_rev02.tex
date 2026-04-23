@@ -93,7 +93,7 @@ contributions.
 
 % To evaluate the characteristics of the proposed method, three representative radionuclides—Am-241, Cs-137, and Co-60—were selected in this study. These radionuclides have relatively long half-lives and distinct energy distributions, making them suitable for assessing the performance of the BCCS-based approach under both single-source and mixed-source conditions.
 
-\color{red}To evaluate the proposed BCCS-based approach, three representative radionuclides—Am-241, Cs-137, and Co-60—were selected as test cases. These radionuclides have relatively long half-lives and exhibit distinct spectral characteristics in plastic scintillation detectors and thus provide a practical basis for assessing the method under both single-source and mixed-source conditions.\normalcolor
+To evaluate the proposed BCCS-based approach, three representative radionuclides—Am-241, Cs-137, and Co-60—were selected as test cases. These radionuclides have relatively long half-lives and exhibit distinct spectral characteristics in plastic scintillation detectors and thus provide a practical basis for assessing the method under both single-source and mixed-source conditions.
 
 \section*{Methods}
 \subsection*{Experimental Setup}
@@ -105,13 +105,13 @@ detector size and measurement configuration were kept unchanged throughout the e
 Background measurements were acquired in the absence of any radioactive source. The background count rate depended slightly on the lower level discriminator (LLD) setting. Under the measurement condition used in this study, where the LLD was set to include the energy region relevant to Am-241 detection, the background count rate was approximately 10,000 cps per detector. This background condition was used as the reference for both subtraction-based and normalization-based spectral processing.
 
 % Three representative radionuclides, Am-241, Cs-137, and Co-60, were selected for evaluation of the proposed method. These radionuclides were chosen because they have relatively long half-lives and distinct representative energy regions, allowing systematic comparison of their spectral characteristics. In addition to single-source measurements, mixed-source conditions were also prepared to evaluate decomposition performance.
-\color{red}
+
 
 Three representative radionuclides, Am-241, Cs-137, and Co-60, were selected for evaluation of the proposed method. The corresponding source activities were 90 $\mu\text{Ci}$, 16 $\mu\text{Ci}$, and 9 $\mu\text{Ci}$, respectively. Single-source measurements were used to construct radionuclide-specific reference spectra, and mixed-source configurations were additionally prepared to evaluate decomposition performance.
 
 In addition to the controlled reference and mixed-source measurements described above, a separate real-time validation test was conducted under container-transfer conditions to examine the practical applicability of the proposed framework.
 
-\normalcolor
+
 \subsection*{Spectral Channel Configuration}
 
 In scintillation detector systems, spectral data are commonly acquired using 256, 512, or 1024 channels, whereas high-resolution semiconductor detectors such as HPGe often use much finer channel configurations, such as 4k or 8k channels. However, for plastic scintillation detectors, increasing the number of channels does not necessarily improve radionuclide discrimination because of the intrinsically low energy resolution of the detector response.
@@ -121,7 +121,7 @@ fluctuations are more influential than fine spectral resolution.
 
 
 \subsection*{Spectral Preprocessing: Backward Cumulative Channel Sum (BCCS)}
-\color{red}
+
 The backward cumulative channel sum (BCCS) is defined as a cumulative transformation of the pulse-height spectrum. Let $\mathbf{C} = [C_1,\,C_2,\ldots,\,C_N]$ denote the raw pulse-height spectrum, where $C_i$ is the count in channel $i$. The BCCS spectrum is given by
 
 \begin{equation}
@@ -140,7 +140,7 @@ $$
 In the forward cumulative representation, the cumulative values are constructed from the lowest channels upward. Because the spectral features relevant for radionuclide discrimination in plastic scintillators are primarily located in the low- to medium-channel region, the forward scheme provides limited noise suppression in these critical channels. As a result, statistical fluctuations in the most informative part of the spectrum remain largely unmitigated.
 In contrast, the backward cumulative representation integrates counts from each channel toward the high-channel end of the spectrum. This leads to substantial averaging even in the low- and medium-channel region, where most of the physically meaningful spectral differences reside. Consequently, the backward scheme more effectively reduces statistical fluctuations in the most relevant part of the spectrum while preserving the global spectral trend.
 For these reasons, the backward cumulative channel sum (BCCS) was adopted in this study as the primary spectral transformation method.
-\normalcolor
+
 
 For each measurement condition, repeated acquisitions were performed more than 10 times under identical experimental settings. Because the run-to-run variation in spectral shape and in the resulting BCCS trend was negligible, a single representative spectrum is presented in the figures for clarity.
 
@@ -150,9 +150,9 @@ For each measurement condition, repeated acquisitions were performed more than 1
 
 \subsection*{Background Compensation Techniques}
 
-After BCCS preprocessing, background compensation was applied to reduce the influence of ambient radiation and system background on the transformed spectra. \color{red}In practical RPM environments, both the intensity and spectral shape of the background may vary depending on container structure, cargo composition, and measurement conditions. Therefore, appropriate background compensation is essential prior to radionuclide spectral decomposition.
+After BCCS preprocessing, background compensation was applied to reduce the influence of ambient radiation and system background on the transformed spectra. In practical RPM environments, both the intensity and spectral shape of the background may vary depending on container structure, cargo composition, and measurement conditions. Therefore, appropriate background compensation is essential prior to radionuclide spectral decomposition.
 
-Two background compensation techniques were considered in this study. The first was a subtraction-based method, \color{red}efined as 
+Two background compensation techniques were considered in this study. The first was a subtraction-based method, defined as 
 
 \begin{equation}
 S^M_i =  B^M_i - B_i^{\textrm{bkg}}. \label{eq:DS}
@@ -167,15 +167,15 @@ R^M_i = \left(\dfrac{B^M_i}{B^{\textrm{bkg}}_i}\right) -1.\label{eq:NB}
 \end{equation}
 
 This formulation represents the relative deviation of the measured spectrum from the background. The subtraction of unity ensures that 
-$R_i^M = 0$ corresponds to pure background, providing a convenient baseline for comparison. Because the ratio removes the common scaling factor between the measured and background spectra, it is largely independent of acquisition time and overall count scale. This property is particularly useful in real-time inspection systems, where the effective measurement time may vary as a container truck passes the detector.\normalcolor
+$R_i^M = 0$ corresponds to pure background, providing a convenient baseline for comparison. Because the ratio removes the common scaling factor between the measured and background spectra, it is largely independent of acquisition time and overall count scale. This property is particularly useful in real-time inspection systems, where the effective measurement time may vary as a container truck passes the detector.
 
-\color{blue}
-In both compensation schemes, the spectral data can also be converted into count-rate form by dividing the measured counts by the acquisition time. In this case, the {\color{red}spectral} values are no longer restricted to integers and may take fractional values. However, this does not affect the BCCS procedure, because the cumulative summation can be applied equally to integer and non-integer values. Therefore, the proposed method remains applicable even when the measurement time varies. This property is particularly important in practical RPM environments, where container trucks do not always pass the detector at a constant speed.
 
-Both compensation methods were applied in the BCCS domain, and their performances were compared in terms of spectral contrast, stability, and robustness in subsequent decomposition analysis.\normalcolor
+In both compensation schemes, the spectral data can also be converted into count-rate form by dividing the measured counts by the acquisition time. In this case, the spectral values are no longer restricted to integers and may take fractional values. However, this does not affect the BCCS procedure, because the cumulative summation can be applied equally to integer and non-integer values. Therefore, the proposed method remains applicable even when the measurement time varies. This property is particularly important in practical RPM environments, where container trucks do not always pass the detector at a constant speed.
+
+Both compensation methods were applied in the BCCS domain, and their performances were compared in terms of spectral contrast, stability, and robustness in subsequent decomposition analysis.
 
 \subsection*{Radionuclide Activity Estimation via Linear Spectral Unfolding}
-\color{red}
+
 Following BCCS preprocessing and background compensation, the processed spectrum was analyzed using a linear spectral unfolding framework. Under fixed detector geometry and comparable background conditions, the processed spectrum can be approximated as a linear combination of radionuclide-specific reference spectra.
 
 For the subtraction-based representation, the processed spectrum is expressed as
@@ -213,7 +213,7 @@ I_i^{M} - \sum_{X}\alpha_X I_i^{X}
 Because meaningful source-dependent information in plastic scintillator spectra is concentrated mainly in the low- and medium-channel region, the unfolding analysis was performed over a restricted channel range. This reduces the influence of high-channel statistical fluctuations while preserving the spectral information relevant for radionuclide discrimination.
 
 The resulting coefficients do not represent absolute radionuclide activities in becquerels, because the moving measurement geometry does not permit direct activity quantification. Instead, they are interpreted as reference-based indicators of relative contribution and relative signal level for each radionuclide.
-\normalcolor
+
 
 
 \section*{Results}
@@ -226,22 +226,22 @@ Figure \ref{fig:bkgref}(a) shows the raw spectra of background radiation and thr
 
 After application of the BCCS transformation, the spectra are converted into smooth and monotonically decreasing profiles, as shown in Figure \ref{fig:bkgref}(b). This transformation suppresses channel-to-channel statistical fluctuations while preserving the overall spectral tendency of each radionuclide. As a result, the BCCS representation provides a more stable basis for qualitative comparison among radionuclides than the raw spectral form.
 
-Figures \ref{fig:bkgref} (c) and \ref{fig:bkgref} (d) show the background-subtracted and background-normalized BCCS spectra, respectively. In the subtraction-based representation, the net source contribution is preserved on an absolute count scale, which is advantageous when relative signal magnitude is important. In the normalization-based representation, the spectra are expressed as relative deviations from the background, providing improved comparability under varying measurement conditions. In both forms, radionuclide-dependent spectral differences are more clearly distinguished than in the raw spectra.
+Figures \ref{fig:bkgref}(c) and \ref{fig:bkgref}(d) show the background-subtracted and background-normalized BCCS spectra, respectively. In the subtraction-based representation, the net source contribution is preserved on an absolute net signal-scale, which is advantageous when relative signal magnitude is important. In the normalization-based representation, the spectra are expressed as relative deviations from the background, providing improved comparability under varying measurement conditions. In both forms, radionuclide-dependent spectral differences are more clearly distinguished than in the raw spectra.
 
 It should be noted that the small Am-241 values observed in the high-channel region do not have physical significance. They originate from statistical fluctuations in the original low-count data and were retained without additional artificial suppression.
 
 \subsection*{Comparison of Background Compensation Methods for Mixed-Source Spectra}
 
-Figure \ref{fig:mixedbccs} presents the BCCS spectra for nine mixed-source configurations after applying the two background compensation methods. In Fig.\ref{fig:mixedbccs}(a), the subtraction-based representation preserves absolute count-scale differences among the mixed-source cases, allowing comparison of both spectral shape and relative signal magnitude. This form is advantageous when the net source contribution itself is of interest in the subsequent fitting procedure.
+Figure \ref{fig:mixedbccs} presents the BCCS spectra for nine mixed-source configurations after applying the two background compensation methods. In Figure \ref{fig:mixedbccs}(a), the subtraction-based representation preserves absolute net signal-scale differences among the mixed-source cases, allowing comparison of both spectral shape and relative signal magnitude. This form is advantageous when the net source contribution itself is of interest in the subsequent fitting procedure.
 
-In contrast, Fig. \ref{fig:mixedbccs}(b) shows that the normalization-based representation expresses the spectra as relative deviations from the background. As a result, differences among mixed-source conditions are more directly comparable even when the overall count level varies. This property is particularly useful in practical RPM situations, where the effective acquisition time and total count rate may change depending on source position or container motion.
+In contrast, Figure \ref{fig:mixedbccs}(b) shows that the normalization-based representation expresses the spectra as relative deviations from the background. As a result, differences among mixed-source conditions are more directly comparable even when the overall count level varies. This property is particularly useful in practical RPM situations, where the effective acquisition time and total count rate may change depending on source position or container motion.
 
 The two compensation methods therefore provide complementary advantages. The subtraction-based form retains absolute net signal information, whereas the normalization-based form provides a more flexible representation under varying measurement conditions. In both cases, the BCCS-processed spectra preserve sufficient radionuclide-dependent structure for subsequent decomposition analysis.
 
 
 \subsection*{Linear spectral unfolding of mixed-source measurements}
 
-The unfolding results for the mixed-source spectra are presented in Figure \ref{fig:fi_fitbgsub} and Figure \ref{fig:fi_fitbgrto}. In both cases, the processed BCCS spectra are well reproduced by the fitted combinations of reference radionuclide spectra, indicating that the mixed-source response can be reasonably described within the proposed reference-based linear unfolding framework.
+The unfolding results for the mixed-source spectra are presented in Figures \ref{fig:fi_fitbgsub} and \ref{fig:fi_fitbgrto}. In both cases, the processed BCCS spectra are well reproduced by the fitted combinations of reference radionuclide spectra, indicating that the mixed-source response can be reasonably described within the proposed reference-based linear unfolding framework.
 
 Figure \ref{fig:fi_fitbgsub} shows the results obtained using subtraction-based BCCS processing. The measured spectra are decomposed into Am-241, Cs-137, and Co-60 components with non-negative coefficients, and the fitted curves follow the overall spectral trends of the mixed-source data closely. It should be noted, however, that small nonzero contributions may also be assigned to radionuclides that were not intentionally included in a given source configuration. Such residual components are attributable to limited separability among low-resolution plastic scintillator spectra and to statistical fluctuations in the measured data, rather than to unambiguous evidence for the presence of that radionuclide. In the mixed-source cases examined here, the dominant coefficients nevertheless correspond to the radionuclides actually present, while the residual components remain comparatively small.
 
@@ -262,7 +262,7 @@ As discussed above, the coefficients obtained from the unfolding procedure shoul
 
 \section*{Discussion}
 
-\color{blue}
+
 The results demonstrate that the proposed BCCS-based framework provides a stable and practical spectral representation for radionuclide analysis using large plastic scintillation detectors. Because plastic scintillators produce broad Compton-dominated spectra rather than sharp photopeaks, radionuclide-dependent information is distributed over the overall spectral shape rather than concentrated in narrow spectral features. In this context, the BCCS transformation is effective because it suppresses local statistical fluctuations while preserving the global spectral trend relevant for radionuclide discrimination.
 
 An important feature of the proposed framework is that it makes use of spectral shape information rather than relying only on gross count variation. In practical RPM environments, both the background level and the measured spectral distribution can vary owing to container structure, cargo composition, and changing measurement geometry. Under such conditions, radionuclide identification based only on total count rate can be unreliable. The BCCS representation provides a more stable basis for comparing spectra and for identifying source-dependent deviations from the background, even when the raw spectral differences are not visually distinct.
@@ -277,12 +277,12 @@ The present validation was performed using three representative radionuclides, A
 
 Several practical limitations should also be noted. The method depends on the availability of representative reference spectra, and its performance may degrade if detector response or background conditions differ substantially from those used to construct the reference set. In addition, environmental effects such as gain drift can alter the measured spectral distribution. In practical operation, these effects may be mitigated by updating background and reference data under current measurement conditions. Despite these limitations, the results indicate that the proposed framework provides a physically well-motivated and practically useful approach for extracting radionuclide-specific information from low-resolution plastic scintillator spectra without requiring high-resolution detector hardware or data-intensive learning procedures.
 
-This practical interpretability was further supported by an additional real-time validation test under container-transfer conditions. Additional practical validation was also performed under container-transfer conditions using Am-241, Cs-137, and Co-60 sources attached to containers. In this test, the spectrum measured during the interval between successive containers was used as the operational background, and radionuclide identification was performed using the subtraction-based BCCS framework. Under the tested conditions, the source configuration was correctly identified in 99 of 100 trials. Although this validation was limited to the radionuclides and operating conditions examined here, it provides additional evidence for the practical applicability of the proposed approach in realistic container-screening scenarios; a detailed account of this validation study will be reported elsewhere \cite{Unpublished1}.
+Additional practical validation was also performed under container-transfer conditions using Am-241, Cs-137, and Co-60 sources attached to containers. In this test, the spectrum measured during the interval between successive containers was used as the operational background, and radionuclide identification was performed using the subtraction-based BCCS framework. Under the tested conditions, the source configuration was correctly identified in 99 of 100 trials. Although this validation was limited to the radionuclides and operating conditions examined here, it provides additional evidence for the practical applicability of the proposed approach in realistic container-screening scenarios; a detailed account of this validation study will be reported elsewhere \cite{Unpublished1}.
 
-\normalcolor
+
 
 \section*{Conclusion}
-\color{red}
+
 In this study, a BCCS-based spectral processing framework was proposed for radionuclide discrimination using large plastic scintillation detectors under practical RPM-like conditions. The method was designed to preserve the global spectral characteristics of plastic scintillator responses while reducing local statistical fluctuations through cumulative transformation.
 
 The results showed that the BCCS representation provides a stable basis for comparing radionuclide-dependent spectral patterns and for decomposing mixed-source spectra in combination with background compensation and NNLS-based unfolding. The subtraction-based representation preserves net signal-scale information, whereas the normalization-based representation provides improved flexibility under varying acquisition conditions.
@@ -290,7 +290,7 @@ The results showed that the BCCS representation provides a stable basis for comp
 The unfolding coefficients obtained in this framework should be interpreted as reference-based indicators of relative contribution and relative signal level, rather than as absolute radionuclide activities. Within this interpretation, the proposed method provides a practical and physically meaningful approach for extracting radionuclide-specific information from low-resolution plastic scintillator spectra.
 
 Although the present study focused on three representative radionuclides, the framework can be extended to additional radionuclides when appropriate reference spectra are available. The proposed approach is therefore expected to be useful for real-time radiation monitoring and container inspection applications.
-\normalcolor
+
 
 \section*{Acknowledgements}
 

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.4)  21 APR 2026 11:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.4)  23 APR 2026 18:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/jiyong/Documents/Papers/IsotpoeIdentification/papers/ver260326Moon_revision01/draft_260326Moon_rev01.tex
-(/Users/jiyong/Documents/Papers/IsotpoeIdentification/papers/ver260326Moon_revision01/draft_260326Moon_rev01.tex
+**/Users/jiyong/Documents/Papers/IsotpoeIdentification/papers/ver260326Moon_revision01/draft_260326Moon_rev02.tex
+(/Users/jiyong/Documents/Papers/IsotpoeIdentification/papers/ver260326Moon_revision01/draft_260326Moon_rev02.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2022-12-17> (./wlscirep.cls
 Document Class: wlscirep 08/08/2020, v1.4
@@ -47,7 +47,16 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Cskip=\skip50
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
-(/usr/local/texlive/2022/texmf-dist/tex/latex/base/size10.clo
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/fleqn.clo
+File: fleqn.clo 2016/12/29 v1.2b Standard LaTeX option (flush left equations)
+\mathindent=\skip51
+Applying: [2015/01/01] Make \[ robust on input line 50.
+LaTeX Info: Redefining \[ on input line 51.
+Already applied: [0000/00/00] Make \[ robust on input line 62.
+Applying: [2015/01/01] Make \] robust on input line 74.
+LaTeX Info: Redefining \] on input line 75.
+Already applied: [0000/00/00] Make \] robust on input line 83.
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count190
@@ -58,12 +67,12 @@ File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
 \c@subparagraph=\count195
 \c@figure=\count196
 \c@table=\count197
-\abovecaptionskip=\skip51
-\belowcaptionskip=\skip52
+\abovecaptionskip=\skip52
+\belowcaptionskip=\skip53
 \bibindent=\dimen143
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2022/04/08 v2.17n AMS math features
-\@mathmargin=\skip53
+\@mathmargin=\skip54
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -120,8 +129,8 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \totwidth@=\dimen151
 \lineht@=\dimen152
 \@envbody=\toks21
-\multlinegap=\skip54
-\multlinetaggap=\skip55
+\multlinegap=\skip55
+\multlinetaggap=\skip56
 \mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
@@ -232,8 +241,8 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisrulewidth=\dimen167
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/preprint/authblk.sty
 Package: authblk 2001/02/27 1.3 (PWD)
-\affilsep=\skip56
-\@affilsep=\skip57
+\affilsep=\skip57
+\@affilsep=\skip58
 \c@Maxaffil=\count280
 \c@authors=\count281
 \c@affil=\count282
@@ -377,7 +386,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
-\Hy@SectionHShift=\skip58
+\Hy@SectionHShift=\skip59
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
@@ -385,22 +394,22 @@ Package: cite 2015/02/27  v 5.5
 LaTeX Info: Redefining \cite on input line 441.
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
-\f@nch@headwidth=\skip59
-\f@nch@O@elh=\skip60
-\f@nch@O@erh=\skip61
-\f@nch@O@olh=\skip62
-\f@nch@O@orh=\skip63
-\f@nch@O@elf=\skip64
-\f@nch@O@erf=\skip65
-\f@nch@O@olf=\skip66
-\f@nch@O@orf=\skip67
+\f@nch@headwidth=\skip60
+\f@nch@O@elh=\skip61
+\f@nch@O@erh=\skip62
+\f@nch@O@olh=\skip63
+\f@nch@O@orh=\skip64
+\f@nch@O@elf=\skip65
+\f@nch@O@erf=\skip66
+\f@nch@O@olf=\skip67
+\f@nch@O@orf=\skip68
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/lastpage/lastpage.sty
 Package: lastpage 2021/09/03 v1.2n Refers to last page's name (HMM; JPG)
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2021/07/05 v2.14 Sectioning titles
 \ttl@box=\box53
-\beforetitleunit=\skip68
-\aftertitleunit=\skip69
+\beforetitleunit=\skip69
+\aftertitleunit=\skip70
 \ttl@plus=\dimen188
 \ttl@minus=\dimen189
 \ttl@toksa=\toks25
@@ -412,14 +421,14 @@ Package: titletoc 2021/07/05 v2.14 TOC entries
 \ttl@leftsep=\dimen193
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip70
+\labelindent=\skip71
 \enit@outerparindent=\dimen194
 \enit@toks=\toks26
 \enit@inbox=\box54
 \enit@count@id=\count299
 \enitdp@description=\count300
 )
-\tocsep=\skip71
+\tocsep=\skip72
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lipsum/lipsum.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2022-12-17 L3 programming layer (loader) 
  (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
@@ -462,7 +471,7 @@ LaTeX Info: Redefining \textmicrotypecontext on input line 1858.
 File: microtype-pdftex.def 2022/06/23 v3.0f Definitions specific to pdftex (RS)
 LaTeX Info: Redefining \lsstyle on input line 900.
 LaTeX Info: Redefining \lslig on input line 900.
-\MT@outer@space=\skip72
+\MT@outer@space=\skip73
 )
 Package microtype Info: Loading configuration file microtype.cfg.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/microtype.cfg
@@ -479,7 +488,7 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@cmds=\toks32
 \SOUL@buffer=\toks33
 \SOUL@token=\toks34
-\SOUL@spaceskip=\skip73
+\SOUL@spaceskip=\skip74
 \SOUL@ttwidth=\dimen196
 \SOUL@uldp=\dimen197
 \SOUL@ulht=\dimen198
@@ -503,27 +512,27 @@ Package: lineno 2022/07/30 line numbers on paragraphs v5.0
 LaTeX Info: Redefining \\ on input line 3114.
 )
 true
- (./draft_260326Moon_rev01.aux)
-\openout1 = `draft_260326Moon_rev01.aux'.
+ (./draft_260326Moon_rev02.aux)
+\openout1 = `draft_260326Moon_rev02.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
  (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count321
@@ -580,33 +589,33 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 71.
-(./draft_260326Moon_rev01.out) (./draft_260326Moon_rev01.out)
+Package hyperref Info: Link coloring ON on input line 70.
+(./draft_260326Moon_rev02.out) (./draft_260326Moon_rev02.out)
 \@outlinefile=\write3
-\openout3 = `draft_260326Moon_rev01.out'.
+\openout3 = `draft_260326Moon_rev02.out'.
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 71.
-LaTeX Info: Redefining \microtypecontext on input line 71.
-Package microtype Info: Applying patch `item' on input line 71.
-Package microtype Info: Applying patch `toc' on input line 71.
-Package microtype Info: Applying patch `eqnum' on input line 71.
-Package microtype Info: Applying patch `footnote' on input line 71.
+(lastpage)             ! on input line 70.
+LaTeX Info: Redefining \microtypecontext on input line 70.
+Package microtype Info: Applying patch `item' on input line 70.
+Package microtype Info: Applying patch `toc' on input line 70.
+Package microtype Info: Applying patch `eqnum' on input line 70.
+Package microtype Info: Applying patch `footnote' on input line 70.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 71.
+LaTeX Info: Redefining \showhyphens on input line 70.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 75.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 74.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
@@ -614,7 +623,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 75.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 74.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 )
@@ -622,7 +631,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 75.
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 74.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
@@ -630,15 +639,15 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `ztmcm' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 75.
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 74.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 75.
+LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 74.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 75.
+LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 74.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
@@ -646,70 +655,70 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 75.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 74.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 75.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 74.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 75.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 74.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 75.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 74.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 75.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 74.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 75.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 74.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 75.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 74.
  [1
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6] [7] (./draft_260326Moon_rev01.bbl)
-<newfigures/figure1.pdf, id=102, 1011.78pt x 1011.78pt>
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6] (./draft_260326Moon_rev02.bbl)
+<newfigures/figure1.pdf, id=108, 1011.78pt x 1011.78pt>
 File: newfigures/figure1.pdf Graphic file (type pdf)
 <use newfigures/figure1.pdf>
-Package pdftex.def Info: newfigures/figure1.pdf  used on input line 329.
+Package pdftex.def Info: newfigures/figure1.pdf  used on input line 309.
 (pdftex.def)             Requested size: 500.484pt x 500.48528pt.
- [8]
-<newfigures/figure2.pdf, id=115, 939.51pt x 433.62pt>
+ [7]
+<newfigures/figure2.pdf, id=122, 939.51pt x 433.62pt>
 File: newfigures/figure2.pdf Graphic file (type pdf)
 <use newfigures/figure2.pdf>
-Package pdftex.def Info: newfigures/figure2.pdf  used on input line 345.
+Package pdftex.def Info: newfigures/figure2.pdf  used on input line 320.
 (pdftex.def)             Requested size: 500.484pt x 230.98862pt.
-<newfigures/fit_BGSub.pdf, id=116, 1084.05pt x 1084.05pt>
+<newfigures/fit_BGSub.pdf, id=123, 1084.05pt x 1084.05pt>
 File: newfigures/fit_BGSub.pdf Graphic file (type pdf)
 <use newfigures/fit_BGSub.pdf>
-Package pdftex.def Info: newfigures/fit_BGSub.pdf  used on input line 358.
+Package pdftex.def Info: newfigures/fit_BGSub.pdf  used on input line 330.
 (pdftex.def)             Requested size: 500.484pt x 500.4886pt.
-<newfigures/fit_BGRto.pdf, id=117, 1084.05pt x 1084.05pt>
+<newfigures/fit_BGRto.pdf, id=124, 1084.05pt x 1084.05pt>
 File: newfigures/fit_BGRto.pdf Graphic file (type pdf)
 <use newfigures/fit_BGRto.pdf>
-Package pdftex.def Info: newfigures/fit_BGRto.pdf  used on input line 366.
+Package pdftex.def Info: newfigures/fit_BGRto.pdf  used on input line 337.
 (pdftex.def)             Requested size: 500.484pt x 500.4886pt.
-<newfigures/fit_contributions.pdf, id=118, 578.16pt x 433.62pt>
+<newfigures/fit_contributions.pdf, id=125, 578.16pt x 433.62pt>
 File: newfigures/fit_contributions.pdf Graphic file (type pdf)
 <use newfigures/fit_contributions.pdf>
-Package pdftex.def Info: newfigures/fit_contributions.pdf  used on input line 374.
+Package pdftex.def Info: newfigures/fit_contributions.pdf  used on input line 344.
 (pdftex.def)             Requested size: 500.484pt x 375.36066pt.
  
 AED: lastpage setting LastPage
-[9 <./newfigures/figure1.pdf>] [10 <./newfigures/figure2.pdf>] [11 <./newfigures/fit_BGSub.pdf>] [12 <./newfigures/fit_BGRto.pdf>] [13 <./newfigures/fit_contributions.pdf>] (./draft_260326Moon_rev01.aux)
-Package rerunfilecheck Info: File `draft_260326Moon_rev01.out' has not changed.
+[8 <./newfigures/figure1.pdf>] [9 <./newfigures/figure2.pdf>] [10 <./newfigures/fit_BGSub.pdf>] [11 <./newfigures/fit_BGRto.pdf>] [12 <./newfigures/fit_contributions.pdf>] (./draft_260326Moon_rev02.aux)
+Package rerunfilecheck Info: File `draft_260326Moon_rev02.out' has not changed.
 (rerunfilecheck)             Checksum: AC5ACB24C46F435285EFCA46951909CD;96.
  ) 
 Here is how much of TeX's memory you used:
- 24521 strings out of 476093
- 469371 string characters out of 5791586
+ 24555 strings out of 476093
+ 470065 string characters out of 5791586
  1872793 words of memory out of 5000000
- 44209 multiletter control sequences out of 15000+600000
- 594859 words of font info for 331 fonts, out of 8000000 for 9000
+ 44229 multiletter control sequences out of 15000+600000
+ 595589 words of font info for 338 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,12n,91p,1129b,493s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,12n,91p,1104b,572s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on draft_260326Moon_rev01.pdf (13 pages, 572134 bytes).
+Output written on draft_260326Moon_rev02.pdf (12 pages, 566742 bytes).
 PDF statistics:
- 283 PDF objects out of 1000 (max. 8388607)
- 227 compressed objects within 3 object streams
- 35 named destinations out of 1000 (max. 500000)
+ 292 PDF objects out of 1000 (max. 8388607)
+ 237 compressed objects within 3 object streams
+ 37 named destinations out of 1000 (max. 500000)
  95266 words of extra memory for PDF output out of 106986 (max. 10000000)
 

@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: draft_260326Moon_rev02.aux
+The style file: naturemag-doi.bst
+Database file #1: biblio.bib
+You've used 12 entries,
+            2380 wiz_defined-function locations,
+            1095 strings with 12650 characters,
+and the built_in function-call counts, 5135 in all, are:
+= -- 344
+> -- 160
+< -- 0
++ -- 80
+- -- 40
+* -- 701
+:= -- 573
+add.period$ -- 36
+call.type$ -- 12
+change.case$ -- 13
+chr.to.int$ -- 0
+cite$ -- 12
+duplicate$ -- 434
+empty$ -- 439
+format.name$ -- 52
+if$ -- 1010
+int.to.chr$ -- 0
+int.to.str$ -- 12
+missing$ -- 109
+newline$ -- 70
+num.names$ -- 12
+pop$ -- 60
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 74
+stack$ -- 0
+substring$ -- 242
+swap$ -- 461
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 23
+width$ -- 14
+write$ -- 151

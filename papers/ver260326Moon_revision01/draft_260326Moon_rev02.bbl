@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \urlstyle{rm}
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
@@ -88,9 +88,41 @@
   \doiprefix\url{https://doi.org/10.1016/j.radphyschem.2018.07.022}
   (\bibinfo{year}{2019}).
 
+\bibitem{Kim2019ANN}
+\bibinfo{author}{Kim, J.}, \bibinfo{author}{Park, K.} \& \bibinfo{author}{Cho,
+  G.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Multi-radioisotope identification
+  algorithm using an artificial neural network for plastic gamma spectra}}.
+\newblock {\emph{\JournalTitle{Applied Radiation and Isotopes}}}
+  \textbf{\bibinfo{volume}{147}}, \bibinfo{pages}{83--90},
+  \doiprefix\url{https://doi.org/10.1016/j.apradiso.2019.01.005}
+  (\bibinfo{year}{2019}).
+
+\bibitem{Lee2023Radionuclide}
+\bibinfo{author}{Lee, H.~C.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Radionuclide identification based
+  on energy-weighted algorithm and machine learning applied to a multi-array
+  plastic scintillator}}.
+\newblock {\emph{\JournalTitle{Nuclear Engineering and Technology}}}
+  \textbf{\bibinfo{volume}{55}}, \bibinfo{pages}{3907--3912},
+  \doiprefix\url{https://doi.org/10.1016/j.net.2023.07.005}
+  (\bibinfo{year}{2023}).
+
+\bibitem{Jeon2021CompML}
+\bibinfo{author}{Jeon, B.}, \bibinfo{author}{Kim, J.}, \bibinfo{author}{Yu, Y.}
+  \& \bibinfo{author}{Moon, M.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Comparison of machine
+  learning-based radioisotope identifiers for plastic scintillation detector}}.
+\newblock {\emph{\JournalTitle{Journal of Radiation Protection and Research}}}
+  \textbf{\bibinfo{volume}{46}}, \bibinfo{pages}{204--212},
+  \doiprefix\url{https://doi.org/10.14407/jrpr.2021.00206}
+  (\bibinfo{year}{2021}).
+
 \bibitem{Unpublished1}
-\bibinfo{author}{Ji-Yong~So, M.~M.}
-\newblock \bibinfo{title}{Real-time validation of bccs-based radionuclide
+\bibinfo{author}{So, J.-Y.}, \bibinfo{author}{Lee, J.-H.},
+  \bibinfo{author}{Kim, H.-C.}, \bibinfo{author}{Byun, J.-Y.} \&
+  \bibinfo{author}{Moon, M.}
+\newblock \bibinfo{title}{Real-time validation of {BCCS}-based radionuclide
   identification under container-transfer conditions} (\bibinfo{year}{2026}).
 \newblock \bibinfo{note}{In preparation}.
 
