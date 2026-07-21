@@ -1,0 +1,20 @@
+---------- 원본 메일 ----------
+보낸사람: "Scientific Reports" <srep@nature.com>
+받는사람: moonmk@kaeri.re.kr
+날짜: 2026-07-15 (수) 19:04:30
+제목: Scientific Reports: Decision on your manuscript
+
+
+Ref: Submission ID 2cf10123-75ae-402b-ba8e-530bd1dd4208
+
+Decision: major revision
+
+The reviewers have highlighted major issues with the manuscript, specifically lack of quantitative validation, comparison with established methods and missing details regarding calibration, and quantitative evaluation.
+
+When your revision is ready, the original submitting author, MK Moon, must upload a revised manuscript and a point-by-point response. To view any reviewer reports, editor feedback, and the instructions for submitting your revision, please visit your submission details page:
+
+https://submission.springernature.com/submission-details/2cf10123-75ae-402b-ba8e-530bd1dd4208
+
+ORCid records
+
+If the corresponding author links their Springer Nature and ORCID accounts, the article will be added to their ORCID record when published. Learn more at: https://www.springernature.com/gp/researchers/orcid

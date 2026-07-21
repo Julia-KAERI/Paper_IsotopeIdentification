@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex draft_260326Moon_rev02"] 1776856479 "draft_260326Moon_rev02.aux" "draft_260326Moon_rev02.bbl" "draft_260326Moon_rev02" 1776936738 0
+["bibtex draft_260326Moon_rev02"] 1776856479 "draft_260326Moon_rev02.aux" "draft_260326Moon_rev02.bbl" "draft_260326Moon_rev02" 1784610357 0
   "./biblio.bib" 1776856042 14361 1b93fe4a50463c26aa7c0dfb56115c39 ""
   "./naturemag-doi.bst" 1775197721 36153 a59af0557a0f0c0e857533e984f737bb ""
-  "draft_260326Moon_rev02.aux" 1776936738 9204 7f0ee6bfec0bbc61c712a9015dd3d55b "pdflatex"
+  "draft_260326Moon_rev02.aux" 1784610357 9204 7f0ee6bfec0bbc61c712a9015dd3d55b "pdflatex"
   (generated)
   "draft_260326Moon_rev02.bbl"
   "draft_260326Moon_rev02.blg"
   (rewritten before read)
-["pdflatex"] 1776936737 "/Users/jiyong/Documents/Papers/IsotpoeIdentification/papers/ver260326Moon_revision01/draft_260326Moon_rev02.tex" "draft_260326Moon_rev02.pdf" "draft_260326Moon_rev02" 1776936738 0
+["pdflatex"] 1784610355 "/Users/jiyong/Documents/Papers/IsotpoeIdentification/papers/ver260326Moon_revision01/draft_260326Moon_rev02.tex" "draft_260326Moon_rev02.pdf" "draft_260326Moon_rev02" 1784610357 0
   "/Users/jiyong/Documents/Papers/IsotpoeIdentification/papers/ver260326Moon_revision01/draft_260326Moon_rev02.tex" 1776936736 38604 cc43bb2263f5317bcea33bc5f6f637b8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -166,18 +166,18 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1674016646 4623355 58034c3eb7ddf7eacc726a83d01e26d2 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1672789015 7874810 bfa33868b1ee0a17ddb982f07460daa5 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "draft_260326Moon_rev02.aux" 1776936738 9204 7f0ee6bfec0bbc61c712a9015dd3d55b "pdflatex"
+  "draft_260326Moon_rev02.aux" 1784610357 9204 7f0ee6bfec0bbc61c712a9015dd3d55b "pdflatex"
   "draft_260326Moon_rev02.bbl" 1776856479 6297 071cb319750f35d7184d98605950fc36 "bibtex draft_260326Moon_rev02"
-  "draft_260326Moon_rev02.out" 1776936738 96 ac5acb24c46f435285efca46951909cd "pdflatex"
+  "draft_260326Moon_rev02.out" 1784610357 96 ac5acb24c46f435285efca46951909cd "pdflatex"
   "draft_260326Moon_rev02.tex" 1776936736 38604 cc43bb2263f5317bcea33bc5f6f637b8 ""
   "jabbrv-ltwa-all.ldf" 1775197721 49107 ef89484545be005458b7162f37634c99 ""
   "jabbrv-ltwa-en.ldf" 1775197721 268657 c239d07b7cc89e14f920c5fc8ed8d12e ""
   "jabbrv.sty" 1775197721 15480 2106da179daf9d5a102407956ba23e0c ""
-  "newfigures/figure1.pdf" 1776856682 197907 c9ea38ca0f9dfc5faf5878c665ab4992 ""
-  "newfigures/figure2.pdf" 1776857414 184787 01a8d53f9c6d46928d6a830ccfa2ce69 ""
-  "newfigures/fit_BGRto.pdf" 1776857570 234652 1b44684b1d27223bf1db04a61eb94bbc ""
+  "newfigures/figure1.pdf" 1784610334 197907 28fd269a884912a5d977c2a99122105d ""
+  "newfigures/figure2.pdf" 1784610340 184787 82e293ef2b0b273de418877c9f8cb08a ""
+  "newfigures/fit_BGRto.pdf" 1784610353 234652 abdbb0385029f64d3cc22476ea22da8f ""
   "newfigures/fit_BGSub.pdf" 1775197721 241961 d89f823b73132479dedf79403601341b ""
-  "newfigures/fit_contributions.pdf" 1776835343 121834 3b3a5c2eece53285746035f864008f8a ""
+  "newfigures/fit_contributions.pdf" 1784610355 121834 42459a0d2888cf4493a87214058393be ""
   "wlscirep.cls" 1776835668 5824 2bca8e85f20d8d313a7747a78c480ad7 ""
   (generated)
   "draft_260326Moon_rev02.aux"
