@@ -76,7 +76,7 @@ Plastic scintillation detectors are widely used in radiation portal monitors bec
 
 Radiation portal monitors (RPMs) are widely deployed at border crossings, transportation facilities, and industrial sites to detect the illicit movement of radioactive materials\cite{Sicilliano2005Comparision, Bertrand2014Current,Ely2006TheUse}. Most RPM systems employ large-area plastic scintillation detectors because they offer low cost, mechanical robustness, fast response, and high detection efficiency\cite{Hevener2013EWindow, Lee2020Radioisotope, Paff2017Spectral}. However, plastic scintillators inherently provide poor energy resolution, and the resulting spectra are typically dominated by broad Compton continua rather than well-defined photopeaks. This makes radionuclide identification difficult under realistic field conditions, where net count rates may be low and background radiation may vary over time. 
 
-A range of signal-processing approaches has been investigated to improve spectral discrimination in low-resolution detectors. Conventional methods include smoothing and denoising filters6, as well as feature-extraction approaches such as principal component analysis\cite{Runkle2006Analysis,Kim2019InvMat}. More recently, machine-learning and deep-learning methods have been introduced for isotope identification using low-resolution gamma-ray spectra\cite{Kim2019ANN, Lee2023Radionuclide,Jeon2021CompML}. Although these methods can improve classification performance, they often require extensive training datasets, careful tuning, and validation across different operating environments. In addition, computationally intensive inference may not be ideal for embedded systems operating under real-time constraints.
+A range of signal-processing approaches has been investigated to improve spectral discrimination in low-resolution detectors. Conventional methods include smoothing and denoising filters\cite{Paff2017Spectral}, as well as feature-extraction approaches such as principal component analysis\cite{Runkle2006Analysis,Kim2019InvMat}. More recently, machine-learning and deep-learning methods have been introduced for isotope identification using low-resolution gamma-ray spectra\cite{Kim2019ANN, Lee2023Radionuclide,Jeon2021CompML}. Although these methods can improve classification performance, they often require extensive training datasets, careful tuning, and validation across different operating environments. In addition, computationally intensive inference may not be ideal for embedded systems operating under real-time constraints.
 
 In practical RPM operation, radioactive sources are frequently measured at relatively large source-to-detector distances or under partially shielded conditions, leading to weak net signals. Under such circumstances, spectral differences between radionuclides can be masked by background fluctuations. A robust preprocessing method that enhances spectral separability without requiring high-resolution detectors, elaborate calibration procedures, or large training datasets is therefore highly desirable.
 
@@ -185,7 +185,6 @@ Let the processed measured spectrum be denoted by $I^M$, and let $I^X$ denote th
 \begin{equation}
 I^M_i \approx \sum_X \alpha_X I_i^X,
 \end{equation}
-
 where $\alpha_X \ge 0$ is the contribution coefficient for radionuclide $X$.
 
 The coefficients are estimated by solving the non-negative least-squares (NNLS) problem
@@ -244,7 +243,7 @@ The analysis code used for BCCS transformation, background compensation, and NNL
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\linewidth]{newfigures/fit_BGSub.pdf}
-\caption{\textbf{NNLS decomposition results for subtraction-based spectra.} NNLS fitting results for the background-subtracted BCCS spectra of the nine mixed-source configurations. Each panel shows the measured subtraction-based spectrum together with the fitted reconstruction obtained from a non-negative linear combination of the reference radionuclide spectra. The close agreement between measured and reconstructed spectra demonstrates that subtraction-based BCCS processing supports reliable decomposition of mixed-source measurements under low-count conditions..}
+\caption{\textbf{NNLS decomposition results for subtraction-based spectra.} NNLS fitting results for the background-subtracted BCCS spectra of the nine mixed-source configurations. Each panel shows the measured subtraction-based spectrum together with the fitted reconstruction obtained from a non-negative linear combination of the reference radionuclide spectra. The close agreement between measured and reconstructed spectra demonstrates that subtraction-based BCCS processing supports reliable decomposition of mixed-source measurements under low-count conditions.}
 \label{fig:fi_fitbgsub}
 \end{figure}
 
@@ -258,8 +257,22 @@ The analysis code used for BCCS transformation, background compensation, and NNL
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\linewidth]{newfigures/fit_contributions.pdf}
-\caption{\text{Distance dependence of inferred radionuclide contributions.} Estimated radionuclide contributions for Am-241, Co-60, and Cs-137 as a function of source-to-detector distance, obtained from NNLS decomposition of the processed BCCS spectra. The left panel shows results from the subtraction-based method and the right panel shows results from the normalization-based method. Horizontal dashed lines indicate mean contribution levels estimated from measurements in which the corresponding radionuclide was absent, providing practical background-derived decision thresholds. The inferred contributions decrease with increasing distance and approach the threshold bands under very weak-signal conditions.}
+\caption{\textcolor{red}{Estimated contribution coefficients $\alpha_X$ for Am-241, Co-60, and Cs-137 as a function of source-to-detector distance. Each coefficient is expressed relative to the corresponding reference measurement of that radionuclide (Table \ref{tab:reference_spectrum}) and is therefore not directly comparable between radionuclides. For configurations in which the two sources were placed at different distances, each point is plotted at the distance of the corresponding source.} (a) results from the subtraction-based method; (b) results from the normalization-based method. Horizontal dashed lines indicate mean contribution levels estimated from measurements in which the corresponding radionuclide was absent, providing practical background-derived decision thresholds. The inferred contributions decrease with increasing distance and approach the threshold bands under very weak-signal conditions.}
 \label{fig:fi_fitcontrib}
 \end{figure}
+
+\begin{table}[htbp!]
+\centering
+\caption{Reference spectra information}
+\label{tab:reference_spectrum}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Isotope & Source Activity & Source to Detector Distance & Header 3 \\ \hline
+Am-241 & 90 $\mu\text{Ci}$ & 80 cm & Row 1, Col 3 \\ \hline
+Co-60  & 9 $\mu\text{Ci}$ & 60 cm & Row 2, Col 3 \\ \hline
+Cs-137  & 16 $\mu\text{Ci}$ & 70 cm & Row 2, Col 3 \\ \hline
+\end{tabular}
+\end{table}
+
 
 \end{document}
