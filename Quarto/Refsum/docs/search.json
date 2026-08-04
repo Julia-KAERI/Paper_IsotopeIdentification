@@ -94,7 +94,7 @@
     "href": "Bertrand2014Current.html",
     "title": "2  Bertrand (2014)",
     "section": "",
-    "text": "2.1 PS 의 장단점\nCITE : Bertrand, Hamel, and Sguerra (2014)\n플라스틱 섬광체(Plastic Scintillators, PS)의 화학적·구조적 개선 현황을 광범위하게 정리한 리뷰 논문이다. PS는 빠른 응답속도, 낮은 비용, 대형 제작 용이성 등의 장점이 있으나, 고전적으로 낮은 광출력과 낮은 에너지 분해능이 한계로 지적되어 왔다. 이 논문은 이러한 한계를 극복하기 위한 최신 개선 방향을 정리한다.",
+    "text": "2.1 PS 의 장단점\nCITE : Bertrand et al. (2014)\n플라스틱 섬광체(Plastic Scintillators, PS)의 화학적·구조적 개선 현황을 광범위하게 정리한 리뷰 논문이다. PS는 빠른 응답속도, 낮은 비용, 대형 제작 용이성 등의 장점이 있으나, 고전적으로 낮은 광출력과 낮은 에너지 분해능이 한계로 지적되어 왔다. 이 논문은 이러한 한계를 극복하기 위한 최신 개선 방향을 정리한다.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bertrand (2014)</span>"
     ]
@@ -294,7 +294,7 @@
     "href": "Ely2008EnergyWindow.html#초록-번역",
     "title": "4  Ely2008EnergyWindow",
     "section": "",
-    "text": "플라스틱 섬광체 물질은 다른 검출 물질에 비해 상대적으로 높은 민감도와 비용 효율성 때문에 많은 응용 분야에서 감마선 검출에 자주 사용됩니다. 그러나 지배적인 컴프톤 산란 상호작용 메커니즘으로 인해 플라스틱 섬광 스펙트럼에서 전체 에너지 피크가 관찰되지 않으며 동위원소 식별은 불가능합니다. 일반적으로 플라스틱 섬광체 검출기는 오직 총계수 검출기입니다. 차량 스크리닝을 위한 방사선 포털 모니터와 같은 일부 안전장치 및 보안 애플리케이션에서는 자연 발생 방사성 물질(NORM)이 종종 방사선 경보를 발생시켜 innocent signal 이나 nuisance signal\\(^1\\) 를 발생시킵니다.  플라스틱 섬광체 물질에서 얻을 수 있는 제한된 에너지 정보는 NORM을 대상 재료와 구별하고 불편 경보율을 감소시키는 데 활용될 수 있습니다. 플라스틱 스인틸레이터 재료의 에너지 정보 활용에 대한 개요가 제시될 것이며, 탐지 능력과 보호 장치 및 보안 적용에 대한 잠재적 한계에 중점을 둘 것입니다.\\(^1\\) nuisance signal은 ’방사선 검출 관점에서는 진짜 신호지만, 보안·감시·계측 목적에서는 쓸모없는 신호’이며,RPM 알고리즘 발전의 가장 큰 동기이다.",
+    "text": "플라스틱 섬광체 물질은 다른 검출 물질에 비해 상대적으로 높은 민감도와 비용 효율성 때문에 많은 응용 분야에서 감마선 검출에 자주 사용됩니다. 그러나 지배적인 컴프톤 산란 상호작용 메커니즘으로 인해 플라스틱 섬광 스펙트럼에서 전체 에너지 피크가 관찰되지 않으며 동위원소 식별은 불가능합니다. 일반적으로 플라스틱 섬광체 검출기는 오직 총계수 검출기입니다. 차량 스크리닝을 위한 방사선 포털 모니터와 같은 일부 안전장치 및 보안 애플리케이션에서는 자연 발생 방사성 물질(NORM)이 종종 방사선 경보를 발생시켜 innocent signal 이나 nuisance signal\\(^1\\) 를 발생시킵니다.  플라스틱 섬광체 물질에서 얻을 수 있는 제한된 에너지 정보는 NORM을 대상 재료와 구별하고 불편 경보율을 감소시키는 데 활용될 수 있습니다. 플라스틱 스인틸레이터 재료의 에너지 정보 활용에 대한 개요가 제시될 것이며, 탐지 능력과 보호 장치 및 보안 적용에 대한 잠재적 한계에 중점을 둘 것입니다.\\(^1\\) nuisance signal은 ‘방사선 검출 관점에서는 진짜 신호지만, 보안·감시·계측 목적에서는 쓸모없는 신호’이며,RPM 알고리즘 발전의 가장 큰 동기이다.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Ely2008EnergyWindow</span>"
     ]
@@ -364,7 +364,7 @@
     "href": "Ely2008EnergyWindow.html#결론",
     "title": "4  Ely2008EnergyWindow",
     "section": "4.8 결론",
-    "text": "4.8 결론\n\nPVT의 제한적 에너지 분해능에도 불구하고, 에너지 윈도 비율(Ratio) 분석만으로 대부분의 NORM을 효과적으로 제거할 수 있음\n\nSNM 탐지 sensitivity는 유지하면서 nuisance alarm 비율을 크게 줄임\n\n추가적인 PCA, Fisher-LDA, Neural Network 기반 다변량 알고리즘이 유망\n\n그러나 동위원소 식별은 NaI(Tl) 같은 스펙트로스코픽 검출기에 비해 제한적임\n\n넓은 설치 규모가 필요한 RPM에서는 비용·신뢰성을 고려할 때 여전히 PVT가 실용적 선택\n\n\n\n\n\n\nEly, J., K. Anderson, D. Bates, R. Kouzes, C. Lo Presti, R. Runkle, E. Siciliano, and D. Weier. 2008. “The Use of Energy Information in Plastic Scintillator Material.” Journal of Radioanalytical and Nuclear Chemistry 276 (3): 743–48. https://doi.org/10.1007/s10967-008-0627-5.",
+    "text": "4.8 결론\n\nPVT의 제한적 에너지 분해능에도 불구하고, 에너지 윈도 비율(Ratio) 분석만으로 대부분의 NORM을 효과적으로 제거할 수 있음\n\nSNM 탐지 sensitivity는 유지하면서 nuisance alarm 비율을 크게 줄임\n\n추가적인 PCA, Fisher-LDA, Neural Network 기반 다변량 알고리즘이 유망\n\n그러나 동위원소 식별은 NaI(Tl) 같은 스펙트로스코픽 검출기에 비해 제한적임\n\n넓은 설치 규모가 필요한 RPM에서는 비용·신뢰성을 고려할 때 여전히 PVT가 실용적 선택\n\n\n\n\n\n\nEly, J., K. Anderson, D. Bates, et al. 2008. “The Use of Energy Information in Plastic Scintillator Material.” Journal of Radioanalytical and Nuclear Chemistry 276 (3): 743–48. https://doi.org/10.1007/s10967-008-0627-5.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Ely2008EnergyWindow</span>"
     ]
@@ -374,7 +374,7 @@
     "href": "Hevener2013EWindow.html",
     "title": "5  Hevener2013EWindow",
     "section": "",
-    "text": "5.1 연구 목적\nCite : Hevener, Yim, and Baird (2013)\n방사선 포털 모니터(RPM)는 핵물질 불법 반입을 방지하기 위해 전 세계에 배치되어 있으며, 대부분 PVT 플라스틱 섬광체 기반의 단순 Gross Count(GC) 방식에 의존하고 있다. 본문 연구는 에너지 윈도잉(Energy Windowing, EW) 알고리즘을 개선하여:\n을 1차 검사 단계에서 식별할 수 있도록 하는 것이 목표이다.",
+    "text": "5.1 연구 목적\nCite : Hevener et al. (2013)\n방사선 포털 모니터(RPM)는 핵물질 불법 반입을 방지하기 위해 전 세계에 배치되어 있으며, 대부분 PVT 플라스틱 섬광체 기반의 단순 Gross Count(GC) 방식에 의존하고 있다. 본문 연구는 에너지 윈도잉(Energy Windowing, EW) 알고리즘을 개선하여:\n을 1차 검사 단계에서 식별할 수 있도록 하는 것이 목표이다.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Hevener2013EWindow</span>"
     ]
@@ -1064,7 +1064,7 @@
     "href": "Lee2023Radionuclide.html#결론",
     "title": "7  Lee2023Radionuclide",
     "section": "7.8 결론",
-    "text": "7.8 결론\n본 연구는 다음을 명확히 보여준다.\n\n다중 배열 PVT 검출기와 에너지 가중 스펙트럼을 CNN으로 분석하면,\n이동 중인 조건에서도 기존 PVT RPM에서는 불가능했던\n’동위원소 식별’이 실질적으로 가능하다.\n\n이는 향후 차세대 지능형 RPM 개발을 위한 중요한 기반 연구이다.\n\n\n\n\nLee, Hyun Cheol, Bon Tack Koo, Ju Young Jeon, Bo-Wi Cheon, Do Hyeon Yoo, Heejun Chung, and Chul Hee Min. 2023. “Radionuclide Identification Based on Energy-Weighted Algorithm and Machine Learning Applied to a Multi-Array Plastic Scintillator.” Nuclear Engineering and Technology 55 (10): 3907–12. https://doi.org/https://doi.org/10.1016/j.net.2023.07.005.",
+    "text": "7.8 결론\n본 연구는 다음을 명확히 보여준다.\n\n다중 배열 PVT 검출기와 에너지 가중 스펙트럼을 CNN으로 분석하면,\n이동 중인 조건에서도 기존 PVT RPM에서는 불가능했던\n‘동위원소 식별’이 실질적으로 가능하다.\n\n이는 향후 차세대 지능형 RPM 개발을 위한 중요한 기반 연구이다.\n\n\n\n\nLee, Hyun Cheol, Bon Tack Koo, Ju Young Jeon, et al. 2023. “Radionuclide Identification Based on Energy-Weighted Algorithm and Machine Learning Applied to a Multi-Array Plastic Scintillator.” Nuclear Engineering and Technology 55 (10): 3907–12. https://doi.org/https://doi.org/10.1016/j.net.2023.07.005.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lee2023Radionuclide</span>"
     ]

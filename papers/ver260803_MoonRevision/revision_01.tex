@@ -1,0 +1,278 @@
+% \documentclass[fleqn,10pt]{wlscirep}
+% fleqn : left alignment of equation
+%
+% Scientic Reports 에 제출한 pdf 를 복원한 것임. 오류도 그대로 있음.
+%
+
+\documentclass[fleqn, 10pt]{wlscirep}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsbsy}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{soul} % 여러 라인에 걸친 밑줄을 사용하기 위한 패키지
+
+% \usepackage[style=authoryear,backend=biber]{biblatex}
+\DeclareMathOperator*{\argmin}{arg\,min} % Jan Hlavacek
+
+%from here, code for line numbers
+\usepackage{lineno}
+\linenumbers
+
+\makeatletter
+\patchcmd\@maketitle{%
+        {%
+        \noindent
+        \colorbox{color2}{%
+            \parbox{\dimexpr\linewidth-2\fboxsep\relax}{%
+            \sffamily\small\textbf\\\theabstract
+            }%
+        }%
+        }%
+    }{%
+        \nolinenumbers{%
+        \noindent
+        \colorbox{color2}{%
+            \parbox{\dimexpr\linewidth-2\fboxsep\relax}{%
+            \internallinenumbers \sffamily\small\theabstract
+            }%
+        }%
+        }%
+    }
+    {\wlog{true}}{\wlog{false}}
+    
+\makeatother
+%end of code for line numbers
+
+\title{Radionuclide Identification for Plastic Scintillation Detectors by Backward Cumulative Channel Sum}
+% \linenumbers
+\author[1]{Ji-Yong So}
+\author[2]{Byoungil Jeon}
+\author[1,*]{Myungkook Moon}
+\affil[1]{Korea Atomic Energy Research Institute, Neutron Science Division, Daejeon 34057, Republic of Korea}
+\affil[2]{Korea Atomic Energy Research Institute, Applied Artificial Intelligence Section, Daejeon 34057, Republic of Korea}
+
+\affil[*]{moonmk@kaeri.re.kr}
+
+% \affil[+]{These authors equally contributed to this work}
+
+\keywords{radiation portal monitor, radionuclide identification}
+
+\begin{abstract}
+
+Plastic scintillation detectors are widely used in radiation portal monitors because of their low cost, robustness, and high detection efficiency, but their poor energy resolution limits radionuclide identification under weak-signal and high-background conditions. We propose a simple spectral-processing framework based on the Backward Cumulative Channel Sum (BCCS) transformation for improving radionuclide separability in low-resolution plastic scintillation spectra. The method combines BCCS with two background-compensation schemes, direct subtraction and normalization to background, and applies non-negative least-squares decomposition to estimate radionuclide contributions. Reference measurements of Am-241, Cs-137, and Co-60, together with nine mixed-source configurations acquired under representative radiation portal monitoring conditions, were used for validation. The BCCS transformation produced smooth cumulative profiles that suppressed high-channel fluctuations while preserving source-dependent spectral structure. Both compensation methods enhanced radionuclide-specific signatures and supported stable decomposition of mixed-source spectra. The inferred contributions decreased with increasing source-to-detector distance and approached background-derived thresholds under very weak-signal conditions. These results demonstrate that BCCS-based preprocessing provides an interpretable and computationally lightweight approach for radionuclide identification using existing plastic scintillation detector systems without hardware modification or data-intensive training.
+
+\end{abstract} 
+
+\begin{document}
+
+\flushbottom
+\maketitle
+
+\thispagestyle{empty}
+
+
+\section*{Introduction}
+
+Radiation portal monitors (RPMs) are widely deployed at border crossings, transportation facilities, and industrial sites to detect the illicit movement of radioactive materials\cite{Sicilliano2005Comparision, Bertrand2014Current,Ely2006TheUse}. Most RPM systems employ large-area plastic scintillation detectors because they offer low cost, mechanical robustness, fast response, and high detection efficiency\cite{Hevener2013EWindow, Lee2020Radioisotope, Paff2017Spectral}. However, plastic scintillators inherently provide poor energy resolution, and the resulting spectra are typically dominated by broad Compton continua rather than well-defined photopeaks. This makes radionuclide identification difficult under realistic field conditions, where net count rates may be low and background radiation may vary over time. 
+
+A range of signal-processing approaches has been investigated to improve spectral discrimination in low-resolution detectors. Conventional methods include smoothing and denoising filters\cite{Paff2017Spectral}, as well as feature-extraction approaches such as principal component analysis\cite{Runkle2006Analysis,Kim2019InvMat}. More recently, machine-learning and deep-learning methods have been introduced for isotope identification using low-resolution gamma-ray spectra\cite{Kim2019ANN, Lee2023Radionuclide,Jeon2021CompML}. Although these methods can improve classification performance, they often require extensive training datasets, careful tuning, and validation across different operating environments. In addition, computationally intensive inference may not be ideal for embedded systems operating under real-time constraints.
+
+In practical RPM operation, radioactive sources are frequently measured at relatively large source-to-detector distances or under partially shielded conditions, leading to weak net signals. Under such circumstances, spectral differences between radionuclides can be masked by background fluctuations. A robust preprocessing method that enhances spectral separability without requiring high-resolution detectors, elaborate calibration procedures, or large training datasets is therefore highly desirable.
+
+In this study, we propose the Backward Cumulative Channel Sum (BCCS) as an effective spectral transformation for improving radionuclide separability in plastic scintillation detectors. By accumulating counts from high to low channels, the BCCS transformation suppresses fluctuations in the high-channel region while preserving the global spectral tendency of each source. We further investigate two complementary background-compensation strategies—direct subtraction and normalization to background—to isolate source-dependent signatures under low-count conditions. Because the processed spectra retain linear compositional structure, they can be analyzed using non-negative least-squares (NNLS) spectral decomposition. Using reference spectra of Am-241, Cs-137, and Co-60, together with multiple mixed-source measurements acquired under representative RPM conditions, we demonstrate that the proposed framework supports both qualitative radionuclide identification and quantitative estimation of radionuclide contributions using only low-resolution plastic scintillation detectors.
+
+\section*{Results}
+
+\subsection*{Transformation of reference radionuclide spectra}
+
+Figure \ref{fig:bkgref}(a) shows the raw spectra of background radiation and three reference radionuclides---Am-241, Cs-137, and Co-60---measured using a large-volume plastic scintillation detector. As expected for plastic scintillators, all spectra are dominated by broad Compton continua, with most counts concentrated in the low-channel region. Cs-137 and Co-60 show noticeable deviations from background over a relatively broad channel range, whereas Am-241 differs from background primarily in the lowest channels, making reliable identification more difficult under low-count conditions.
+
+Applying the BCCS transformation produces smooth, monotonically decreasing profiles, as shown in Figure \ref{fig:bkgref}(b). This transformation suppresses high-channel statistical fluctuations while preserving the overall spectral structure of each radionuclide. Figures \ref{fig:bkgref}(c) and \ref{fig:bkgref}(d) present the background-subtracted and background-normalized BCCS spectra, respectively. The subtraction-based representation retains the absolute count scale and directly reflects the source contribution relative to background, whereas the normalization-based representation emphasizes relative deviations and improves visual contrast. Both representations provide clearer radionuclide-dependent signatures than the raw spectra.
+
+\subsection*{Background compensation for mixed-source spectra}
+
+Mixed-source measurements were processed using the same two background-compensation strategies. Figure \ref{fig:mixedbccs}(a) shows the background-subtracted BCCS spectra for nine mixed-source configurations composed of Am-241, Cs-137, and Co-60 at various source-to-detector distances. Figure \ref{fig:mixedbccs}(b) shows the corresponding normalization-based spectra.
+
+The two approaches provide complementary views of the same data. Direct subtraction preserves absolute count differences among mixtures, allowing direct comparison of net signal magnitude. In contrast, normalization to background enhances relative spectral contrast and facilitates visual discrimination among mixtures, particularly when the constituent radionuclides contribute in different channel regions or when the overall signal level is sufficiently above background. These observations indicate that both compensation methods are useful, depending on whether the primary goal is absolute quantification or qualitative pattern recognition.
+
+For Am-241, whose spectral contribution is concentrated strongly in the lowest channels, statistical fluctuations may produce small negative values after subtraction. In our analysis, these values are much smaller than the dominant signal amplitude and are attributable to statistical noise rather than physical signal inversion. They were therefore set to zero during the decomposition procedure to prevent unstable fitting.
+
+
+\subsection*{Spectral decomposition by NNLS fitting}
+
+The processed spectra were further analyzed using NNLS spectral decomposition. Figure \ref{fig:fi_fitbgsub} presents the fitting results for the background-subtracted BCCS spectra, and Figure \ref{fig:fi_fitbgrto} shows the corresponding results for the background-normalized BCCS
+spectra. In each panel, the measured spectrum and the fitted reconstruction are shown together with the inferred component contributions from the reference radionuclides.
+
+The fitted spectra reproduce the measured data well in both representations, demonstrating that the processed spectra retain sufficient structure for reliable decomposition. Because meaningful information is concentrated primarily in the low-channel region for plastic scintillation detectors operating under weak-signal conditions, the fitting was restricted to the low-channel portion of the spectrum. This restriction reduces the influence of noise-dominated high-channel data and improves the stability of the inferred coefficients.
+
+The normalization-based spectra often provide a more intuitive visual representation of source presence, especially when one radionuclide produces a stronger relative deviation from background in a limited channel region. Nevertheless, the subtraction-based spectra remain advantageous for preserving physically meaningful count scales. Together, these results
+show that both processed representations are compatible with NNLS-based decomposition and can support robust radionuclide identification in mixed-source measurements.
+
+\subsection*{Distance dependence of estimated contributions}
+
+Figure \ref{fig:fi_fitcontrib} summarizes the estimated radionuclide contributions as a function of source-to-detector distance for the subtraction-based and normalization-based analyses. In both cases, the inferred contributions decrease monotonically with increasing distance, consistent with the expected reduction in signal due to geometric attenuation. 
+
+The horizontal dashed lines indicate mean contribution levels estimated from measurements in which the corresponding radionuclide was absent. These values serve as practical background-derived thresholds for interpretation. For Co-60 and Cs-137, the estimated contributions converge toward these threshold bands at large distances, indicating that the corresponding source signals become difficult to distinguish from background under very low-count conditions. Am-241 shows a similar trend, although its behavior is more strongly influenced by the concentration of counts in the lowest channels.
+
+Overall, the results demonstrate that the proposed BCCS-based preprocessing and decomposition framework can identify radionuclide presence and estimate radionuclide contributions in a physically consistent manner, even in weak-signal and mixed-source scenarios.
+
+\section*{Discussion}
+
+The results of this study show that the proposed BCCS-based framework provides a practical approach for enhancing radionuclide identification using low-resolution plastic scintillation detectors. Although such detectors do not provide the spectral resolution needed to resolve photopeaks clearly, the BCCS transformation suppresses high-channel fluctuations while preserving the global source-dependent structure of the spectrum. This enhances spectral separability precisely in the operating regime where plastic scintillators are most often challenged: weak signals, mixed sources, and variable backgrounds.
+
+An important strength of the proposed approach is its simplicity. Unlike many machine-learning methods, the BCCS transformation and the associated background-compensation procedures do not require training datasets, feature engineering, or model retraining when measurement conditions change. Instead, they operate directly on measured spectra, making them suitable for embedded systems and real-time monitoring applications. The cumulative nature of the transformation also reduces the influence of bin-to-bin Poisson variability, which is particularly beneficial when spectra contain only limited net counts. 
+
+The two compensation methods considered here play complementary roles. Direct subtraction preserves absolute source-related count information and is therefore well suited to quantitative decomposition. Normalization to background, on the other hand, emphasizes relative deviations and often improves qualitative visual interpretation, especially in mixed-source cases where subtle spectral differences might otherwise be obscured. The fact that both representations remain compatible with NNLS decomposition is an important practical advantage, as it provides flexibility in implementation and interpretation.
+
+The observed reduction in inferred contributions with increasing source-to-detector distance is consistent with physical expectations and supports the validity of the proposed framework. When the estimated contribution approaches the background-derived threshold, the method effectively indicates the practical detection limit imposed by geometric attenuation and counting statistics rather than by the mathematical method itself. In this sense, the framework provides not only source identification but also an interpretable boundary between detectable and background-indistinguishable conditions.
+
+The proposed method is particularly relevant to field-deployed RPM systems, where low-cost and mechanically robust detectors are often preferred over higher-resolution but more fragile or expensive alternatives such as HPGe systems. Because the method does not require hardware modification and introduces only limited computational overhead, it can be incorporated into existing systems with minimal implementation burden. The general concept may also be useful in other low-resolution radiation-detection environments, including portable screening systems, drone-based radiation surveys, and waste-monitoring applications.
+
+Several limitations should nevertheless be noted. The accuracy of the decomposition depends on the quality and stability of the reference spectra. Environmental changes, detector aging, gain drift, or altered background conditions could introduce bias if not properly accounted for. In addition, the present implementation assumes that the background used for compensation is representative of the measurement condition. Future work may therefore include adaptive background modeling, temporal background estimation, uncertainty-aware decomposition methods, and validation using a broader range of radionuclides and shielding scenarios.
+
+In summary, the combination of BCCS preprocessing, complementary background compensation, and NNLS-based spectral decomposition provides an effective and interpretable framework for radionuclide identification using low-resolution plastic scintillation detectors. The method improves both visual separability and quantitative decomposition performance under weak-signal conditions and shows strong potential for practical deployment in next-generation RPM applications.
+
+
+\section*{Methods}
+\subsection*{Experimental setup}
+
+Gamma-ray spectra were measured using a large-volume plastic scintillation detector with dimensions of 30 cm$\times$180 cm$\times$5 cm, coupled to a photomultiplier tube and a multichannel analyzer with 2048 channels. Three radionuclides—Am-241, Cs-137, and Co-60—were used as reference sources. Each source spectrum was measured together with an independently acquired background spectrum at multiple source-to-detector distances.
+
+To evaluate mixed-source conditions, nine combinations of the three radionuclides were also measured at different distances. All measurements were conducted under representative radiation portal monitoring conditions, and the acquisition times were selected to reflect practical low-count environments. As expected for plastic scintillation detectors, the raw spectra were dominated by broad continua with most counts concentrated in the low-energy region. These spectra served as the basis for preprocessing, background compensation, and spectral decomposition.
+
+
+\subsection*{Backward cumulative channel sum}
+
+Let
+\begin{equation}
+C =[C1,C2,...,CN ] 
+\end{equation}
+
+denote a raw pulse-height spectrum, where Ci is the count recorded in channel i. The Backward Cumulative Channel Sum (BCCS) spectrum is defined as
+
+\begin{equation}
+    B_i = \sum_{j=i}^N C_j.
+\end{equation}
+
+Unlike the conventional forward cumulative spectrum, which accumulates counts from low to high channels, the BCCS operation accumulates counts from channel i to the end of the spectrum. This produces a smooth, monotonically decreasing cumulative profile. The transformation suppresses statistical fluctuations in the high-channel region while preserving the overall spectral tendency of the source. Because of these properties, BCCS serves as the primary preprocessing step for all subsequent analyses.
+
+
+\subsection*{Background compensation}
+
+Two complementary background-compensation methods were applied after the BCCS transformation: direct subtraction and normalization to background.
+
+For the subtraction-based method, let $B^X_i$ and $B^\text{bkg}_i$ denote the BCCS spectra of radionuclide $X$ and the background, respectively. The background-subtracted spectrum is defined as
+
+\begin{equation}
+S^X_i = B^X_i - B^\text{bkg}_i.
+\end{equation}
+
+This representation preserves the count scale and directly reflects the net source contribution relative to background. Because statistical fluctuations may occasionally generate small negative values, especially for weak low-channel signals such as Am-241, these values were clipped to zero during fitting when necessary. 
+
+For the normalization-based method, the BCCS spectrum is divided by the corresponding background spectrum to emphasize relative deviations. The normalized spectrum is defined as
+
+\begin{equation}
+R^X_i = \dfrac{B_i^X}{B_i^\text{bkg}} -1 = \dfrac{S_i^X}{B_i^\text{bkg}}.
+\end{equation}
+
+This dimensionless representation reduces the influence of global count-level variation and highlights local contrast relative to background. It is particularly useful when the source contribution only slightly exceeds the background level.
+
+\subsection*{NNLS-based spectral decomposition}
+
+Let the processed measured spectrum be denoted by $I^M$, and let $I^X$ denote the processed reference spectrum for radionuclide $X$, where $I$ represents either the subtraction-based spectrum $S$ or the normalization-based spectrum $R$. The measured spectrum is modeled as a non-negative linear combination of the reference spectra:
+
+\begin{equation}
+I^M_i \approx \sum_X \alpha_X I_i^X,
+\end{equation}
+where $\alpha_X \ge 0$ is the contribution coefficient for radionuclide $X$.
+
+The coefficients are estimated by solving the non-negative least-squares (NNLS) problem
+
+\begin{equation}
+\argmin_{\alpha_X \ge 0} \left\| I^M - \sum_X \alpha_X I^X \right\|^2_2.
+\end{equation}
+
+Because informative features in plastic scintillation spectra under low-count conditions are concentrated mainly in the lower channels, the decomposition was performed only over the low-channel region of the processed spectra. This reduces sensitivity to noise-dominated high-channel fluctuations and improves the robustness of the estimated coefficients. 
+
+When the normalization-based method is used, the model assumes that the background spectrum measured with the unknown sample is comparable to the background spectrum associated with the reference measurement. Under this condition, the normalized spectrum also preserves an approximately linear compositional structure, allowing the same NNLS framework to be applied.
+
+\section*{Acknowledgements}
+
+This research was supported by the Ministry of Oceans and Fisheries, Republic of Korea, through the Korea Institute of Marine Science \& Technology Promotion (KIMST) under Project No. 20200611.
+
+\section*{Author contributions statement}
+M.M. conceived the study and performed the experiments. J.-Y.S. developed the analysis software and performed the signal processing. B.J. synthesized the test datasets and supported the evaluation. All authors contributed to interpretation of the results and reviewed the manuscript.
+
+\section*{Data availability}
+The datasets generated and/or analyzed during the current study are available from the corresponding author upon reasonable request.
+
+\section*{Code availability}
+The analysis code used for BCCS transformation, background compensation, and NNLS-based spectral decomposition is available from the corresponding author upon reasonable request.
+
+\section*{Additional information}
+
+\textbf{Competing interests:} The authors declare no competing interests.
+
+
+\bibliography{biblio2}
+
+
+\begin{figure}[ht]
+\centering
+% \includegraphics[width=\linewidth]{figure/fig01_bkgref.pdf}
+\includegraphics[width=\linewidth]{newfigures/figure1.pdf}
+\caption{\textbf{Reference spectra before and after BCCS-based processing.} (a) Raw gamma-ray spectra of background radiation and the three reference radionuclides Am-241, Cs-137, and Co-60 measured using a large-volume plastic scintillation detector. (b) Corresponding BCCS-transformed spectra, showing smooth, monotonically decreasing profiles that suppress high-channel statistical fluctuations while preserving overall spectral structure. (c) Background-subtracted BCCS spectra, which reveal source-specific deviations from background while retaining the count scale. (d) Background-normalized BCCS spectra, highlighting relative intensity differences and improving visual contrast under low-count conditions.}
+
+\label{fig:bkgref}
+\end{figure}
+
+\newpage 
+
+\begin{figure}[ht]
+\centering
+% \includegraphics[width=\linewidth]{figure/fig04_CSBS.pdf}
+\includegraphics[width=\linewidth]{newfigures/figure2.pdf}
+\caption{\textbf{Processed BCCS spectra for mixed-source measurements.} (a) Background-subtracted BCCS spectra for nine mixed-source configurations consisting of Am-241, Cs-137, and Co-60 at different source-to-detector distances. Absolute count differences among mixtures are preserved, revealing mixture-dependent cumulative spectral profiles. (b) Background-normalized BCCS spectra for the same configurations. Normalization emphasizes relative deviations from background and enhances the visibility of spectral differences among mixtures, particularly when radionuclides contribute differently across channel regions.}
+\label{fig:mixedbccs}
+\end{figure}
+
+\newpage
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{newfigures/fit_BGSub.pdf}
+\caption{\textbf{NNLS decomposition results for subtraction-based spectra.} NNLS fitting results for the background-subtracted BCCS spectra of the nine mixed-source configurations. Each panel shows the measured subtraction-based spectrum together with the fitted reconstruction obtained from a non-negative linear combination of the reference radionuclide spectra. The close agreement between measured and reconstructed spectra demonstrates that subtraction-based BCCS processing supports reliable decomposition of mixed-source measurements under low-count conditions.}
+\label{fig:fi_fitbgsub}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{newfigures/fit_BGRto.pdf}
+\caption{\textbf{NNLS decomposition results for normalization-based spectra.} NNLS fitting results for the background-normalized BCCS spectra of the nine mixed-source configurations. Each panel shows the measured normalization-based spectrum together with the fitted reconstruction obtained from the corresponding non-negative linear combination of the reference spectra. The agreement between measured and reconstructed spectra demonstrates that the normalization-based representation also preserves sufficient source-dependent structure for reliable decomposition of mixed-source measurements.}
+\label{fig:fi_fitbgrto}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{newfigures/fit_contributions.pdf}
+\caption{\textcolor{red}{Estimated contribution coefficients $\alpha_X$ for Am-241, Co-60, and Cs-137 as a function of source-to-detector distance. Each coefficient is expressed relative to the corresponding reference measurement of that radionuclide (Table \ref{tab:reference_spectrum}) and is therefore not directly comparable between radionuclides. For configurations in which the two sources were placed at different distances, each point is plotted at the distance of the corresponding source.} (a) results from the subtraction-based method; (b) results from the normalization-based method. Horizontal dashed lines indicate mean contribution levels estimated from measurements in which the corresponding radionuclide was absent, providing practical background-derived decision thresholds. The inferred contributions decrease with increasing distance and approach the threshold bands under very weak-signal conditions.}
+\label{fig:fi_fitcontrib}
+\end{figure}
+
+\begin{table}[htbp!]
+\centering
+\caption{Reference spectra information}
+\label{tab:reference_spectrum}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Isotope & Source Activity & Source to Detector Distance & Header 3 \\ \hline
+Am-241 & 90 $\mu\text{Ci}$ & 80 cm & Row 1, Col 3 \\ \hline
+Co-60  & 9 $\mu\text{Ci}$ & 60 cm & Row 2, Col 3 \\ \hline
+Cs-137  & 16 $\mu\text{Ci}$ & 70 cm & Row 2, Col 3 \\ \hline
+\end{tabular}
+\end{table}
+
+
+\end{document}
