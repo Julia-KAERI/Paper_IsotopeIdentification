@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import csv
 import pandas as pd
 import scipy.optimize as optimization
+from scipy.stats import t
 from datetime import datetime
 from os import listdir
 from os.path import isfile, join
@@ -348,16 +349,52 @@ def bccsfit(params, spectrum, refspecs, i0=3, plot=False):
     return fr1
 
 
-def sag(d):
+
+def solidangle(z=80):
     """
     calculate solid angle for 30 cm x 180 cm size detector with sample-to detector distance
     
     """
 
-    xr = np.arange(-15, 15.05, 0.1)
-    yr = np.arange(-90, 90.05, 0.1)
-    dx = xr[1]-xr[0]
-    dy = yr[1]-yr[0]
-    X, Y = np.meshgrid(xr, yr)
-    Rd, Rxy = np.sqrt(X**2+Y**2+d**2), np.sqrt(X**2+Y**2)
-    return np.sum(dx*dy*Rxy/Rd**3)
+    theta = np.pi/2 - np.arctan2(90, z)
+    phi = np.arctan2(15, z)
+    return (4*phi * np.cos(theta))/4/np.pi
+
+
+def BCCSfit(params, spectrum, refspecs = {}, idf=None, plot=False):
+    """Fit the spectrum to a linear combination of reference spectra.
+    """ 
+    if idf == None :
+        idf = len(spectrum)
+        
+    amspec = refspecs["Am"][0:idf]
+    cospec = refspecs["Co"][0:idf]
+    csspec = refspecs["Cs"][0:idf]
+    
+    def detfunc(xdata, a,b,c):
+        
+        return abs(a)*amspec + abs(b)*cospec + abs(c)*csspec
+
+    popt, pconv = optimization.curve_fit(detfunc, np.arange(len(spectrum[0:idf])), spectrum[0:idf], params, absolute_sigma=True)
+    
+    # 표준오차(SE)와 95% 신뢰구간
+    n, p = idf, len(popt)
+    dof = max(0, n - p)
+    se = np.sqrt(np.diag(pconv))
+    tval = t.ppf(0.975, dof)
+    ci = np.column_stack([popt - tval*se, popt + tval*se])
+
+    if plot:
+        plt.figure(figsize=(12, 6))
+        plt.plot(spectrum, label="Spectrum", color="black")
+        plt.plot(popt[0]*amspec, label="Am-241", color="blue")
+        plt.plot(popt[1]*cospec, label="Co-60", color="red")
+        plt.plot(popt[2]*csspec, label="Cs-137", color="green")
+        plt.plot(popt[0]*amspec + popt[1]*cospec + popt[2]*csspec, label="Fitted", color="violet")
+        plt.yscale("log", base=10)
+        plt.ylim(1.0, spectrum[0]*2)
+        plt.legend()
+        plt.title("Spectrum Fit")
+        plt.show()
+    return popt, se, pconv
+

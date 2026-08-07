@@ -1,48 +1,94 @@
-% \documentclass[fleqn,10pt]{wlscirep}
-% fleqn : left alignment of equation
+% !TEX root = ./revision_01.tex
+%Version 3.1 December 2024
+% See section 11 of the User Manual for version history
 %
-% Scientic Reports 에 제출한 pdf 를 복원한 것임. 오류도 그대로 있음.
-%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                 %%
+%% Please do not use \input{...} to include other tex files.       %%
+%% Submit your LaTeX manuscript as one .tex document.              %%
+%%                                                                 %%
+%% All additional figures and files should be attached             %%
+%% separately and not embedded in the \TeX\ document itself.       %%
+%%                                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[fleqn, 10pt]{wlscirep}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath}
-\usepackage{amsbsy}
-\usepackage{xcolor}
-\usepackage[T1]{fontenc}
-\usepackage{soul} % 여러 라인에 걸친 밑줄을 사용하기 위한 패키지
+%%\documentclass[referee,sn-basic]{sn-jnl}% referee option is meant for double line spacing
 
-% \usepackage[style=authoryear,backend=biber]{biblatex}
-\DeclareMathOperator*{\argmin}{arg\,min} % Jan Hlavacek
+%%=======================================================%%
+%% to print line numbers in the margin use lineno option %%
+%%=======================================================%%
 
-%from here, code for line numbers
-\usepackage{lineno}
-\linenumbers
+%%\documentclass[lineno,pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
 
-\makeatletter
-\patchcmd\@maketitle{%
-        {%
-        \noindent
-        \colorbox{color2}{%
-            \parbox{\dimexpr\linewidth-2\fboxsep\relax}{%
-            \sffamily\small\textbf\\\theabstract
-            }%
-        }%
-        }%
-    }{%
-        \nolinenumbers{%
-        \noindent
-        \colorbox{color2}{%
-            \parbox{\dimexpr\linewidth-2\fboxsep\relax}{%
-            \internallinenumbers \sffamily\small\theabstract
-            }%
-        }%
-        }%
-    }
-    {\wlog{true}}{\wlog{false}}
-    
-\makeatother
-%end of code for line numbers
+%%=========================================================================================%%
+%% the documentclass is set to pdflatex as default. You can delete it if not appropriate.  %%
+%%=========================================================================================%%
+
+%%\documentclass[sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+
+%%Note: the following reference styles support Namedate and Numbered referencing. By default the style follows the most common style. To switch between the options you can add or remove �Numbered� in the optional parenthesis. 
+%%The option is available for: sn-basic.bst, sn-chicago.bst%  
+ 
+%%\documentclass[pdflatex,sn-nature]{sn-jnl}% Style for submissions to Nature Portfolio journals
+%%\documentclass[pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+\documentclass[pdflatex,sn-mathphys-num]{sn-jnl}% Math and Physical Sciences Numbered Reference Style
+%%\documentclass[pdflatex,sn-mathphys-ay]{sn-jnl}% Math and Physical Sciences Author Year Reference Style
+%%\documentclass[pdflatex,sn-aps]{sn-jnl}% American Physical Society (APS) Reference Style
+%%\documentclass[pdflatex,sn-vancouver-num]{sn-jnl}% Vancouver Numbered Reference Style
+%%\documentclass[pdflatex,sn-vancouver-ay]{sn-jnl}% Vancouver Author Year Reference Style
+%%\documentclass[pdflatex,sn-apa]{sn-jnl}% APA Reference Style
+%%\documentclass[pdflatex,sn-chicago]{sn-jnl}% Chicago-based Humanities Reference Style
+
+%%%% Standard Packages
+%%<additional latex packages if required can be included here>
+
+\usepackage{graphicx}%
+\usepackage{multirow}%
+\usepackage{amsmath,amssymb,amsfonts}%
+\usepackage{amsthm}%
+\usepackage{mathrsfs}%
+\usepackage[title]{appendix}%
+\usepackage{xcolor}%
+\usepackage{textcomp}%
+\usepackage{manyfoot}%
+\usepackage{booktabs}%
+\usepackage{algorithm}%
+\usepackage{algorithmicx}%
+\usepackage{algpseudocode}%
+\usepackage{listings}%
+%%%%
+
+%%%%%=============================================================================%%%%
+%%%%  Remarks: This template is provided to aid authors with the preparation
+%%%%  of original research articles intended for submission to journals published 
+%%%%  by Springer Nature. The guidance has been prepared in partnership with 
+%%%%  production teams to conform to Springer Nature technical requirements. 
+%%%%  Editorial and presentation requirements differ among journal portfolios and 
+%%%%  research disciplines. You may find sections in this template are irrelevant 
+%%%%  to your work and are empowered to omit any such section if allowed by the 
+%%%%  journal you intend to submit to. The submission guidelines and policies 
+%%%%  of the journal take precedence. A detailed User Manual is available in the 
+%%%%  template package for technical guidance.
+%%%%%=============================================================================%%%%
+
+%% as per the requirement new theorem styles can be included as shown below
+\theoremstyle{thmstyleone}%
+\newtheorem{theorem}{Theorem}%  meant for continuous numbers
+%%\newtheorem{theorem}{Theorem}[section]% meant for sectionwise numbers
+%% optional argument [theorem] produces theorem numbering sequence instead of independent numbers for Proposition
+\newtheorem{proposition}[theorem]{Proposition}% 
+%%\newtheorem{proposition}{Proposition}% to get separate numbers for theorem and proposition etc.
+
+\theoremstyle{thmstyletwo}%
+\newtheorem{example}{Example}%
+\newtheorem{remark}{Remark}%
+
+\theoremstyle{thmstylethree}%
+\newtheorem{definition}{Definition}%
+
+\raggedbottom
+%%\unnumbered% uncomment this for unnumbered level heads
+\begin{document}
 
 \title{Radionuclide Identification for Plastic Scintillation Detectors by Backward Cumulative Channel Sum}
 % \linenumbers
@@ -56,23 +102,19 @@
 
 % \affil[+]{These authors equally contributed to this work}
 
+
+
+\abstract{Plastic scintillation detectors are widely used in radiation portal monitors because of their low cost, robustness, and high detection efficiency, but their poor energy resolution limits radionuclide identification under weak-signal and high-background conditions. We propose a simple spectral-processing framework based on the Backward Cumulative Channel Sum (BCCS) transformation for improving radionuclide separability in low-resolution plastic scintillation spectra. The method combines BCCS with two background-compensation schemes, direct subtraction and normalization to background, and applies non-negative least-squares decomposition to estimate radionuclide contributions. Reference measurements of Am-241, Cs-137, and Co-60, together with nine mixed-source configurations acquired under representative radiation portal monitoring conditions, were used for validation. The BCCS transformation produced smooth cumulative profiles that suppressed high-channel fluctuations while preserving source-dependent spectral structure. Both compensation methods enhanced radionuclide-specific signatures and supported stable decomposition of mixed-source spectra. The inferred contributions decreased with increasing source-to-detector distance and approached background-derived thresholds under very weak-signal conditions. These results demonstrate that BCCS-based preprocessing provides an interpretable and computationally lightweight approach for radionuclide identification using existing plastic scintillation detector systems without hardware modification or data-intensive training.} 
+
+% \begin{document}
 \keywords{radiation portal monitor, radionuclide identification}
-
-\begin{abstract}
-
-Plastic scintillation detectors are widely used in radiation portal monitors because of their low cost, robustness, and high detection efficiency, but their poor energy resolution limits radionuclide identification under weak-signal and high-background conditions. We propose a simple spectral-processing framework based on the Backward Cumulative Channel Sum (BCCS) transformation for improving radionuclide separability in low-resolution plastic scintillation spectra. The method combines BCCS with two background-compensation schemes, direct subtraction and normalization to background, and applies non-negative least-squares decomposition to estimate radionuclide contributions. Reference measurements of Am-241, Cs-137, and Co-60, together with nine mixed-source configurations acquired under representative radiation portal monitoring conditions, were used for validation. The BCCS transformation produced smooth cumulative profiles that suppressed high-channel fluctuations while preserving source-dependent spectral structure. Both compensation methods enhanced radionuclide-specific signatures and supported stable decomposition of mixed-source spectra. The inferred contributions decreased with increasing source-to-detector distance and approached background-derived thresholds under very weak-signal conditions. These results demonstrate that BCCS-based preprocessing provides an interpretable and computationally lightweight approach for radionuclide identification using existing plastic scintillation detector systems without hardware modification or data-intensive training.
-
-\end{abstract} 
-
-\begin{document}
-
-\flushbottom
+%\flushbottom
 \maketitle
 
-\thispagestyle{empty}
+%\thispagestyle{empty}
 
 
-\section*{Introduction}
+\section*{Introduction}\label{sec1}
 
 Radiation portal monitors (RPMs) are widely deployed at border crossings, transportation facilities, and industrial sites to detect the illicit movement of radioactive materials\cite{Sicilliano2005Comparision, Bertrand2014Current,Ely2006TheUse}. Most RPM systems employ large-area plastic scintillation detectors because they offer low cost, mechanical robustness, fast response, and high detection efficiency\cite{Hevener2013EWindow, Lee2020Radioisotope, Paff2017Spectral}. However, plastic scintillators inherently provide poor energy resolution, and the resulting spectra are typically dominated by broad Compton continua rather than well-defined photopeaks. This makes radionuclide identification difficult under realistic field conditions, where net count rates may be low and background radiation may vary over time. 
 
@@ -111,6 +153,8 @@ show that both processed representations are compatible with NNLS-based decompos
 
 \subsection*{Distance dependence of estimated contributions}
 
+\textcolor{red}{The geometric solid angle subtended by the 30 cm × 180 cm detector face at a point source positioned on the normal through the detector center was computed by numerical integration of $\sin\theta \,d\theta d\varphi$ over the angular extent of the detector. Because the detector dimensions are comparable to the source-to-detector distances used here, the inverse-square approximation is not valid, and the finite detector size must be taken into account. Since only ratios relative to the reference distance are compared, the angle-dependent intrinsic efficiency largely cancels.}
+
 Figure \ref{fig:fi_fitcontrib} summarizes the estimated radionuclide contributions as a function of source-to-detector distance for the subtraction-based and normalization-based analyses. In both cases, the inferred contributions decrease monotonically with increasing distance, consistent with the expected reduction in signal due to geometric attenuation. 
 
 The horizontal dashed lines indicate mean contribution levels estimated from measurements in which the corresponding radionuclide was absent. These values serve as practical background-derived thresholds for interpretation. For Co-60 and Cs-137, the estimated contributions converge toward these threshold bands at large distances, indicating that the corresponding source signals become difficult to distinguish from background under very low-count conditions. Am-241 shows a similar trend, although its behavior is more strongly influenced by the concentration of counts in the lowest channels.
@@ -141,6 +185,7 @@ Gamma-ray spectra were measured using a large-volume plastic scintillation detec
 
 To evaluate mixed-source conditions, nine combinations of the three radionuclides were also measured at different distances. All measurements were conducted under representative radiation portal monitoring conditions, and the acquisition times were selected to reflect practical low-count environments. As expected for plastic scintillation detectors, the raw spectra were dominated by broad continua with most counts concentrated in the low-energy region. These spectra served as the basis for preprocessing, background compensation, and spectral decomposition.
 
+\textcolor{red}{For each radionuclide, the spectrum acquired at the shortest source-to-detector distance was used as the reference spectrum $I^X$ (Am-241 at 80 cm, Co-60 at 60 cm, Cs-137 at 70 cm; Table \ref{tab:isotope_lists}), since these measurements provide the highest signal-to-background ratio and therefore the most stable spectral shape. The additional measurements at larger distances (Co-60 at 120 cm, Cs-137 at 130 cm) shown in Figure \ref{fig:bkgref} illustrate the distance dependence of the spectral shape and were not used as references.}
 
 \subsection*{Backward cumulative channel sum}
 
@@ -185,12 +230,13 @@ Let the processed measured spectrum be denoted by $I^M$, and let $I^X$ denote th
 \begin{equation}
 I^M_i \approx \sum_X \alpha_X I_i^X,
 \end{equation}
-where $\alpha_X \ge 0$ is the contribution coefficient for radionuclide $X$.
+
+\noindent\textcolor{red}{where $\alpha_X \ge 0$ is the contribution coefficient for radionuclide $X$.  Each reference spectrum was acquired under the fixed conditions listed in Table 1, so that $\alpha_X=1$ corresponds to a source contribution equal to that of the reference measurement of $X$. Because each coefficient is normalized to its own reference, $\alpha_X$ is comparable across measurements for a given radionuclide but not between different radionuclides.}
 
 The coefficients are estimated by solving the non-negative least-squares (NNLS) problem
 
 \begin{equation}
-\argmin_{\alpha_X \ge 0} \left\| I^M - \sum_X \alpha_X I^X \right\|^2_2.
+\text{argmin}_{\alpha_X \ge 0} \left\| I^M - \sum_X \alpha_X I^X \right\|^2_2.
 \end{equation}
 
 Because informative features in plastic scintillation spectra under low-count conditions are concentrated mainly in the lower channels, the decomposition was performed only over the low-channel region of the processed spectra. This reduces sensitivity to noise-dominated high-channel fluctuations and improves the robustness of the estimated coefficients. 
@@ -214,8 +260,94 @@ The analysis code used for BCCS transformation, background compensation, and NNL
 
 \textbf{Competing interests:} The authors declare no competing interests.
 
+\bibliography{biblio3}
 
-\bibliography{biblio2}
+\newpage
+
+\begin{sidewaystable}
+\centering
+\caption{Reference spectra information}
+\label{tab:isotope_lists}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\toprule
+Data ID & Category & Radionuclide(s) & Nominal activity ($\mu\text{Ci}$) & Distance (cm) & Actual live time (s) & Role \& note \\
+\midrule
+Background & Background-only & - &- &- & 20.000 & Background correction and resampling \\
+Sample-1   & Single-source & Am-241 & 90 & 80 & 20.000 & Am-241  reference spectrum \\
+Sample-2   & Single-source & Am-241 & 90 & 180 & 20.000 & Single-source distance measurement \\
+Sample-3   & Single-source & Am-241 & 90 & 280 & 20.000 & Single-source distance measurement \\
+Sample-4   & Single-source & Am-241 & 90 & 460 & 20.000 & Single-source distance measurement \\
+Sample-5   & Single-source & Cs-137 & 16 & 70 & 19.284 & Cs-137 reference spectrum \\
+Sample-6   & Single-source & Cs-137 & 16 & 130 & 19.652 & Cs-137 distance series \\
+Sample-7   & Single-source & Cs-137 & 16 & 300 & 19.900 & Cs-137 distance series \\
+Sample-8   & Single-source & Cs-137 & 16 & 390 & 19.962 & Cs-137 distance series \\
+Sample-9   & Single-source & Co-60 & 9 & 60 & 18.672 & Co-60 reference spectrum \\
+Sample-10  & Single-source & Co-60 & 9 & 120 & 19.220 &  Co-60 distance series\\
+Sample-11  & Single-source & Co-60 & 9 & 310 & 19.720 & Co-60 distance series \\
+Sample-12  & Single-source & Co-60 & 9 & 470 & 19.864 & Co-60 distance series \\
+Sample-13  & Mixed-source  & Cs-137 + Co-60 & 16 / 9 & 136 / 136 & 19.134 & Mixed-source dataset \\
+Sample-14  & Mixed-source  & Am-241 + Co-60 & 90 / 9 & 287 / 287 & 19.676 & Mixed-source dataset \\
+Sample-15  & Mixed-source  & Cs-137 + Co-60 & 16 / 9 & 361 / 361 & 19.716 & Mixed-source dataset \\
+Sample-16  & Mixed-source  & Am-241 + Cs-137 & 90 / 16 & 163 / 163 & 19.628 & Mixed-source dataset \\
+Sample-17  & Mixed-source  & Am-241 + Cs-137 + Co-60 & 90 / 16 / 9 & 309 / 309 / 309 & 19.574 & Mixed-source dataset \\
+Sample-18  & Mixed-source  & Co-60 + Am-241 & 9 / 90 & 153 / 210 & 19.310 & Separated source positions \\
+Sample-19  & Mixed-source  & Cs-137 + Co-60 & 16 / 9 & 367 / 285 & 19.568 & Separated source positions \\
+Sample-20  & Mixed-source  & Am-241 + Cs-137 & 90 / 16 & 85 / 173 & 19.554 &  Separated source positions \\
+Sample-21  & Mixed-source  & Cs-137 + Co-60 & 16 / 9 & 223 / 316 & 19.470 & Separated source positions\\
+\botrule
+\end{tabular}
+\end{sidewaystable}
+
+\begin{table}[h]
+\centering
+\caption{Reference spectra information}
+\label{tab:isotope_lists}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\toprule
+Radionuclide(s) & d (cm) & $(d_0/d)^2$ & $(\Omega/\Omega_0)$ & count sum ratio & $\alpha_\text{Am}$ & $\alpha_\text{Cs}$ & $\alpha_\text{Co}$ \\
+\midrule
+Am-241 & 80  &  1.000 &  1.000 & 1.000 & 1.000(0.005) & -0.000(0.000) &  0.000(0.000)    \\
+Am-241 & 180 &  0.198 &  0.269 & 0.316 & 0.316(0.006) &  0.002(0.002) & -0.000(0.002)    \\
+Am-241 & 280 &  0.082 &  0.118 & 0.129 & 0.137(0.005) & -0.000(0.001) &  0.000(0.002)    \\
+Am-241 & 460 &  0.030 &  0.045 & 0.042 & 0.051(0.005) & -0.000(0.001) &  0.000(0.001)    \\
+Cs-137 & 70  &  3.449 &  2.545 & 2.581 & 0.000        &  1.000        & -0.000           \\
+Cs-137 & 130 &  1.000 &  1.000 & 1.000 & 0.000(0.005) &  0.358(0.002) &  0.014(0.002)    \\ 
+Cs-137 & 300 &  0.188 &  0.220 & 0.220 & 0.011(0.006) &  0.065(0.002) &  0.002(0.002)    \\
+Cs-137 & 390 &  0.111 &  0.132 & 0.128 & 0.015(0.006) &  0.027(0.002) &  0.005(0.002)    \\
+Co-60  & 60  &  4.000 &  2.728 & 2.763 & 0.000        &  0.000        &  1.000           \\
+Co-60  & 120 &  1.000 &  1.000 & 1.000 & 0.067(0.006) &  0.005(0.002) &  0.384(0.002)    \\
+Co-60  & 310 &  0.150 &  0.181 & 0.183 & 0.040(0.006) &  0.006(0.002) &  0.085(0.002)    \\
+Co-60  & 470 &  0.065 &  0.081 & 0.074 & 0.049(0.006) &  0.000(0.002) &  0.052(0.002)    \\
+%  Cs-137 + Co-60 & 136 / 136 & 19.134 & Mixed-source dataset \\
+%  Am-241 + Co-60 & 287 / 287 & 19.676 & Mixed-source dataset \\
+%  Cs-137 + Co-60 & 361 / 361 & 19.716 & Mixed-source dataset \\
+%  Am-241 + Cs-137 & 163 / 163 & 19.628 & Mixed-source dataset \\
+%  Am-241 + Cs-137 + Co-60 & 309 / 309 / 309 & 19.574 & e dataset \\
+%  Co-60 + Am-241 & 153 / 210 & 19.310 & Separated source positions \\
+%  Cs-137 + Co-60 & 367 / 285 & 19.568 & Separated source positions \\
+%  Am-241 + Cs-137 & 85 / 173 & 19.554 &  Separated source positions \\
+%  Cs-137 + Co-60 & 223 / 316 & 19.470 & Separated source positions\\
+% 
+% |      Isotope | distance (cm) |     (d_0/d)^2 |            Am-241 |             Co-60  |            Cs-137  |
+% |           am |            80 |    1.00000000 |  1.000 +/-  0.005 | -0.000 +/-  0.000 |  0.000 +/-  0.000 |
+% |           am |           180 |    0.19753086 |  0.316 +/-  0.006 |  0.002 +/-  0.002 | -0.000 +/-  0.002 |
+% |           am |           280 |    0.08163265 |  0.137 +/-  0.005 | -0.000 +/-  0.001 |  0.000 +/-  0.002 |
+% |           am |           460 |    0.03024575 |  0.051 +/-  0.005 | -0.000 +/-  0.001 |  0.000 +/-  0.001 |
+% |           co |            60 |    1.00000000 | -0.000 +/-    inf |  1.000 +/-    inf | -0.000 +/-    inf |
+% |           co |           120 |    0.25000000 |  0.000 +/-  0.005 |  0.358 +/-  0.002 |  0.014 +/-  0.002 |
+% |           co |           310 |    0.03746098 |  0.011 +/-  0.006 |  0.065 +/-  0.002 |  0.002 +/-  0.002 |
+% |           co |           470 |    0.01629697 |  0.015 +/-  0.006 |  0.027 +/-  0.002 |  0.005 +/-  0.002 |
+% |           cs |            70 |    1.00000000 |  0.000 +/-    inf |  0.000 +/-    inf |  1.000 +/-    inf |
+% |           cs |           130 |    0.28994083 |  0.067 +/-  0.006 |  0.005 +/-  0.002 |  0.384 +/-  0.002 |
+% |           cs |           300 |    0.05444444 |  0.040 +/-  0.006 |  0.006 +/-  0.002 |  0.085 +/-  0.002 |
+% |           cs |           390 |    0.03221565 |  0.049 +/-  0.006 |  0.000 +/-  0.002 |  0.052 +/-  0.002 |
+\botrule
+\end{tabular}
+\end{table}
+
+
+
+
 
 
 \begin{figure}[ht]
@@ -261,18 +393,8 @@ The analysis code used for BCCS transformation, background compensation, and NNL
 \label{fig:fi_fitcontrib}
 \end{figure}
 
-\begin{table}[htbp!]
-\centering
-\caption{Reference spectra information}
-\label{tab:reference_spectrum}
-\begin{tabular}{|c|c|c|c|}
-\hline
-Isotope & Source Activity & Source to Detector Distance & Header 3 \\ \hline
-Am-241 & 90 $\mu\text{Ci}$ & 80 cm & Row 1, Col 3 \\ \hline
-Co-60  & 9 $\mu\text{Ci}$ & 60 cm & Row 2, Col 3 \\ \hline
-Cs-137  & 16 $\mu\text{Ci}$ & 70 cm & Row 2, Col 3 \\ \hline
-\end{tabular}
-\end{table}
+\newpage
+
 
 
 \end{document}

@@ -348,6 +348,44 @@ def bccsfit(params, spectrum, refspecs, i0=3, plot=False):
     return fr1
 
 
+def BCCSfit(params, spectrum, refspecs = {}, idf=None, plot=False):
+    """Fit the spectrum to a linear combination of reference spectra.
+    """ 
+    if idf == None :
+        idf = len(spectrum)
+        
+    amspec = refspecs["Am"][0:idf]
+    cospec = refspecs["Co"][0:idf]
+    csspec = refspecs["Cs"][0:idf]
+    
+    def detfunc(xdata, a,b,c):
+        
+        return abs(a)*amspec + abs(b)*cospec + abs(c)*csspec
+
+    popt, pconv = optimization.curve_fit(detfunc, np.arange(len(spectrum[0:idf])), spectrum[0:idf], params, absolute_sigma=True)
+    
+    # 표준오차(SE)와 95% 신뢰구간
+    n, p = idf, len(popt)
+    dof = max(0, n - p)
+    se = np.sqrt(np.diag(pconv))
+    tval = t.ppf(0.975, dof)
+    ci = np.column_stack([popt - tval*se, popt + tval*se])
+
+    if plot:
+        plt.figure(figsize=(12, 6))
+        plt.plot(spectrum, label="Spectrum", color="black")
+        plt.plot(popt[0]*amspec, label="Am-241", color="blue")
+        plt.plot(popt[1]*cospec, label="Co-60", color="red")
+        plt.plot(popt[2]*csspec, label="Cs-137", color="green")
+        plt.plot(popt[0]*amspec + popt[1]*cospec + popt[2]*csspec, label="Fitted", color="violet")
+        plt.yscale("log", base=10)
+        plt.ylim(1.0, spectrum[0]*2)
+        plt.legend()
+        plt.title("Spectrum Fit")
+        plt.show()
+    return popt, se, pconv
+
+
 def sag(d):
     """
     calculate solid angle for 30 cm x 180 cm size detector with sample-to detector distance

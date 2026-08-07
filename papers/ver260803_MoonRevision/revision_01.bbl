@@ -1,0 +1,245 @@
+%% BioMed_Central_Bib_Style_v1.01
+
+\begin{thebibliography}{11}
+% BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1}\fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1}\fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{#1}\fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1}\fi
+\ifx \bissue  \undefined \def \bissue#1{#1}\fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1}\fi
+\ifx \blpage  \undefined \def \blpage #1{#1}\fi
+\ifx \burl  \undefined \def \burl#1{\textsf{#1}}\fi
+\ifx \doiurl  \undefined \def \doiurl#1{\url{https://doi.org/#1}}\fi
+\ifx \betal  \undefined \def \betal{\textit{et al.}}\fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1}\fi
+\ifx \binstitutionaled  \undefined \def \binstitutionaled#1{#1}\fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1}\fi
+\ifx \beditor  \undefined \def \beditor#1{#1}\fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1}\fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{#1}\fi
+\ifx \bedition  \undefined \def \bedition#1{#1}\fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1}\fi
+\ifx \blocation  \undefined \def \blocation#1{#1}\fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1}\fi
+\ifx \bsnm \undefined \def \bsnm#1{#1}\fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1}\fi
+\ifx \bparticle \undefined \def \bparticle#1{#1}\fi
+\ifx \barticle \undefined \def \barticle#1{#1}\fi
+\bibcommenthead
+\ifx \bconfdate \undefined \def \bconfdate #1{#1}\fi
+\ifx \botherref \undefined \def \botherref #1{#1}\fi
+\ifx \url \undefined \def \url#1{\textsf{#1}}\fi
+\ifx \bchapter \undefined \def \bchapter#1{#1}\fi
+\ifx \bbook \undefined \def \bbook#1{#1}\fi
+\ifx \bcomment \undefined \def \bcomment#1{#1}\fi
+\ifx \oauthor \undefined \def \oauthor#1{#1}\fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1}\fi
+\ifx \endbibitem  \undefined \def \endbibitem {}\fi
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
+\ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
+\csname PreBibitemsHook\endcsname
+
+%%% 1
+\bibitem[\protect\citeauthoryear{Siciliano
+  et~al.}{2005}]{Sicilliano2005Comparision}
+\begin{barticle}
+\bauthor{\bsnm{Siciliano}, \binits{E.R.}},
+\bauthor{\bsnm{Ely}, \binits{J.H.}},
+\bauthor{\bsnm{Kouzes}, \binits{R.T.}},
+\bauthor{\bsnm{Milbrath}, \binits{B.D.}},
+\bauthor{\bsnm{Schweppe}, \binits{J.E.}},
+\bauthor{\bsnm{Stromswold}, \binits{D.C.}}:
+\batitle{Comparison of pvt and nai(tl) scintillators for vehicle portal monitor
+  applications}.
+\bjtitle{Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment}
+\bvolume{550}(\bissue{3}),
+\bfpage{647}--\blpage{674}
+(\byear{2005})
+\doiurl{10.1016/j.nima.2005.05.056}
+\end{barticle}
+\endbibitem
+
+%%% 2
+\bibitem[\protect\citeauthoryear{Bertrand et~al.}{2014}]{Bertrand2014Current}
+\begin{barticle}
+\bauthor{\bsnm{Bertrand}, \binits{G.H.V.}},
+\bauthor{\bsnm{Hamel}, \binits{M.}},
+\bauthor{\bsnm{Sguerra}, \binits{F.}}:
+\batitle{Current status on plastic scintillators modifications}.
+\bjtitle{Chemistry -- A European Journal}
+\bvolume{20}(\bissue{48}),
+\bfpage{15660}--\blpage{15685}
+(\byear{2014})
+\doiurl{10.1002/chem.201404093}
+\end{barticle}
+\endbibitem
+
+%%% 3
+\bibitem[\protect\citeauthoryear{Ely et~al.}{2006}]{Ely2006TheUse}
+\begin{barticle}
+\bauthor{\bsnm{Ely}, \binits{J.}},
+\bauthor{\bsnm{Kouzes}, \binits{R.}},
+\bauthor{\bsnm{Schweppe}, \binits{J.}},
+\bauthor{\bsnm{Siciliano}, \binits{E.}},
+\bauthor{\bsnm{Strachan}, \binits{D.}},
+\bauthor{\bsnm{Weier}, \binits{D.}}:
+\batitle{The use of energy windowing to discriminate snm from norm in radiation
+  portal monitors}.
+\bjtitle{Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment}
+\bvolume{560}(\bissue{2}),
+\bfpage{373}--\blpage{387}
+(\byear{2006})
+\doiurl{10.1016/j.nima.2006.01.053}
+\end{barticle}
+\endbibitem
+
+%%% 4
+\bibitem[\protect\citeauthoryear{Hevener et~al.}{2013}]{Hevener2013EWindow}
+\begin{barticle}
+\bauthor{\bsnm{Hevener}, \binits{R.}},
+\bauthor{\bsnm{Yim}, \binits{M.-S.}},
+\bauthor{\bsnm{Baird}, \binits{K.}}:
+\batitle{Investigation of energy windowing algorithms for effective cargo
+  screening with radiation portal monitors}.
+\bjtitle{Radiation Measurements}
+\bvolume{58},
+\bfpage{113}--\blpage{120}
+(\byear{2013})
+\doiurl{10.1016/j.radmeas.2013.08.004}
+\end{barticle}
+\endbibitem
+
+%%% 5
+\bibitem[\protect\citeauthoryear{Lee et~al.}{2020}]{Lee2020Radioisotope}
+\begin{barticle}
+\bauthor{\bsnm{Lee}, \binits{H.C.}},
+\bauthor{\bsnm{Shin}, \binits{W.-g.}},
+\bauthor{\bsnm{Choi}, \binits{H.J.}},
+\bauthor{\bsnm{Choi}, \binits{C.-I.}},
+\bauthor{\bsnm{Park}, \binits{C.S.}},
+\bauthor{\bsnm{Kim}, \binits{H.-S.}},
+\bauthor{\bsnm{Min}, \binits{C.H.}}:
+\batitle{Radioisotope identification using an energy-weighted algorithm with a
+  proof-of-principle radiation portal monitor based on plastic scintillators}.
+\bjtitle{Applied Radiation and Isotopes}
+\bvolume{156},
+\bfpage{109010}
+(\byear{2020})
+\doiurl{10.1016/j.apradiso.2019.109010}
+\end{barticle}
+\endbibitem
+
+%%% 6
+\bibitem[\protect\citeauthoryear{Paff et~al.}{2017}]{Paff2017Spectral}
+\begin{barticle}
+\bauthor{\bsnm{Paff}, \binits{M.G.}},
+\bauthor{\bsnm{Fulvio}, \binits{A.D.}},
+\bauthor{\bsnm{Clarke}, \binits{S.D.}},
+\bauthor{\bsnm{Pozzi}, \binits{S.A.}}:
+\batitle{Radionuclide identification algorithm for organic scintillator-based
+  radiation portal monitor}.
+\bjtitle{Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment}
+\bvolume{849},
+\bfpage{41}--\blpage{48}
+(\byear{2017})
+\doiurl{10.1016/j.nima.2017.01.009}
+\end{barticle}
+\endbibitem
+
+%%% 7
+\bibitem[\protect\citeauthoryear{Runkle et~al.}{2006}]{Runkle2006Analysis}
+\begin{barticle}
+\bauthor{\bsnm{Runkle}, \binits{R.C.}},
+\bauthor{\bsnm{Tardiff}, \binits{M.F.}},
+\bauthor{\bsnm{Anderson}, \binits{K.K.}},
+\bauthor{\bsnm{Carlson}, \binits{D.K.}},
+\bauthor{\bsnm{Smith}, \binits{L.E.}}:
+\batitle{Analysis of spectroscopic radiation portal monitor data using
+  principal components analysis}.
+\bjtitle{IEEE Transactions on Nuclear Science}
+\bvolume{53}(\bissue{3}),
+\bfpage{1418}--\blpage{1423}
+(\byear{2006})
+\doiurl{10.1109/TNS.2006.874883}
+\end{barticle}
+\endbibitem
+
+%%% 8
+\bibitem[\protect\citeauthoryear{Kim et~al.}{2019a}]{Kim2019InvMat}
+\begin{barticle}
+\bauthor{\bsnm{Kim}, \binits{Y.}},
+\bauthor{\bsnm{Kim}, \binits{M.}},
+\bauthor{\bsnm{Lim}, \binits{K.T.}},
+\bauthor{\bsnm{Kim}, \binits{J.}},
+\bauthor{\bsnm{Cho}, \binits{G.}}:
+\batitle{Inverse calibration matrix algorithm for radiation detection portal
+  monitors}.
+\bjtitle{Radiation Physics and Chemistry}
+\bvolume{155},
+\bfpage{127}--\blpage{132}
+(\byear{2019})
+\doiurl{10.1016/j.radphyschem.2018.07.022}
+\end{barticle}
+\endbibitem
+
+%%% 9
+\bibitem[\protect\citeauthoryear{Kim et~al.}{2019b}]{Kim2019ANN}
+\begin{barticle}
+\bauthor{\bsnm{Kim}, \binits{J.}},
+\bauthor{\bsnm{Park}, \binits{K.}},
+\bauthor{\bsnm{Cho}, \binits{G.}}:
+\batitle{Multi-radioisotope identification algorithm using an artificial neural
+  network for plastic gamma spectra}.
+\bjtitle{Applied Radiation and Isotopes}
+\bvolume{147},
+\bfpage{83}--\blpage{90}
+(\byear{2019})
+\doiurl{10.1016/j.apradiso.2019.01.005}
+\end{barticle}
+\endbibitem
+
+%%% 10
+\bibitem[\protect\citeauthoryear{Lee et~al.}{2023}]{Lee2023Radionuclide}
+\begin{barticle}
+\bauthor{\bsnm{Lee}, \binits{H.C.}},
+\bauthor{\bsnm{Koo}, \binits{B.T.}},
+\bauthor{\bsnm{Jeon}, \binits{J.Y.}},
+\bauthor{\bsnm{Cheon}, \binits{B.-W.}},
+\bauthor{\bsnm{Yoo}, \binits{D.H.}},
+\bauthor{\bsnm{Chung}, \binits{H.}},
+\bauthor{\bsnm{Min}, \binits{C.H.}}:
+\batitle{Radionuclide identification based on energy-weighted algorithm and
+  machine learning applied to a multi-array plastic scintillator}.
+\bjtitle{Nuclear Engineering and Technology}
+\bvolume{55}(\bissue{10}),
+\bfpage{3907}--\blpage{3912}
+(\byear{2023})
+\doiurl{10.1016/j.net.2023.07.005}
+\end{barticle}
+\endbibitem
+
+%%% 11
+\bibitem[\protect\citeauthoryear{Jeon et~al.}{2021}]{Jeon2021CompML}
+\begin{barticle}
+\bauthor{\bsnm{Jeon}, \binits{B.}},
+\bauthor{\bsnm{Kim}, \binits{J.}},
+\bauthor{\bsnm{Yu}, \binits{Y.}},
+\bauthor{\bsnm{Moon}, \binits{M.}}:
+\batitle{Comparison of machine learning-based radioisotope identifiers for
+  plastic scintillation detector}.
+\bjtitle{Journal of Radiation Protection and Research}
+\bvolume{46}(\bissue{4}),
+\bfpage{204}--\blpage{212}
+(\byear{2021})
+\doiurl{10.14407/jrpr.2021.00206}
+\end{barticle}
+\endbibitem
+
+\end{thebibliography}

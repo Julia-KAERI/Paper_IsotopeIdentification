@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.4)  7 AUG 2026 19:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.4)  6 AUG 2026 17:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/jiyong/Documents/Papers/IsotpoeIdentification/papers/ver260803_MoonRevision/revision_01.tex
-(/Users/jiyong/Documents/Papers/IsotpoeIdentification/papers/ver260803_MoonRevision/revision_01.tex
+**/Users/jiyong/Documents/Papers/IsotpoeIdentification/springer_latex_templete/sn-article.tex
+(/Users/jiyong/Documents/Papers/IsotpoeIdentification/springer_latex_templete/sn-article.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2022-12-17> (./sn-jnl.cls
 Document Class: sn-jnl 2019/11/18 v0.1: An authoring template for Springer Journal articles
@@ -485,12 +485,8 @@ Package: listings 2020/03/24 1.8d (Carsten Heinz)
 File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count327
 \l__pdf_internal_box=\box76
-) (./revision_01.aux
-
-LaTeX Warning: Label `tab:isotope_lists' multiply defined.
-
-)
-\openout1 = `revision_01.aux'.
+) (./sn-article.aux)
+\openout1 = `sn-article.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
 LaTeX Font Info:    ... okay on input line 91.
@@ -572,34 +568,34 @@ LaTeX Font Info:    Overwriting symbol font `AMSa' in version `normal'
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `bold'
 (Font)                  U/msa/m/n --> U/msa/m/n on input line 91.
 Package hyperref Info: Link coloring ON on input line 91.
- (./revision_01.out) (./revision_01.out)
+ (./sn-article.out) (./sn-article.out)
 \@outlinefile=\write3
-\openout3 = `revision_01.out'.
+\openout3 = `sn-article.out'.
 
 \c@lstlisting=\count334
-LaTeX Font Info:    Calculating math sizes for size <12.045> on input line 113.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 113.
+LaTeX Font Info:    Calculating math sizes for size <12.045> on input line 143.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 143.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 113.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 143.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 113.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 143.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <8.43146> not available
-(Font)              size <8> substituted on input line 113.
+(Font)              size <8> substituted on input line 143.
 
-LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 113.
+LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 143.
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.52061> not available
-(Font)              size <6> substituted on input line 113.
+(Font)              size <6> substituted on input line 143.
 
-LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 113.
+LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 143.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -609,178 +605,166 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-Underfull \hbox (badness 2088) in paragraph at lines 137--138
-\OT1/cmr/m/n/10 Mixed-source mea-sure-ments were pro-cessed using the same two background-
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 202.
+
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <4.015> not available
+(Font)              size <5> substituted on input line 202.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3
+pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.267 
+      ]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 269.
+
+Package epstopdf Info: Source file: <fig.eps>
+(epstopdf)                    date: 2026-08-06 16:41:52
+(epstopdf)                    size: 91593 bytes
+(epstopdf)             Output file: <fig-eps-converted-to.pdf>
+(epstopdf)                    date: 2026-08-06 16:50:40
+(epstopdf)                    size: 3039 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig-eps-converted-to.pdf fig.eps>
+(epstopdf)             \includegraphics on input line 309.
+Package epstopdf Info: Output file is already uptodate.
+<fig-eps-converted-to.pdf, id=121, 505.89pt x 84.315pt>
+File: fig-eps-converted-to.pdf Graphic file (type pdf)
+<use fig-eps-converted-to.pdf>
+Package pdftex.def Info: fig-eps-converted-to.pdf  used on input line 309.
+(pdftex.def)             Requested size: 334.79773pt x 55.79987pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4
+pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.315 F
+       or sample purpose, we have included the width of images in the option...
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.315 F
+       or sample purpose, we have included the width of images in the option... <./fig-eps-converted-to.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5
+pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.315 F
+       or sample purpose, we have included the width of images in the option...]
+LaTeX Font Info:    Trying to load font information for OMS+cmss on input line 359.
+LaTeX Font Info:    No file OMScmss.fd. on input line 359.
+
+
+LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 359.
+
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 366.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 401.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 401.
+
+Overfull \hbox (7.55843pt too wide) in paragraph at lines 395--407
+[]$[]$ 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7] (./revision_01.bbl
-Underfull \hbox (badness 1281) in paragraph at lines 50--66
-[]\OT1/cmr/m/n/10 Siciliano, E.R., Ely, J.H., Kouzes, R.T., Mil-brath, B.D., Schweppe, J.E.,
- []
-
-
+ [7]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9])
+ [9]
+Underfull \hbox (badness 1859) in paragraph at lines 523--524
+\OT1/cmr/m/n/10 of a clin-i-cal trial then addi-tional infor-ma-tion will be required. Please visit
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 523--524
+\OT1/cmr/m/n/10 ([][]$https : / / www . nature . com / nature-[]research / editorial-[]policies$[][]) for Nature Port-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 523--524
+\OT1/cmr/m/n/10 fo-lio jour-nals, ([][]$https : / / www . springer . com / gp / authors-[]editors / journal-[]author /
+ []
+
+
+Underfull \hbox (badness 4634) in paragraph at lines 523--524
+\OT1/cmr/m/n/10 journal-[]author-[]helpdesk / publishing-[]ethics / 14214$[][]) for Springer Nature jour-nals,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 523--524
+\OT1/cmr/m/n/10 or ([][]$https : / / www . biomedcentral . com / getpublished / editorial-[]policies # ethics + and +
+ []
+
+
+Package hyperref Warning: Difference (4) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 539.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10]
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 268.
+Package hyperref Warning: Difference (3) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 547.
 
-LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 271.
-
-LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <4.015> not available
-(Font)              size <5> substituted on input line 271.
-
-
-Overfull \hbox (100.52463pt too wide) in paragraph at lines 268--299
- [] 
- []
-
-
-Overfull \hbox (64.49992pt too wide) in paragraph at lines 301--346
- [] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<newfigures/figure1.pdf, id=142, 1011.78pt x 1011.78pt>
-File: newfigures/figure1.pdf Graphic file (type pdf)
-<use newfigures/figure1.pdf>
-Package pdftex.def Info: newfigures/figure1.pdf  used on input line 356.
-(pdftex.def)             Requested size: 372.0pt x 372.00609pt.
-
+(./sn-article.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.362 \newpage
-               <./newfigures/figure1.pdf>]
+ [11])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12
-pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.362 \newpage
-              ]
-<newfigures/figure2.pdf, id=175, 939.51pt x 433.62pt>
-File: newfigures/figure2.pdf Graphic file (type pdf)
-<use newfigures/figure2.pdf>
-Package pdftex.def Info: newfigures/figure2.pdf  used on input line 367.
-(pdftex.def)             Requested size: 372.0pt x 171.69154pt.
-
-Underfull \hbox (badness 1281) in paragraph at lines 368--368
-[]\OT1/cmr/bx/n/8 Fig. 2 []Processed BCCS spec-tra for mixed-source mea-sure-ments. \OT1/cmr/m/n/8 (a) Background-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13
-pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.372 \newpage
-              
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.372 \newpage
-               <./newfigures/figure2.pdf>]
-<newfigures/fit_BGSub.pdf, id=197, 1084.05pt x 1084.05pt>
-File: newfigures/fit_BGSub.pdf Graphic file (type pdf)
-<use newfigures/fit_BGSub.pdf>
-Package pdftex.def Info: newfigures/fit_BGSub.pdf  used on input line 377.
-(pdftex.def)             Requested size: 372.0pt x 371.99617pt.
-<newfigures/fit_BGRto.pdf, id=198, 1084.05pt x 1084.05pt>
-File: newfigures/fit_BGRto.pdf Graphic file (type pdf)
-<use newfigures/fit_BGRto.pdf>
-Package pdftex.def Info: newfigures/fit_BGRto.pdf  used on input line 384.
-(pdftex.def)             Requested size: 372.0pt x 371.99617pt.
-<newfigures/fit_contributions.pdf, id=199, 578.16pt x 433.62pt>
-File: newfigures/fit_contributions.pdf Graphic file (type pdf)
-<use newfigures/fit_contributions.pdf>
-Package pdftex.def Info: newfigures/fit_contributions.pdf  used on input line 391.
-(pdftex.def)             Requested size: 372.0pt x 278.99794pt.
-
-
-LaTeX Warning: Reference `tab:reference_spectrum' on page 14 undefined on input line 392.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.396 \newpage
-               <./newfigures/fit_BGSub.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.400 \end{document}
-                     <./newfigures/fit_BGRto.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [16
-pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.400 \end{document}
-                     <./newfigures/fit_contributions.pdf>] (./revision_01.aux)
+ [12] (./sn-article.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.985pt have occurred.
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package rerunfilecheck Info: File `revision_01.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `sn-article.out' has not changed.
+(rerunfilecheck)             Checksum: 7869B4D47B59CEB8AE30C555CA9F4B42;3122.
  ) 
 Here is how much of TeX's memory you used:
- 14378 strings out of 476093
- 225225 string characters out of 5791586
- 1883793 words of memory out of 5000000
- 34449 multiletter control sequences out of 15000+600000
- 539162 words of font info for 137 fonts, out of 8000000 for 9000
+ 14831 strings out of 476093
+ 228364 string characters out of 5791586
+ 1876793 words of memory out of 5000000
+ 34866 multiletter control sequences out of 15000+600000
+ 540484 words of font info for 142 fonts, out of 8000000 for 9000
  1151 hyphenation exceptions out of 8191
- 87i,16n,91p,1703b,631s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on revision_01.pdf (16 pages, 693515 bytes).
+ 87i,17n,91p,814b,1626s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on sn-article.pdf (12 pages, 382274 bytes).
 PDF statistics:
- 357 PDF objects out of 1000 (max. 8388607)
- 281 compressed objects within 3 object streams
- 60 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 415 PDF objects out of 1000 (max. 8388607)
+ 331 compressed objects within 4 object streams
+ 86 named destinations out of 1000 (max. 500000)
+ 150 words of extra memory for PDF output out of 10000 (max. 10000000)
 
