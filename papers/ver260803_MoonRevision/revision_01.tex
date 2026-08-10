@@ -31,7 +31,7 @@
  
 %%\documentclass[pdflatex,sn-nature]{sn-jnl}% Style for submissions to Nature Portfolio journals
 %%\documentclass[pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
-\documentclass[pdflatex,sn-mathphys-num]{sn-jnl}% Math and Physical Sciences Numbered Reference Style
+\documentclass[pdflatex,sn-mathphys-num, table]{sn-jnl}% Math and Physical Sciences Numbered Reference Style
 %%\documentclass[pdflatex,sn-mathphys-ay]{sn-jnl}% Math and Physical Sciences Author Year Reference Style
 %%\documentclass[pdflatex,sn-aps]{sn-jnl}% American Physical Society (APS) Reference Style
 %%\documentclass[pdflatex,sn-vancouver-num]{sn-jnl}% Vancouver Numbered Reference Style
@@ -49,7 +49,7 @@
 \usepackage{mathrsfs}%
 \usepackage[title]{appendix}%
 \usepackage{xcolor}%
-\usepackage[table]{xcolor} %
+% \usepackage[table]{xcolor} %% 
 \usepackage{textcomp}%
 \usepackage{manyfoot}%
 \usepackage{booktabs}%
@@ -314,7 +314,8 @@ Sample-21   & Co-60/Cs-137 & 9/16 & 223/316 & 19.470 & Separated source position
 
 \begin{table}[h]
 \centering
-\caption{BCCS-NNLS fitting results for single source. Rows for reference spectra are shaded. $d$ is the distance to the detector. $d_0/d$ is the inverse ratio of distance to the reference spectrum. $\Omega/\Omega_0$ is the ratio of the solid angle to the reference isotope. Count sum ratio is the ratio of the sum of livetime normalized spectrum to the reference isotope. $\alpha_\text{Am}$, $\alpha_\text{Co}$, $\alpha_\text{Cs}$ are the contributions calculated from the NNLS.}
+\caption{BCCS--NNLS decomposition of single-source measurements, compared with the geometric prediction. Reference rows are shaded; for these, $\alpha \equiv 1$ by definition and no uncertainty is quoted. $d$ is the source-to-detector distance and $d_0$ the corresponding reference distance. $(d_0/d)^2$ is the inverse-square prediction, and $\Omega/\Omega_0$ the ratio of the geometric solid angle subtended by the detector face, both relative to the reference measurement of the same radionuclide. The count sum ratio is the ratio of the total live-time-normalized net count rate to that of the reference measurement. $\alpha_\text{Am}$, $\alpha_\text{Co}$ and $\alpha_\text{Cs}$ are the coefficients obtained from the decomposition of the background-subtracted BCCS spectra, with standard errors in parentheses. For this comparison the non-negativity constraint was relaxed, so that
+coefficients consistent with zero scatter symmetrically about zero.}
 \label{tab:single_isotope}
 \begin{tabular}{cccccccc}
 \toprule
@@ -324,41 +325,15 @@ Radionuclide(s) & $d$ (cm) & $(d_0/d)^2$ & $(\Omega/\Omega_0)$ & count sum ratio
 Am-241  & 180   &      0.198 &     0.268 &        0.324 & 0.316( 0.006) &  0.002( 0.001) &  0.000( 0.001) \\
 Am-241  & 280   &      0.082 &     0.118 &        0.138 & 0.137( 0.006) & -0.000( 0.001) &  0.000( 0.001) \\
 Am-241  & 460   &      0.030 &     0.045 &        0.045 & 0.051( 0.005) & -0.000( 0.001) & -0.000( 0.001) \\
-\rowcolor{gray!20} Co-60   & 60    &      1.000 &     1.000 &        1.000 &-0.000(   inf) &  1.000(   inf) &  0.000(   inf) \\
+\rowcolor{gray!20} Co-60   & 60    &      1.000 &     1.000 &        1.000 &-0.000(-) &  1.000(-) &  0.000(-) \\
 Co-60   & 120   &      0.250 &     0.366 &        0.368 & 0.000( 0.005) &  0.358( 0.002) &  0.014( 0.002) \\
 Co-60   & 310   &      0.037 &     0.066 &        0.072 & 0.011( 0.006) &  0.065( 0.002) &  0.002( 0.002) \\
 Co-60   & 470   &      0.016 &     0.029 &        0.036 & 0.015( 0.006) &  0.027( 0.002) &  0.005( 0.002) \\
-\rowcolor{gray!20} Cs-137  & 70    &      1.000 &     1.000 &        1.000 & 0.000(   inf) &  0.000(   inf) &  1.000(   inf) \\
+\rowcolor{gray!20} Cs-137  & 70    &      1.000 &     1.000 &        1.000 & 0.000(-) &  0.000(   -) &  1.000(-) \\
 Cs-137  & 130   &      0.290 &     0.392 &        0.393 & 0.067( 0.006) &  0.005( 0.002) &  0.384( 0.002) \\
 Cs-137  & 300   &      0.054 &     0.086 &        0.095 & 0.040( 0.006) &  0.006( 0.002) &  0.085( 0.002) \\
 Cs-137  & 390   &      0.032 &     0.052 &        0.057 & 0.049( 0.006) &  0.000( 0.002) &  0.052( 0.002) \\
 
-
-
-
-%  Cs-137 + Co-60 & 136 / 136 & 19.134 & Mixed-source dataset \\
-%  Am-241 + Co-60 & 287 / 287 & 19.676 & Mixed-source dataset \\
-%  Cs-137 + Co-60 & 361 / 361 & 19.716 & Mixed-source dataset \\
-%  Am-241 + Cs-137 & 163 / 163 & 19.628 & Mixed-source dataset \\
-%  Am-241 + Cs-137 + Co-60 & 309 / 309 / 309 & 19.574 & e dataset \\
-%  Co-60 + Am-241 & 153 / 210 & 19.310 & Separated source positions \\
-%  Cs-137 + Co-60 & 367 / 285 & 19.568 & Separated source positions \\
-%  Am-241 + Cs-137 & 85 / 173 & 19.554 &  Separated source positions \\
-%  Cs-137 + Co-60 & 223 / 316 & 19.470 & Separated source positions\\
-% 
-% |      Isotope | distance (cm) |     (d_0/d)^2 |            Am-241 |             Co-60  |            Cs-137  |
-% |           am |            80 |    1.00000000 |  1.000 +/-  0.005 | -0.000 +/-  0.000 |  0.000 +/-  0.000 |
-% |           am |           180 |    0.19753086 |  0.316 +/-  0.006 |  0.002 +/-  0.002 | -0.000 +/-  0.002 |
-% |           am |           280 |    0.08163265 |  0.137 +/-  0.005 | -0.000 +/-  0.001 |  0.000 +/-  0.002 |
-% |           am |           460 |    0.03024575 |  0.051 +/-  0.005 | -0.000 +/-  0.001 |  0.000 +/-  0.001 |
-% |           co |            60 |    1.00000000 | -0.000 +/-    inf |  1.000 +/-    inf | -0.000 +/-    inf |
-% |           co |           120 |    0.25000000 |  0.000 +/-  0.005 |  0.358 +/-  0.002 |  0.014 +/-  0.002 |
-% |           co |           310 |    0.03746098 |  0.011 +/-  0.006 |  0.065 +/-  0.002 |  0.002 +/-  0.002 |
-% |           co |           470 |    0.01629697 |  0.015 +/-  0.006 |  0.027 +/-  0.002 |  0.005 +/-  0.002 |
-% |           cs |            70 |    1.00000000 |  0.000 +/-    inf |  0.000 +/-    inf |  1.000 +/-    inf |
-% |           cs |           130 |    0.28994083 |  0.067 +/-  0.006 |  0.005 +/-  0.002 |  0.384 +/-  0.002 |
-% |           cs |           300 |    0.05444444 |  0.040 +/-  0.006 |  0.006 +/-  0.002 |  0.085 +/-  0.002 |
-% |           cs |           390 |    0.03221565 |  0.049 +/-  0.006 |  0.000 +/-  0.002 |  0.052 +/-  0.002 |
 \botrule
 \end{tabular}
 \end{table}
