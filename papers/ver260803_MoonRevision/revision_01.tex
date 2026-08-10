@@ -49,6 +49,7 @@
 \usepackage{mathrsfs}%
 \usepackage[title]{appendix}%
 \usepackage{xcolor}%
+\usepackage[table]{xcolor} %
 \usepackage{textcomp}%
 \usepackage{manyfoot}%
 \usepackage{booktabs}%
@@ -56,6 +57,7 @@
 \usepackage{algorithmicx}%
 \usepackage{algpseudocode}%
 \usepackage{listings}%
+\usepackage{makecell}%
 %%%%
 
 %%%%%=============================================================================%%%%
@@ -128,7 +130,7 @@ In this study, we propose the Backward Cumulative Channel Sum (BCCS) as an effec
 
 \subsection*{Transformation of reference radionuclide spectra}
 
-Figure \ref{fig:bkgref}(a) shows the raw spectra of background radiation and three reference radionuclides---Am-241, Cs-137, and Co-60---measured using a large-volume plastic scintillation detector. As expected for plastic scintillators, all spectra are dominated by broad Compton continua, with most counts concentrated in the low-channel region. Cs-137 and Co-60 show noticeable deviations from background over a relatively broad channel range, whereas Am-241 differs from background primarily in the lowest channels, making reliable identification more difficult under low-count conditions.
+Figure \ref{fig:bkgref}(a) shows the \textcolor{red}{live time-normalized spectra} of background radiation and three reference radionuclides---Am-241, Cs-137, and Co-60---measured using a large-volume plastic scintillation detector. As expected for plastic scintillators, all spectra are dominated by broad Compton continua, with most counts concentrated in the low-channel region. Cs-137 and Co-60 show noticeable deviations from background over a relatively broad channel range, whereas Am-241 differs from background primarily in the lowest channels, making reliable identification more difficult under low-count conditions.
 
 Applying the BCCS transformation produces smooth, monotonically decreasing profiles, as shown in Figure \ref{fig:bkgref}(b). This transformation suppresses high-channel statistical fluctuations while preserving the overall spectral structure of each radionuclide. Figures \ref{fig:bkgref}(c) and \ref{fig:bkgref}(d) present the background-subtracted and background-normalized BCCS spectra, respectively. The subtraction-based representation retains the absolute count scale and directly reflects the source contribution relative to background, whereas the normalization-based representation emphasizes relative deviations and improves visual contrast. Both representations provide clearer radionuclide-dependent signatures than the raw spectra.
 
@@ -179,28 +181,38 @@ In summary, the combination of BCCS preprocessing, complementary background comp
 
 
 \section*{Methods}
-\subsection*{Experimental setup}
+\subsection*{Experimental system and measurement geometry}
 
-Gamma-ray spectra were measured using a large-volume plastic scintillation detector with dimensions of 30 cm$\times$180 cm$\times$5 cm, coupled to a photomultiplier tube and a multichannel analyzer with 2048 channels. Three radionuclides—Am-241, Cs-137, and Co-60—were used as reference sources. Each source spectrum was measured together with an independently acquired background spectrum at multiple source-to-detector distances.
+\textcolor{red}{Measurements  were  performed  using  a  cRPM-54  testbed  equipped  with  a large-area  plastic  scintillation detector  panel  measuring  30$\times$180$\times$5 $\text{cm}^3$  and  coupled  to  a  photomultiplier  tube.  High-voltage  supply  and pulse-height acquisition were provided by a custom M1 International system incorporating an Amptek DP5G digital pulse processor\cite{cRPM54Manual}. The photomultiplier high voltage was set to 1,475 V, the amplifier gain was set to 4.0, and the acquisition system recorded 256 pulse-height channels.}
 
-To evaluate mixed-source conditions, nine combinations of the three radionuclides were also measured at different distances. All measurements were conducted under representative radiation portal monitoring conditions, and the acquisition times were selected to reflect practical low-count environments. As expected for plastic scintillation detectors, the raw spectra were dominated by broad continua with most counts concentrated in the low-energy region. These spectra served as the basis for preprocessing, background compensation, and spectral decomposition.
+\textcolor{red}{The radioactive materials were sealed point sources with nominal activities of 90 $\mu\text{Ci}$ for Am-241,9 $\mu\text{Ci}$ for Co-60, and 16 $\mu\text{Ci}$ for Cs-137. The front surface of the detector panel was defined as the source-to-detector distance origin. Each source was positioned on the central normal axis of the detector, with horizontal and vertical  alignment  referenced  to  the  center  of  the  active  detector  area.  The  source  height  was  set  to  the detector-center height. Samples and experiments informations are liste in Table \ref{tab:isotope_lists}. For Samples 13–17, all constituent sources were positioned at the same nominal source-to-detector distance. For  Samples  18–21,  the  constituent  sources  were  positioned  at  different  distances  while  maintaining alignment  with  the  detector  center.  No  intentional  shielding,  cargo,  or  other  intervening  material  was introduced. }
 
-\textcolor{red}{For each radionuclide, the spectrum acquired at the shortest source-to-detector distance was used as the reference spectrum $I^X$ (Am-241 at 80 cm, Co-60 at 60 cm, Cs-137 at 70 cm; Table \ref{tab:isotope_lists}), since these measurements provide the highest signal-to-background ratio and therefore the most stable spectral shape. The additional measurements at larger distances (Co-60 at 120 cm, Cs-137 at 130 cm) shown in Figure \ref{fig:bkgref} illustrate the distance dependence of the spectral shape and were not used as references.}
+\textcolor{red}{These conditions represent static, unshielded measurements of sealed point sources. They do not reproduce vehicle occupancy, cargo attenuation, complex load-dependent scattering, moving-source profiles, or other operational  conditions  encountered  in  portal  monitoring.  The  results  should  therefore  be  interpreted  as  a controlled feasibility study specific to the detector configuration and reference library used in this work.}
+
+
+\textcolor{teal}{For each radionuclide, the spectrum acquired at the shortest source-to-detector distance was used as the reference spectrum(Am-241 at 80 cm, Co-60 at 60 cm, Cs-137 at 70 cm; Table \ref{tab:isotope_lists}), since these measurements provide the highest signal-to-background ratio and therefore the most stable spectral shape. The additional measurements at larger distances (Co-60 at 120 cm, Cs-137 at 130 cm) shown in Figure \ref{fig:bkgref} illustrate the distance dependence of the spectral shape and were not used as references.}
+
+\subsection*{\textcolor{red}{Data set, acquisition time, and channel treatment}}
+
+\textcolor{red}{The completed data set comprised one independently acquired background spectrum, twelve single-source spectra (Samples 1-12), and nine mixed-source spectra (Samples 13-21). The complete conditions are listed in Supplementary Table S1. Sample-22 was not included in the formal analysis because its source identity and geometry could not be verified.} 
+
+\textcolor{red}{All acquisitions had a nominal real-time duration of 20 $\text{s}$. The actual MCA live time recorded in the file headers ranged from 18.672 to  20.000 $\text{s}$;therefore, each channel was divided by its file-specific live time before comparison. The background live time was 20.000 $\text{s}$. The  background contained 121,966 counts over Channels 4-256, corresponding to 6,098.3 $\text{s}^{-1}$.}
+
+\textcolor{red}{Channels 1-3 were below the configured lower-level discriminator and contained no  accepted  events; Channels 4-256 were treated as the valid acquisition range. The revised primary BCCS analysis used the complete valid range and did not truncate the spectrum to an undefined 'low-channel region'. Differences among the reference BCCS curves were largest at lower threshold channels, but every  BCCS coordinate retained all counts above its threshold.}
+
+% \textcolor{red}{No traceable channel-to-energy calibration was established for this data set. Because the plastic-scintillator spectra did not provide narrow photopeaks suitable for conventional centroid and FWHM calibration, the analysis was performed in detector-channel space. This choice avoids assigning unsupported physical energies but makes the reference library and five-window boundaries  specific to the present gain, discriminator, and channel configuration. Recalibration is required after gain, LLD, or electronics changes.} 
+
+\textcolor{red}{Sample-1 (Am-241 at 80 cm), Sample-5 (Cs-137 at 70 cm), and Sample-9 (Co-60 at 60 cm) were used as fixed single-radionuclide reference spectra. The remaining eighteen known-composition spectra were treated as independent tests. The fitted coefficients are scaling factors relative to these detector responses; they are not activity fractions because source activities, distances, geometry,  attenuation, and energy-dependent efficiency differ.} 
 
 \subsection*{Backward cumulative channel sum}
 
-Let
-\begin{equation}
-C =[C1,C2,...,CN ] 
-\end{equation}
-
-denote a raw pulse-height spectrum, where Ci is the count recorded in channel i. The Backward Cumulative Channel Sum (BCCS) spectrum is defined as
+\textcolor{red}{Let $C_i$ denote the live-time-normalized count rate in channel $i$ and let $N=256$}. The Backward Cumulative Channel Sum (BCCS) spectrum is defined as
 
 \begin{equation}
     B_i = \sum_{j=i}^N C_j.
 \end{equation}
 
-Unlike the conventional forward cumulative spectrum, which accumulates counts from low to high channels, the BCCS operation accumulates counts from channel i to the end of the spectrum. This produces a smooth, monotonically decreasing cumulative profile. The transformation suppresses statistical fluctuations in the high-channel region while preserving the overall spectral tendency of the source. Because of these properties, BCCS serves as the primary preprocessing step for all subsequent analyses.
+Unlike the conventional forward cumulative spectrum, which accumulates counts from low to high channels, the BCCS operation accumulates counts from channel $i$ to the end of the spectrum. This produces a smooth, monotonically decreasing cumulative profile. The transformation suppresses statistical fluctuations in the high-channel region while preserving the overall spectral tendency of the source. Because of these properties, BCCS serves as the primary preprocessing step for all subsequent analyses.
 
 
 \subsection*{Background compensation}
@@ -262,62 +274,68 @@ The analysis code used for BCCS transformation, background compensation, and NNL
 
 \bibliography{biblio3}
 
-\newpage
+\clearpage
 
 \begin{sidewaystable}
 \centering
-\caption{Reference spectra information}
+\caption{Activities are nominal source activities. Distances are measured from the detector surface with each sealed point source aligned to the horizontal and vertical center of the detector panel. Samples 13-17 used the same distance for all constituents; Samples 18-21 used separated source positions. The nominal acquisition time was 20 s, and all calculations used the actual live time recorded in each MCA file. Channels 4-256 were treated as valid.}
 \label{tab:isotope_lists}
-\begin{tabular}{|c|c|c|c|c|c|c|}
+\begin{tabular}{ccccccc}
 \toprule
-Data ID & Category & Radionuclide(s) & Nominal activity ($\mu\text{Ci}$) & Distance (cm) & Actual live time (s) & Role \& note \\
+Data ID & Radionuclide(s) & Nominal activity  ($\mu\text{Ci}$) & Distance (cm) & Actual live time (s) & Role \& note \\
 \midrule
-Background & Background-only & - &- &- & 20.000 & Background correction and resampling \\
-Sample-1   & Single-source & Am-241 & 90 & 80 & 20.000 & Am-241  reference spectrum \\
-Sample-2   & Single-source & Am-241 & 90 & 180 & 20.000 & Single-source distance measurement \\
-Sample-3   & Single-source & Am-241 & 90 & 280 & 20.000 & Single-source distance measurement \\
-Sample-4   & Single-source & Am-241 & 90 & 460 & 20.000 & Single-source distance measurement \\
-Sample-5   & Single-source & Cs-137 & 16 & 70 & 19.284 & Cs-137 reference spectrum \\
-Sample-6   & Single-source & Cs-137 & 16 & 130 & 19.652 & Cs-137 distance series \\
-Sample-7   & Single-source & Cs-137 & 16 & 300 & 19.900 & Cs-137 distance series \\
-Sample-8   & Single-source & Cs-137 & 16 & 390 & 19.962 & Cs-137 distance series \\
-Sample-9   & Single-source & Co-60 & 9 & 60 & 18.672 & Co-60 reference spectrum \\
-Sample-10  & Single-source & Co-60 & 9 & 120 & 19.220 &  Co-60 distance series\\
-Sample-11  & Single-source & Co-60 & 9 & 310 & 19.720 & Co-60 distance series \\
-Sample-12  & Single-source & Co-60 & 9 & 470 & 19.864 & Co-60 distance series \\
-Sample-13  & Mixed-source  & Cs-137 + Co-60 & 16 / 9 & 136 / 136 & 19.134 & Mixed-source dataset \\
-Sample-14  & Mixed-source  & Am-241 + Co-60 & 90 / 9 & 287 / 287 & 19.676 & Mixed-source dataset \\
-Sample-15  & Mixed-source  & Cs-137 + Co-60 & 16 / 9 & 361 / 361 & 19.716 & Mixed-source dataset \\
-Sample-16  & Mixed-source  & Am-241 + Cs-137 & 90 / 16 & 163 / 163 & 19.628 & Mixed-source dataset \\
-Sample-17  & Mixed-source  & Am-241 + Cs-137 + Co-60 & 90 / 16 / 9 & 309 / 309 / 309 & 19.574 & Mixed-source dataset \\
-Sample-18  & Mixed-source  & Co-60 + Am-241 & 9 / 90 & 153 / 210 & 19.310 & Separated source positions \\
-Sample-19  & Mixed-source  & Cs-137 + Co-60 & 16 / 9 & 367 / 285 & 19.568 & Separated source positions \\
-Sample-20  & Mixed-source  & Am-241 + Cs-137 & 90 / 16 & 85 / 173 & 19.554 &  Separated source positions \\
-Sample-21  & Mixed-source  & Cs-137 + Co-60 & 16 / 9 & 223 / 316 & 19.470 & Separated source positions\\
+Background  & - &- &- & 20.000 & Background correction and resampling \\
+Sample-1    & Am-241 & 90 & 80 & 20.000 & Am-241  reference spectrum \\
+Sample-2    & Am-241 & 90 & 180 & 20.000 & Single-source distance measurement \\
+Sample-3    & Am-241 & 90 & 280 & 20.000 & Single-source distance measurement \\
+Sample-4    & Am-241 & 90 & 460 & 20.000 & Single-source distance measurement \\
+Sample-5    & Cs-137 & 16 & 70 & 19.284 & Cs-137 reference spectrum \\
+Sample-6    & Cs-137 & 16 & 130 & 19.652 & Cs-137 distance series \\
+Sample-7    & Cs-137 & 16 & 300 & 19.900 & Cs-137 distance series \\
+Sample-8    & Cs-137 & 16 & 390 & 19.962 & Cs-137 distance series \\
+Sample-9    & Co-60 & 9 & 60 & 18.672 & Co-60 reference spectrum \\
+Sample-10   & Co-60 & 9 & 120 & 19.220 &  Co-60 distance series\\
+Sample-11   & Co-60 & 9 & 310 & 19.720 & Co-60 distance series \\
+Sample-12   & Co-60 & 9 & 470 & 19.864 & Co-60 distance series \\
+Sample-13   & Co-60/Cs-137 & 9/16 & 136/136 & 19.134 & Mixed-source dataset \\
+Sample-14   & Am-241/Co-60 & 90/9 & 287/287 & 19.676 & Mixed-source dataset \\
+Sample-15   & Co-60/Cs-137  & 9/16 & 361/361 & 19.716 & Mixed-source dataset \\
+Sample-16   & Am-241/Cs-137 & 90/16 & 163/163 & 19.628 & Mixed-source dataset \\
+Sample-17   & Am-241/Co-60/Cs-137  & 90/9/16 & 309/309/309 & 19.574 & Mixed-source dataset \\
+Sample-18   & Am-241/Co-60 & 90/9 & 210/153 & 19.310 & Separated source positions \\
+Sample-19   & Co-60/Cs-137 & 9/16 & 285/367 & 19.568 & Separated source positions \\
+Sample-20   & Am-241/Cs-137 & 90/16 & 85/173 & 19.554 &  Separated source positions \\
+Sample-21   & Co-60/Cs-137 & 9/16 & 223/316 & 19.470 & Separated source positions\\
 \botrule
 \end{tabular}
 \end{sidewaystable}
 
+\clearpage
+
 \begin{table}[h]
 \centering
-\caption{Reference spectra information}
-\label{tab:isotope_lists}
-\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\caption{BCCS-NNLS fitting results for single source. Rows for reference spectra are shaded. $d$ is the distance to the detector. $d_0/d$ is the inverse ratio of distance to the reference spectrum. $\Omega/\Omega_0$ is the ratio of the solid angle to the reference isotope. Count sum ratio is the ratio of the sum of livetime normalized spectrum to the reference isotope. $\alpha_\text{Am}$, $\alpha_\text{Co}$, $\alpha_\text{Cs}$ are the contributions calculated from the NNLS.}
+\label{tab:single_isotope}
+\begin{tabular}{cccccccc}
 \toprule
-Radionuclide(s) & d (cm) & $(d_0/d)^2$ & $(\Omega/\Omega_0)$ & count sum ratio & $\alpha_\text{Am}$ & $\alpha_\text{Cs}$ & $\alpha_\text{Co}$ \\
+Radionuclide(s) & $d$ (cm) & $(d_0/d)^2$ & $(\Omega/\Omega_0)$ & count sum ratio & $\alpha_\text{Am}$ & $\alpha_\text{Co}$ & $\alpha_\text{Cs}$ \\
 \midrule
-Am-241 & 80  &  1.000 &  1.000 & 1.000 & 1.000(0.005) & -0.000(0.000) &  0.000(0.000)    \\
-Am-241 & 180 &  0.198 &  0.269 & 0.316 & 0.316(0.006) &  0.002(0.002) & -0.000(0.002)    \\
-Am-241 & 280 &  0.082 &  0.118 & 0.129 & 0.137(0.005) & -0.000(0.001) &  0.000(0.002)    \\
-Am-241 & 460 &  0.030 &  0.045 & 0.042 & 0.051(0.005) & -0.000(0.001) &  0.000(0.001)    \\
-Cs-137 & 70  &  3.449 &  2.545 & 2.581 & 0.000        &  1.000        & -0.000           \\
-Cs-137 & 130 &  1.000 &  1.000 & 1.000 & 0.000(0.005) &  0.358(0.002) &  0.014(0.002)    \\ 
-Cs-137 & 300 &  0.188 &  0.220 & 0.220 & 0.011(0.006) &  0.065(0.002) &  0.002(0.002)    \\
-Cs-137 & 390 &  0.111 &  0.132 & 0.128 & 0.015(0.006) &  0.027(0.002) &  0.005(0.002)    \\
-Co-60  & 60  &  4.000 &  2.728 & 2.763 & 0.000        &  0.000        &  1.000           \\
-Co-60  & 120 &  1.000 &  1.000 & 1.000 & 0.067(0.006) &  0.005(0.002) &  0.384(0.002)    \\
-Co-60  & 310 &  0.150 &  0.181 & 0.183 & 0.040(0.006) &  0.006(0.002) &  0.085(0.002)    \\
-Co-60  & 470 &  0.065 &  0.081 & 0.074 & 0.049(0.006) &  0.000(0.002) &  0.052(0.002)    \\
+\rowcolor{gray!20} Am-241  &  80   &      1.000 &     1.000 &        1.000 & 1.000( 0.005) & -0.000( 0.000) &  0.000( 0.000) \\
+Am-241  & 180   &      0.198 &     0.268 &        0.324 & 0.316( 0.006) &  0.002( 0.001) &  0.000( 0.001) \\
+Am-241  & 280   &      0.082 &     0.118 &        0.138 & 0.137( 0.006) & -0.000( 0.001) &  0.000( 0.001) \\
+Am-241  & 460   &      0.030 &     0.045 &        0.045 & 0.051( 0.005) & -0.000( 0.001) & -0.000( 0.001) \\
+\rowcolor{gray!20} Co-60   & 60    &      1.000 &     1.000 &        1.000 &-0.000(   inf) &  1.000(   inf) &  0.000(   inf) \\
+Co-60   & 120   &      0.250 &     0.366 &        0.368 & 0.000( 0.005) &  0.358( 0.002) &  0.014( 0.002) \\
+Co-60   & 310   &      0.037 &     0.066 &        0.072 & 0.011( 0.006) &  0.065( 0.002) &  0.002( 0.002) \\
+Co-60   & 470   &      0.016 &     0.029 &        0.036 & 0.015( 0.006) &  0.027( 0.002) &  0.005( 0.002) \\
+\rowcolor{gray!20} Cs-137  & 70    &      1.000 &     1.000 &        1.000 & 0.000(   inf) &  0.000(   inf) &  1.000(   inf) \\
+Cs-137  & 130   &      0.290 &     0.392 &        0.393 & 0.067( 0.006) &  0.005( 0.002) &  0.384( 0.002) \\
+Cs-137  & 300   &      0.054 &     0.086 &        0.095 & 0.040( 0.006) &  0.006( 0.002) &  0.085( 0.002) \\
+Cs-137  & 390   &      0.032 &     0.052 &        0.057 & 0.049( 0.006) &  0.000( 0.002) &  0.052( 0.002) \\
+
+
+
+
 %  Cs-137 + Co-60 & 136 / 136 & 19.134 & Mixed-source dataset \\
 %  Am-241 + Co-60 & 287 / 287 & 19.676 & Mixed-source dataset \\
 %  Cs-137 + Co-60 & 361 / 361 & 19.716 & Mixed-source dataset \\
@@ -345,16 +363,13 @@ Co-60  & 470 &  0.065 &  0.081 & 0.074 & 0.049(0.006) &  0.000(0.002) &  0.052(0
 \end{tabular}
 \end{table}
 
-
-
-
-
+\clearpage
 
 \begin{figure}[ht]
 \centering
 % \includegraphics[width=\linewidth]{figure/fig01_bkgref.pdf}
 \includegraphics[width=\linewidth]{newfigures/figure1.pdf}
-\caption{\textbf{Reference spectra before and after BCCS-based processing.} (a) Raw gamma-ray spectra of background radiation and the three reference radionuclides Am-241, Cs-137, and Co-60 measured using a large-volume plastic scintillation detector. (b) Corresponding BCCS-transformed spectra, showing smooth, monotonically decreasing profiles that suppress high-channel statistical fluctuations while preserving overall spectral structure. (c) Background-subtracted BCCS spectra, which reveal source-specific deviations from background while retaining the count scale. (d) Background-normalized BCCS spectra, highlighting relative intensity differences and improving visual contrast under low-count conditions.}
+\caption{\textbf{Reference spectra before and after BCCS-based processing.} (a) \textcolor{red}{Live-time-normalized gamma-ray spectra of background radiation and the three reference radionuclides Am-241, Cs-137, and Co-60 measured using a large-volume plastic scintillation detector.} (b) Corresponding BCCS-transformed spectra, showing smooth, monotonically decreasing profiles that suppress high-channel statistical fluctuations while preserving overall spectral structure. (c) Background-subtracted BCCS spectra, which reveal source-specific deviations from background while retaining the count scale. (d) Background-normalized BCCS spectra, highlighting relative intensity differences and improving visual contrast under low-count conditions.}
 
 \label{fig:bkgref}
 \end{figure}
@@ -365,7 +380,7 @@ Co-60  & 470 &  0.065 &  0.081 & 0.074 & 0.049(0.006) &  0.000(0.002) &  0.052(0
 \centering
 % \includegraphics[width=\linewidth]{figure/fig04_CSBS.pdf}
 \includegraphics[width=\linewidth]{newfigures/figure2.pdf}
-\caption{\textbf{Processed BCCS spectra for mixed-source measurements.} (a) Background-subtracted BCCS spectra for nine mixed-source configurations consisting of Am-241, Cs-137, and Co-60 at different source-to-detector distances. Absolute count differences among mixtures are preserved, revealing mixture-dependent cumulative spectral profiles. (b) Background-normalized BCCS spectra for the same configurations. Normalization emphasizes relative deviations from background and enhances the visibility of spectral differences among mixtures, particularly when radionuclides contribute differently across channel regions.}
+\caption{\textbf{Processed BCCS spectra for mixed-source measurements.} (a) Background-subtracted BCCS spectra for nine mixed-source configurations consisting of Am-241, Cs-137, and Co-60 at different source-to-detector distances. Absolute count differences among mixtures are preserved, revealing mixture-dependent cumulative spectral profiles. (b) Background-normalized BCCS spectra for the same configurations. \textcolor{red}{Normalization to backgroud} emphasizes relative deviations from background and enhances the visibility of spectral differences among mixtures, particularly when radionuclides contribute differently across channel regions.}
 \label{fig:mixedbccs}
 \end{figure}
 
@@ -389,7 +404,7 @@ Co-60  & 470 &  0.065 &  0.081 & 0.074 & 0.049(0.006) &  0.000(0.002) &  0.052(0
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\linewidth]{newfigures/fit_contributions.pdf}
-\caption{\textcolor{red}{Estimated contribution coefficients $\alpha_X$ for Am-241, Co-60, and Cs-137 as a function of source-to-detector distance. Each coefficient is expressed relative to the corresponding reference measurement of that radionuclide (Table \ref{tab:reference_spectrum}) and is therefore not directly comparable between radionuclides. For configurations in which the two sources were placed at different distances, each point is plotted at the distance of the corresponding source.} (a) results from the subtraction-based method; (b) results from the normalization-based method. Horizontal dashed lines indicate mean contribution levels estimated from measurements in which the corresponding radionuclide was absent, providing practical background-derived decision thresholds. The inferred contributions decrease with increasing distance and approach the threshold bands under very weak-signal conditions.}
+\caption{\textcolor{red}{Estimated contribution coefficients $\alpha_X$ for Am-241, Co-60, and Cs-137 as a function of source-to-detector distance. Each coefficient is expressed relative to the corresponding reference measurement of that radionuclide (Table \ref{tab:single_isotope}) and is therefore not directly comparable between radionuclides. For configurations in which the two sources were placed at different distances, each point is plotted at the distance of the corresponding source.} (a) results from the subtraction-based method; (b) results from the normalization-based method. Horizontal dashed lines indicate mean contribution levels estimated from measurements in which the corresponding radionuclide was absent, providing practical background-derived decision thresholds. The inferred contributions decrease with increasing distance and approach the threshold bands under very weak-signal conditions.}
 \label{fig:fi_fitcontrib}
 \end{figure}
 

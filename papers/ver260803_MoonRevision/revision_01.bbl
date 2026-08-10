@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{11}
+\begin{thebibliography}{12}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -44,8 +44,7 @@
 \csname PreBibitemsHook\endcsname
 
 %%% 1
-\bibitem[\protect\citeauthoryear{Siciliano
-  et~al.}{2005}]{Sicilliano2005Comparision}
+\bibitem[\protect\citeauthoryear{Siciliano et~al.}{2005}]{Sicilliano2005Comparision}
 \begin{barticle}
 \bauthor{\bsnm{Siciliano}, \binits{E.R.}},
 \bauthor{\bsnm{Ely}, \binits{J.H.}},
@@ -53,10 +52,8 @@
 \bauthor{\bsnm{Milbrath}, \binits{B.D.}},
 \bauthor{\bsnm{Schweppe}, \binits{J.E.}},
 \bauthor{\bsnm{Stromswold}, \binits{D.C.}}:
-\batitle{Comparison of pvt and nai(tl) scintillators for vehicle portal monitor
-  applications}.
-\bjtitle{Nuclear Instruments and Methods in Physics Research Section A:
-  Accelerators, Spectrometers, Detectors and Associated Equipment}
+\batitle{Comparison of pvt and nai(tl) scintillators for vehicle portal monitor applications}.
+\bjtitle{Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment}
 \bvolume{550}(\bissue{3}),
 \bfpage{647}--\blpage{674}
 (\byear{2005})
@@ -88,10 +85,8 @@
 \bauthor{\bsnm{Siciliano}, \binits{E.}},
 \bauthor{\bsnm{Strachan}, \binits{D.}},
 \bauthor{\bsnm{Weier}, \binits{D.}}:
-\batitle{The use of energy windowing to discriminate snm from norm in radiation
-  portal monitors}.
-\bjtitle{Nuclear Instruments and Methods in Physics Research Section A:
-  Accelerators, Spectrometers, Detectors and Associated Equipment}
+\batitle{The use of energy windowing to discriminate snm from norm in radiation portal monitors}.
+\bjtitle{Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment}
 \bvolume{560}(\bissue{2}),
 \bfpage{373}--\blpage{387}
 (\byear{2006})
@@ -105,8 +100,7 @@
 \bauthor{\bsnm{Hevener}, \binits{R.}},
 \bauthor{\bsnm{Yim}, \binits{M.-S.}},
 \bauthor{\bsnm{Baird}, \binits{K.}}:
-\batitle{Investigation of energy windowing algorithms for effective cargo
-  screening with radiation portal monitors}.
+\batitle{Investigation of energy windowing algorithms for effective cargo screening with radiation portal monitors}.
 \bjtitle{Radiation Measurements}
 \bvolume{58},
 \bfpage{113}--\blpage{120}
@@ -125,8 +119,7 @@
 \bauthor{\bsnm{Park}, \binits{C.S.}},
 \bauthor{\bsnm{Kim}, \binits{H.-S.}},
 \bauthor{\bsnm{Min}, \binits{C.H.}}:
-\batitle{Radioisotope identification using an energy-weighted algorithm with a
-  proof-of-principle radiation portal monitor based on plastic scintillators}.
+\batitle{Radioisotope identification using an energy-weighted algorithm with a proof-of-principle radiation portal monitor based on plastic scintillators}.
 \bjtitle{Applied Radiation and Isotopes}
 \bvolume{156},
 \bfpage{109010}
@@ -142,10 +135,8 @@
 \bauthor{\bsnm{Fulvio}, \binits{A.D.}},
 \bauthor{\bsnm{Clarke}, \binits{S.D.}},
 \bauthor{\bsnm{Pozzi}, \binits{S.A.}}:
-\batitle{Radionuclide identification algorithm for organic scintillator-based
-  radiation portal monitor}.
-\bjtitle{Nuclear Instruments and Methods in Physics Research Section A:
-  Accelerators, Spectrometers, Detectors and Associated Equipment}
+\batitle{Radionuclide identification algorithm for organic scintillator-based radiation portal monitor}.
+\bjtitle{Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment}
 \bvolume{849},
 \bfpage{41}--\blpage{48}
 (\byear{2017})
@@ -161,8 +152,7 @@
 \bauthor{\bsnm{Anderson}, \binits{K.K.}},
 \bauthor{\bsnm{Carlson}, \binits{D.K.}},
 \bauthor{\bsnm{Smith}, \binits{L.E.}}:
-\batitle{Analysis of spectroscopic radiation portal monitor data using
-  principal components analysis}.
+\batitle{Analysis of spectroscopic radiation portal monitor data using principal components analysis}.
 \bjtitle{IEEE Transactions on Nuclear Science}
 \bvolume{53}(\bissue{3}),
 \bfpage{1418}--\blpage{1423}
@@ -179,8 +169,7 @@
 \bauthor{\bsnm{Lim}, \binits{K.T.}},
 \bauthor{\bsnm{Kim}, \binits{J.}},
 \bauthor{\bsnm{Cho}, \binits{G.}}:
-\batitle{Inverse calibration matrix algorithm for radiation detection portal
-  monitors}.
+\batitle{Inverse calibration matrix algorithm for radiation detection portal monitors}.
 \bjtitle{Radiation Physics and Chemistry}
 \bvolume{155},
 \bfpage{127}--\blpage{132}
@@ -195,8 +184,7 @@
 \bauthor{\bsnm{Kim}, \binits{J.}},
 \bauthor{\bsnm{Park}, \binits{K.}},
 \bauthor{\bsnm{Cho}, \binits{G.}}:
-\batitle{Multi-radioisotope identification algorithm using an artificial neural
-  network for plastic gamma spectra}.
+\batitle{Multi-radioisotope identification algorithm using an artificial neural network for plastic gamma spectra}.
 \bjtitle{Applied Radiation and Isotopes}
 \bvolume{147},
 \bfpage{83}--\blpage{90}
@@ -215,8 +203,7 @@
 \bauthor{\bsnm{Yoo}, \binits{D.H.}},
 \bauthor{\bsnm{Chung}, \binits{H.}},
 \bauthor{\bsnm{Min}, \binits{C.H.}}:
-\batitle{Radionuclide identification based on energy-weighted algorithm and
-  machine learning applied to a multi-array plastic scintillator}.
+\batitle{Radionuclide identification based on energy-weighted algorithm and machine learning applied to a multi-array plastic scintillator}.
 \bjtitle{Nuclear Engineering and Technology}
 \bvolume{55}(\bissue{10}),
 \bfpage{3907}--\blpage{3912}
@@ -232,14 +219,25 @@
 \bauthor{\bsnm{Kim}, \binits{J.}},
 \bauthor{\bsnm{Yu}, \binits{Y.}},
 \bauthor{\bsnm{Moon}, \binits{M.}}:
-\batitle{Comparison of machine learning-based radioisotope identifiers for
-  plastic scintillation detector}.
+\batitle{Comparison of machine learning-based radioisotope identifiers for plastic scintillation detector}.
 \bjtitle{Journal of Radiation Protection and Research}
 \bvolume{46}(\bissue{4}),
 \bfpage{204}--\blpage{212}
 (\byear{2021})
 \doiurl{10.14407/jrpr.2021.00206}
 \end{barticle}
+\endbibitem
+
+%%% 12
+\bibitem[\protect\citeauthoryear{M1 International CO., LTD}{2022}]{cRPM54Manual}
+\begin{botherref}
+M1 International CO., LTD:
+Container-interior Radiation Detection System,
+1st edn.
+Rm. 605, Bldg. A, Hannam Campus Innovation Park, 70 Hannam-ro, Daedeok-gu, Daejeon, 34430, Republic of Korea
+(2022).
+M1 International CO., LTD
+\end{botherref}
 \endbibitem
 
 \end{thebibliography}
